@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Módulo 04 — A orientação das pirâmides | Arqueoastronomia das Necrópoles</title>
+<meta name="description" content="Os dados de erro cardinal pirâmide a pirâmide, as hipóteses concorrentes de método e o debate Spence × Rawlins & Pickering na Nature.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Noto+Sans+Mono:wght@400;500&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/curso.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html"><span class="gl">𓇼</span> Códigos Egípcios</a>
+    <nav class="topnav">
+      <a href="index.html">Início do curso</a>
+      <a href="index.html#grade">Grade</a>
+      <a href="index.html#avaliacao">Avaliação</a>
+      <a href="index.html#bibliografia">Bibliografia</a>
+      <a href="../curso-hieroglifos/index.html">Curso de hieróglifos</a>
+      <a href="https://codigosegipcios.netlify.app/">Voltar ao site</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="glyphband">𓉴𓏤𓇼𓈌</div>
+    <span class="eyebrow">Módulo 04 · 4h</span>
+    <h1>A orientação das pirâmides</h1>
+    <p class="lede">Os dados de erro cardinal pirâmide a pirâmide, as hipóteses concorrentes de método e o debate Spence × Rawlins & Pickering na Nature.</p>
+  </div>
+</section>
+<section class="wrap narrow">
+
+  <div class="objetivos">
+    <h4>Objetivos do módulo</h4>
+    <ul>
+      <li>Ler a tabela de erros cardinais das pirâmides do Reino Antigo e interpretar a convenção de sinais</li>
+      <li>Reconhecer o padrão sistemático na deriva dos erros e explicar por que ele exige uma causa sistemática</li>
+      <li>Comparar as quatro famílias de hipóteses sobre o método de orientação</li>
+      <li>Reconstituir o argumento de Spence e a inferência cronológica que ela extrai dele</li>
+      <li>Avaliar a réplica de Rawlins &amp; Pickering e o estado atual da questão</li>
+    </ul>
+  </div>
+
+  <div class="toc">
+    <h4>Neste módulo</h4>
+    <ol>
+      <li><a href="#a41">Os dados</a></li>
+      <li><a href="#a42">A deriva</a></li>
+      <li><a href="#a43">Quatro famílias de hipóteses</a></li>
+      <li><a href="#a44">O argumento de Spence</a></li>
+      <li><a href="#a45">A réplica e o estado atual</a></li>
+    </ol>
+  </div>
+
+  <!-- ============ 4.1 ============ -->
+  <article class="aula" id="a41">
+    <h2><span class="n">Aula 4.1</span> Os dados</h2>
+
+    <p>Comecemos pelo que é medido, antes de qualquer interpretação. As grandes pirâmides do Reino Antigo têm
+    lados orientados aos pontos cardeais com desvios pequenos e — este é o ponto — <strong>desiguais entre si de
+    forma ordenada</strong>.</p>
+
+    <div class="box box-nota">
+      <h4>Convenção de sinais</h4>
+      <p>Os valores abaixo são o desvio do lado em relação ao norte verdadeiro, em <strong>minutos de arco</strong>
+      (1′ = 1/60 de grau). <strong>Negativo = a oeste do norte</strong>; <strong>positivo = a leste do
+      norte</strong>. Lados leste e oeste de cada pirâmide são medidos separadamente, e a diferença entre eles é
+      uma medida da qualidade da execução.</p>
+    </div>
+
+    <div class="tablewrap">
+      <table class="dados">
+        <thead>
+          <tr><th>Pirâmide</th><th>Soberano</th><th class="r">Lado oeste</th><th class="r">Lado leste</th><th class="r">Média</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Meidum</td><td>Seneferu</td><td class="num neg">−18,2′</td><td class="num neg">−20,7′</td><td class="num neg">−19,4′</td></tr>
+          <tr><td>Curvada (Dahshur)</td><td>Seneferu</td><td class="num neg">−11,9′</td><td class="num neg">−17,4′</td><td class="num neg">−14,6′</td></tr>
+          <tr><td>Vermelha (Dahshur)</td><td>Seneferu</td><td class="num neg">−8,8′</td><td class="num">—</td><td class="num neg">−8,8′</td></tr>
+          <tr><td><b>Quéops (Gizé)</b></td><td>Khufu</td><td class="num neg">−2,9′</td><td class="num neg">−3,5′</td><td class="num neg">−3,2′</td></tr>
+          <tr><td>Quéfren (Gizé)</td><td>Khafre</td><td class="num neg">−6,1′</td><td class="num neg">−6,1′</td><td class="num neg">−6,1′</td></tr>
+          <tr><td>Miquerinos (Gizé)</td><td>Menkaure</td><td class="num pos">+14,1′</td><td class="num pos">+12,5′</td><td class="num pos">+13,3′</td></tr>
+        </tbody>
+        <caption>Valores conforme SPENCE, K. <i>Nature</i> 408 (2000), Tabela 1, arredondados para um decimal.
+        Antes de citar estes números em trabalho próprio, consulte a publicação original — levantamentos posteriores
+        divergem em alguns casos, e a definição do ponto de referência em cada lado afeta o resultado.</caption>
+      </table>
+    </div>
+
+    <div class="box box-pratica">
+      <h4>Três coisas que a tabela já mostra</h4>
+      <ol style="margin-bottom:0">
+        <li><strong>A precisão é excepcional.</strong> Quéops erra por 3 minutos de arco. Pela conta da Aula 3.4,
+        isso equivale a 20 cm sobre uma base de 230 m.</li>
+        <li><strong>Os erros não são aleatórios.</strong> Cinco das seis pirâmides erram <em>para o mesmo lado</em>
+        — a oeste do norte. Erro aleatório distribuiria os sinais.</li>
+        <li><strong>A magnitude diminui e depois inverte.</strong> De −19′ em Meidum até −3′ em Quéops, e então
+        +13′ em Miquerinos. Há uma <strong>deriva</strong>.</li>
+      </ol>
+    </div>
+  </article>
+
+  <!-- ============ 4.2 ============ -->
+  <article class="aula" id="a42">
+    <h2><span class="n">Aula 4.2</span> A deriva</h2>
+
+    <p>O padrão fica evidente quando os mesmos números são postos em ordem cronológica de construção.</p>
+
+    <figure class="fig">
+      <svg viewBox="0 0 640 380" role="img" aria-labelledby="t-deriv d-deriv">
+        <title id="t-deriv">Erro de orientação cardinal das pirâmides do Reino Antigo, em ordem cronológica</title>
+        <desc id="d-deriv">Gráfico de linha com seis pontos. O erro parte de cerca de 19 minutos de arco a oeste
+        do norte em Meidum, diminui progressivamente até cerca de 3 minutos em Quéops, retrocede levemente em
+        Quéfren e passa a cerca de 13 minutos a leste do norte em Miquerinos. Os valores exatos estão na tabela da
+        aula anterior.</desc>
+
+        <!-- grade horizontal -->
+        <line x1="90" y1="286.3" x2="600" y2="286.3" class="svg-grid"/>
+        <line x1="90" y1="217.9" x2="600" y2="217.9" class="svg-grid"/>
+        <line x1="90" y1="81.1"  x2="600" y2="81.1"  class="svg-grid"/>
+        <!-- linha do zero, destacada -->
+        <line x1="90" y1="149.5" x2="600" y2="149.5" class="svg-rule"/>
+        <text x="98" y="142" class="svg-label-sm" text-anchor="start">norte verdadeiro</text>
+
+        <!-- rótulos do eixo y -->
+        <text x="80" y="290" class="svg-axis" text-anchor="end">−20′</text>
+        <text x="80" y="222" class="svg-axis" text-anchor="end">−10′</text>
+        <text x="80" y="153" class="svg-axis" text-anchor="end">0′</text>
+        <text x="80" y="85"  class="svg-axis" text-anchor="end">+10′</text>
+
+        <!-- sentido do eixo -->
+        <text x="30" y="250" class="svg-label-sm" text-anchor="middle" transform="rotate(-90 30 250)">a oeste do norte</text>
+        <text x="30" y="100" class="svg-label-sm" text-anchor="middle" transform="rotate(-90 30 100)">a leste</text>
+
+        <!-- série -->
+        <polyline points="90,282.5 188,249.6 286,209.6 384,171.3 482,191.1 580,58.5" class="svg-mark"/>
+
+        <circle cx="90"  cy="282.5" r="5" class="svg-dot"/>
+        <circle cx="188" cy="249.6" r="5" class="svg-dot"/>
+        <circle cx="286" cy="209.6" r="5" class="svg-dot"/>
+        <circle cx="384" cy="171.3" r="6.5" class="svg-dot"/>
+        <circle cx="482" cy="191.1" r="5" class="svg-dot"/>
+        <circle cx="580" cy="58.5"  r="5" class="svg-dot"/>
+
+        <!-- rótulos diretos, seletivos -->
+        <text x="90"  y="306" class="svg-axis" text-anchor="middle">−19,4′</text>
+        <text x="384" y="160" class="svg-axis" text-anchor="middle">−3,2′</text>
+        <text x="580" y="46"  class="svg-axis" text-anchor="middle">+13,3′</text>
+
+        <!-- eixo x: nomes -->
+        <text x="90"  y="340" class="svg-label-sm" text-anchor="middle">Meidum</text>
+        <text x="188" y="340" class="svg-label-sm" text-anchor="middle">Curvada</text>
+        <text x="286" y="340" class="svg-label-sm" text-anchor="middle">Vermelha</text>
+        <text x="384" y="340" class="svg-label-sm" text-anchor="middle">Quéops</text>
+        <text x="482" y="340" class="svg-label-sm" text-anchor="middle">Quéfren</text>
+        <text x="580" y="340" class="svg-label-sm" text-anchor="middle">Miquerinos</text>
+
+        <line x1="90" y1="320" x2="600" y2="320" class="svg-grid"/>
+        <path d="M 560 362 L 600 362" class="svg-grid"/>
+        <path d="M 600 362 l -7 -3.5 l 0 7 z" class="svg-label" fill="var(--fg-muted)"/>
+        <text x="550" y="366" class="svg-label-sm" text-anchor="end">ordem cronológica de construção</text>
+      </svg>
+      <figcaption>
+        Erro de orientação (média dos lados leste e oeste) das seis grandes pirâmides, em ordem de construção.
+        <b>A deriva é o dado que exige explicação</b> — não a pequenez dos erros. Note também a
+        <b>reversão em Quéfren</b>, que interrompe a tendência: esse ponto fora da linha é justamente o que
+        alimenta boa parte do debate da Aula 4.5. Valores completos na tabela da Aula 4.1.
+      </figcaption>
+    </figure>
+
+    <div class="box box-atencao">
+      <h4>Leia o gráfico com desconfiança produtiva</h4>
+      <p>O eixo horizontal aqui é a <strong>ordem</strong> de construção, com espaçamento igual — não o tempo em
+      escala. Essa escolha facilita a leitura, mas esconde uma informação importante: os intervalos reais entre as
+      construções não são iguais. As três pirâmides de Seneferu foram erguidas no mesmo reinado, enquanto entre
+      Quéops e Miquerinos passam duas gerações.</p>
+      <p>Quando Spence converte esta deriva em datas, na Aula 4.4, é precisamente o <strong>espaçamento temporal
+      real</strong> que faz o trabalho pesado — e é onde a crítica vai concentrar fogo.</p>
+    </div>
+  </article>
+
+  <!-- ============ 4.3 ============ -->
+  <article class="aula" id="a43">
+    <h2><span class="n">Aula 4.3</span> Quatro famílias de hipóteses</h2>
+
+    <p>Como se acha o norte verdadeiro sem bússola? Há quatro respostas plausíveis, e todas são tecnicamente
+    viáveis com o instrumental do Módulo 03.</p>
+
+    <div class="grid grid-2" style="margin-top:1.6rem">
+      <div class="card">
+        <h3>A. Trânsito simultâneo de duas estrelas</h3>
+        <p>Escolhe-se um par de estrelas circumpolares em lados <em>opostos</em> do polo. Quando as duas aparecem
+        alinhadas na <strong>vertical</strong> — uma na culminação superior, outra na inferior — o fio de prumo
+        entre elas aponta o polo celeste.</p>
+        <p class="small muted" style="margin-bottom:0"><b>Viés característico:</b> a corda que une o par não passa
+        exatamente pelo polo, e por precessão essa distância muda de sinal ao longo dos séculos — gerando
+        exatamente uma deriva.</p>
+      </div>
+      <div class="card">
+        <h3>B. Elongação máxima de uma circumpolar</h3>
+        <p>Observa-se uma estrela circumpolar nos dois extremos de sua oscilação leste–oeste em torno do polo. A
+        <strong>bissetriz</strong> dos dois azimutes extremos é o norte verdadeiro.</p>
+        <p class="small muted" style="margin-bottom:0"><b>Viés característico:</b> depende de identificar
+        corretamente o instante de elongação, difícil porque o movimento é lento ali; e do valor da refração no
+        horizonte.</p>
+      </div>
+      <div class="card">
+        <h3>C. Bisseção solar com gnômon</h3>
+        <p>O método da Aula 3.2: marcar dois instantes de sombra igual e bissectar. Puramente solar, não depende de
+        nenhuma estrela.</p>
+        <p class="small muted" style="margin-bottom:0"><b>Viés característico:</b> a declinação do Sol varia entre
+        manhã e tarde, produzindo erro sistemático que depende da <em>época do ano</em> da medição — não da época
+        histórica. Defendido por Isler e por Dorner.</p>
+      </div>
+      <div class="card">
+        <h3>D. Estrela polar direta</h3>
+        <p>Visar simplesmente a estrela mais próxima do polo. Em 2800 a.C. essa estrela era
+        <strong>Thuban</strong> (α Draconis), que chegou a menos de um décimo de grau do polo.</p>
+        <p class="small muted" style="margin-bottom:0"><b>Viés característico:</b> à medida que a precessão afasta
+        Thuban do polo, o erro cresce continuamente — mas para um só lado, o que não reproduz a
+        <em>inversão de sinal</em> observada.</p>
+      </div>
+    </div>
+
+    <div class="box box-pratica">
+      <h4>O critério que separa as hipóteses</h4>
+      <p>Todas as quatro produzem boa precisão. A pergunta discriminante é outra:
+      <strong>qual delas produz um viés que muda de sinal ao longo dos séculos?</strong></p>
+      <p>A hipótese <strong>C</strong> tem viés sazonal, não secular — não explica a deriva histórica.
+      A <strong>D</strong> tem viés crescente, mas monótono — não explica a inversão.
+      As hipóteses <strong>A</strong> e <strong>B</strong>, que dependem da posição relativa de estrelas afetadas
+      pela precessão, <strong>produzem naturalmente um viés que atravessa o zero</strong>.</p>
+      <p style="margin-bottom:0">É por isso que a discussão moderna se concentra nelas — e é o raciocínio de
+      Spence.</p>
+    </div>
+  </article>
+
+  <!-- ============ 4.4 ============ -->
+  <article class="aula" id="a44">
+    <h2><span class="n">Aula 4.4</span> O argumento de Spence</h2>
+
+    <p>Em novembro de 2000, <strong>Kate Spence</strong>, então em Cambridge, publicou na <i>Nature</i> uma
+    proposta que transformou o problema. O raciocínio tem quatro passos encadeados.</p>
+
+    <ul class="marcos">
+      <li>
+        <span class="quando">Passo 1</span>
+        <span class="oque"><b>O método.</b> Os egípcios teriam usado o trânsito simultâneo — a hipótese A — com um
+        par específico: <b>Kochab</b> (β Ursae Minoris) e <b>Mizar</b> (ζ Ursae Majoris), estrelas brilhantes em
+        lados opostos do polo.</span>
+      </li>
+      <li>
+        <span class="quando">Passo 2</span>
+        <span class="oque"><b>A data de ouro.</b> Por precessão, a corda que une essas duas estrelas passou
+        <em>exatamente</em> pelo polo celeste por volta de <b>2467 a.C.</b> Quem usasse o método naquele ano
+        obteria o norte verdadeiro sem erro algum.</span>
+      </li>
+      <li>
+        <span class="quando">Passo 3</span>
+        <span class="oque"><b>O erro como relógio.</b> Antes dessa data, a corda passava a um lado do polo; depois,
+        ao outro. O erro de orientação de uma pirâmide seria, portanto, uma medida direta de
+        <b>quantos anos</b> a separam de 2467 a.C. — e de que lado.</span>
+      </li>
+      <li>
+        <span class="quando">Passo 4</span>
+        <span class="oque"><b>A cronologia.</b> Supondo que a cerimônia de orientação ocorresse por volta do
+        <b>ano 2</b> de cada reinado, Spence converte os erros medidos em datas. Para Quéops, obtém
+        <b>2478 a.C.</b>, com incerteza declarada de <b>± 65 anos</b>.</span>
+      </li>
+    </ul>
+
+    <div class="box box-nota">
+      <h4>Por que isso foi notícia</h4>
+      <p>Porque inverte a direção usual da inferência. Normalmente a arqueologia data o monumento e a astronomia
+      verifica se um alinhamento faz sentido naquela data. Spence propõe o contrário: usar o
+      <strong>erro de orientação como cronômetro</strong> e datar o monumento a partir dele.</p>
+      <p>A datação resultante para Quéops exigiria <strong>rebaixar em cerca de 74 anos</strong> a estimativa
+      inferior da cronologia então corrente de von Beckerath — uma proposta de peso, feita a partir de dados
+      astronômicos, sobre a cronologia do Reino Antigo.</p>
+    </div>
+
+    <figure class="fig">
+      <svg viewBox="0 0 640 300" role="img" aria-labelledby="t-trans d-trans">
+        <title id="t-trans">Trânsito simultâneo de duas estrelas circumpolares</title>
+        <desc id="d-trans">Duas estrelas em lados opostos do polo celeste. Quando a linha que as une passa pelo
+        polo, ela é vertical e indica o norte verdadeiro. Por precessão, essa linha desliza de um lado ao outro do
+        polo ao longo dos séculos, gerando um erro que muda de sinal.</desc>
+
+        <!-- três instantes -->
+        <g>
+          <text x="106" y="26" class="svg-title" text-anchor="middle">antes de 2467 a.C.</text>
+          <circle cx="106" cy="160" r="70" class="svg-grid"/>
+          <circle cx="106" cy="160" r="4" class="svg-dot"/>
+          <text x="93" y="164" class="svg-label-sm" text-anchor="end">polo</text>
+          <line x1="82" y1="92" x2="130" y2="228" class="svg-mark"/>
+          <line x1="106" y1="86" x2="106" y2="234" class="svg-dim" stroke-dasharray="3 4"/>
+          <circle cx="86" cy="96" r="4" class="svg-star"/>
+          <circle cx="128" cy="222" r="4" class="svg-star"/>
+          <text x="106" y="272" class="svg-label-sm" text-anchor="middle">corda a oeste</text>
+        </g>
+
+        <g>
+          <text x="320" y="26" class="svg-title" text-anchor="middle">≈ 2467 a.C.</text>
+          <circle cx="320" cy="160" r="70" class="svg-grid"/>
+          <circle cx="320" cy="160" r="4" class="svg-dot"/>
+          <text x="307" y="164" class="svg-label-sm" text-anchor="end">polo</text>
+          <line x1="320" y1="90" x2="320" y2="230" class="svg-mark"/>
+          <circle cx="320" cy="92" r="4" class="svg-star"/>
+          <circle cx="320" cy="228" r="4" class="svg-star"/>
+          <text x="320" y="272" class="svg-label-sm" text-anchor="middle">corda sobre o polo</text>
+        </g>
+
+        <g>
+          <text x="534" y="26" class="svg-title" text-anchor="middle">depois de 2467 a.C.</text>
+          <circle cx="534" cy="160" r="70" class="svg-grid"/>
+          <circle cx="534" cy="160" r="4" class="svg-dot"/>
+          <text x="521" y="164" class="svg-label-sm" text-anchor="end">polo</text>
+          <line x1="558" y1="92" x2="510" y2="228" class="svg-mark"/>
+          <line x1="534" y1="86" x2="534" y2="234" class="svg-dim" stroke-dasharray="3 4"/>
+          <circle cx="554" cy="96" r="4" class="svg-star"/>
+          <circle cx="512" cy="222" r="4" class="svg-star"/>
+          <text x="534" y="272" class="svg-label-sm" text-anchor="middle">corda a leste</text>
+        </g>
+      </svg>
+      <figcaption>
+        O mecanismo proposto por Spence. Tracejado: a vertical verdadeira. Contínuo: a linha unindo as duas
+        estrelas no instante do trânsito simultâneo. A precessão faz essa linha <b>deslizar de um lado do polo ao
+        outro</b> ao longo dos séculos — e um método que confie nela herda um erro que
+        <b>inverte de sinal</b> na passagem. Esse comportamento é o que faz a hipótese A ser candidata a explicar
+        a deriva da Aula 4.2.
+      </figcaption>
+    </figure>
+  </article>
+
+  <!-- ============ 4.5 ============ -->
+  <article class="aula" id="a45">
+    <h2><span class="n">Aula 4.5</span> A réplica e o estado atual</h2>
+
+    <p>Em agosto de 2001, a <i>Nature</i> publicou a objeção de <strong>Dennis Rawlins</strong> e
+    <strong>Keith Pickering</strong>, com resposta de Spence na mesma página. O debate segue aberto e vale
+    reconstruí-lo, porque é um exemplo limpo de como uma controvérsia científica realmente funciona.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Objeção</th><th>Conteúdo</th><th>Por que pesa</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><b>Não-unicidade</b></td>
+            <td>Kochab–Mizar não é o único par que se ajusta aos dados. Outras configurações estelares produzem
+            ajustes comparáveis.</td>
+            <td>Se vários pares explicam igualmente bem, o ajuste não identifica <em>qual</em> foi usado — e a
+            datação derivada perde o suporte.</td>
+          </tr>
+          <tr>
+            <td><b>A suposição do ano 2</b></td>
+            <td>A conversão de erro em data depende de supor que a cerimônia ocorria por volta do segundo ano de
+            cada reinado.</td>
+            <td>É uma premissa sem apoio documental direto. Alterá-la desloca todas as datas obtidas.</td>
+          </tr>
+          <tr>
+            <td><b>Poucos pontos</b></td>
+            <td>Seis pirâmides, uma delas (Quéfren) fora da tendência, e três do mesmo reinado.</td>
+            <td>Com essa amostra, o ajuste tem poucos graus de liberdade e é sensível a cada ponto individual.</td>
+          </tr>
+          <tr>
+            <td><b>Alinhamentos horizontais</b></td>
+            <td>Rawlins e Pickering apontam configurações alternativas — por exemplo envolvendo Thuban e
+            10 Draconis — de natureza diferente da vertical proposta por Spence.</td>
+            <td>Amplia o espaço de hipóteses viáveis em vez de reduzi-lo.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Onde a questão está hoje</h3>
+    <p>Em 2022, <strong>Irina Tupikova</strong> publicou uma reavaliação sistemática de todas as configurações
+    estelares propostas, calculando para cada uma o erro médio que ela preveria. Os resultados dão a medida da
+    dificuldade:</p>
+
+    <div class="tablewrap">
+      <table class="dados">
+        <thead><tr><th>Configuração proposta</th><th>Tipo</th><th class="r">Desvio médio previsto</th><th class="r">Dispersão</th></tr></thead>
+        <tbody>
+          <tr><td>Kochab – Mizar <span class="muted">(Spence)</span></td><td>vertical</td><td class="num">−4,7′</td><td class="num">± 3,0′</td></tr>
+          <tr><td>Phecda – Megrez <span class="muted">(Belmonte)</span></td><td>vertical</td><td class="num">8,5′</td><td class="num">± 5,5′</td></tr>
+          <tr><td>Alioth – Mizar <span class="muted">(Tupikova)</span></td><td>horizontal</td><td class="num">−4,7′</td><td class="num">± 3,0′</td></tr>
+        </tbody>
+        <caption>Valores conforme TUPIKOVA, I. &ldquo;Astronomical Orientation of the Pyramids and Stellar
+        Alignments&rdquo;, MPIWG Preprint 511 (2022), para os lados leste. O trabalho conclui que o alinhamento
+        horizontal Alioth–Mizar, ou uma variante vertical com Kochab, explicam as orientações
+        <b>sem exigir revisão da cronologia convencional</b>.</caption>
+      </table>
+    </div>
+
+    <div class="box box-debate">
+      <h4>O balanço honesto</h4>
+      <p><strong>Bem estabelecido:</strong> as pirâmides do Reino Antigo são orientadas ao norte verdadeiro com
+      precisão notável; os erros seguem um padrão sistemático, não aleatório; e esse padrão é
+      <strong>compatível</strong> com métodos de orientação baseados em estrelas circumpolares afetadas pela
+      precessão.</p>
+      <p><strong>Em disputa:</strong> qual par de estrelas, se algum; se a configuração era vertical ou horizontal;
+      se o método era estelar ou solar; e se a deriva pode servir de instrumento cronológico.</p>
+      <p><strong>Provavelmente indecidível com os dados atuais:</strong> a distinção entre as configurações
+      estelares concorrentes. Várias produzem previsões estatisticamente indistinguíveis com apenas seis
+      monumentos. Seria preciso mais pirâmides bem medidas — e elas não existem.</p>
+      <p style="margin-bottom:0"><strong>Note o que ninguém disputa:</strong> nenhum dos participantes deste debate
+      propõe construtores anteriores ao Reino Antigo, tecnologia perdida ou intervenção externa. A discussão inteira
+      é sobre <em>qual estrela egípcios da IV Dinastia olhavam</em>. É um bom exemplo de que ceticismo sobre uma
+      hipótese específica não é ceticismo sobre a cronologia.</p>
+    </div>
+
+    <div class="box box-pratica">
+      <h4>O que decidiria a questão</h4>
+      <ul style="margin-bottom:0">
+        <li>Um <strong>texto do Reino Antigo</strong> que descrevesse o procedimento de orientação — não a legenda
+        ptolomaica da Aula 3.3, mas uma fonte contemporânea.</li>
+        <li>Medições novas e de alta precisão em pirâmides menores e mal estudadas, que <strong>aumentassem a
+        amostra</strong>.</li>
+        <li>Evidência arqueológica de <strong>estruturas de observação</strong> — plataformas, marcos, linhas de
+        base — associadas aos canteiros.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- ============ EXERCÍCIOS ============ -->
+  <div class="exercicios">
+    <h3>Exercícios do Módulo 04</h3>
+    <ol>
+      <li>Converta o erro de Quéops (−3,2′) em desvio linear sobre o lado de 230,4 m. E o de Meidum (−19,4′) sobre
+      o lado de 144 m.</li>
+      <li>Por que cinco pirâmides errando para o mesmo lado é mais informativo do que seis pirâmides errando pouco?</li>
+      <li>Das quatro famílias de hipóteses da Aula 4.3, quais podem produzir um erro que <em>inverte de sinal</em>
+      ao longo dos séculos? Justifique.</li>
+      <li>Explique em três frases por que a bisseção solar com gnômon, ainda que precisa, não explica o padrão
+      observado.</li>
+      <li>A datação de Spence para Quéops é 2478 a.C. ± 65 anos. Que premissa não astronômica sustenta essa
+      conversão, e o que acontece se ela estiver errada?</li>
+      <li>Tupikova obtém desvio médio de −4,7′ ± 3,0′ tanto para Kochab–Mizar quanto para Alioth–Mizar. Que
+      conclusão metodológica se tira disso?</li>
+      <li>Quéfren (−6,1′) rompe a tendência de Quéops (−3,2′). Que três explicações você consideraria, e como
+      tentaria distingui-las?</li>
+    </ol>
+
+    <details class="gab">
+      <summary>Ver gabarito comentado</summary>
+      <div class="body">
+        <ol>
+          <li><b>Quéops:</b> 230,4 × tan(3,2′) = 230,4 × 0,000931 ≈ <strong>0,21 m</strong>, cerca de 21 cm em
+          230 metros. <b>Meidum:</b> 144 × tan(19,4′) = 144 × 0,005643 ≈ <strong>0,81 m</strong>, cerca de 81 cm.
+          A diferença de qualidade entre as duas obras fica concreta: de quase um metro para um palmo.</li>
+
+          <li>Porque <strong>errar pouco</strong> é explicável por competência — bons instrumentos, bases longas,
+          médias de muitas observações. Já <strong>errar sistematicamente para o mesmo lado</strong> não pode vir de
+          erro aleatório: exige um viés no método. É a existência do viés, e não a sua pequenez, que abre a
+          possibilidade de identificar <em>qual</em> método foi usado.</li>
+
+          <li>As hipóteses <strong>A</strong> (trânsito simultâneo) e <strong>B</strong> (elongação máxima), porque
+          ambas dependem da <strong>posição relativa de estrelas em relação ao polo</strong>, e essa relação é
+          continuamente alterada pela precessão. A corda que une um par de estrelas desliza de um lado do polo ao
+          outro, e o erro herdado atravessa o zero. As hipóteses C e D não têm esse comportamento.</li>
+
+          <li>Seu erro característico depende da <strong>variação da declinação solar entre manhã e tarde</strong>,
+          que é um efeito <em>sazonal</em>: muda conforme a época do ano em que a medição é feita. Não muda
+          conforme o <em>século</em>. Portanto, ainda que o método fosse usado, ele não produziria a deriva
+          ordenada de Meidum a Miquerinos — produziria dispersão conforme o mês da fundação de cada obra.</li>
+
+          <li>A premissa de que a <strong>cerimônia de orientação ocorria por volta do ano 2 de cada reinado</strong>.
+          Ela é arqueológica e documental, não astronômica, e não tem apoio direto em fonte do Reino Antigo. Se a
+          cerimônia ocorria em momento variável dos reinados, cada data obtida se desloca de forma diferente, a
+          regressão muda, e a incerteza real passa a ser bem maior que os ±65 anos declarados.</li>
+
+          <li>Que os dados <strong>não discriminam entre as duas hipóteses</strong>. Quando duas explicações
+          fisicamente distintas produzem previsões estatisticamente indistinguíveis sobre a mesma amostra, o ajuste
+          deixa de ser evidência a favor de qualquer uma delas em particular — ele apenas mostra que ambas são
+          <em>compatíveis</em>. Decidir exigiria dados novos, não análise nova.</li>
+
+          <li>Três explicações plausíveis: (i) <strong>erro de execução</strong> local, independente do método —
+          transferência imperfeita da direção observada para a base; (ii) <strong>cronologia</strong>: se o
+          intervalo real entre Quéops e Quéfren não é o suposto, o ponto pode estar no lugar errado no eixo
+          horizontal; (iii) <strong>método diferente</strong>, ou observação feita em condições diferentes, por
+          equipe diferente. Para distinguir: reexaminar a medição original e sua incerteza; buscar evidência
+          independente sobre a duração dos reinados; e verificar se pirâmides menores contemporâneas apresentam o
+          mesmo desvio — se apresentarem, aponta para método; se não, para execução.</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <div class="box box-nota">
+    <h4>Leitura recomendada para este módulo</h4>
+    <p>SPENCE, K. <i>Nature</i> 408 (2000), p. 320–324 — leia o artigo original, tem quatro páginas.
+    &nbsp;·&nbsp; RAWLINS, D.; PICKERING, K. <i>Nature</i> 412 (2001), p. 699, com a resposta de Spence.
+    &nbsp;·&nbsp; TUPIKOVA, I. MPIWG Preprint 511 (2022) — acesso aberto. &nbsp;·&nbsp;
+    LEHNER, M.; HAWASS, Z. <i>Giza and the Pyramids</i> (2017), capítulos sobre levantamento e construção.</p>
+  </div>
+
+</section>
+<div class="wrap"><nav class="pager"><a href="modulo-03.html"><span class="k">Módulo anterior</span><span class="v">03 · Instrumentos e o ritual de fundação</span></a><a class="next" href="modulo-05.html"><span class="k">Próximo módulo</span><span class="v">05 · Templos, necrópoles e o horizonte</span></a></nav></div></main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span class="gl">𓇯 𓇳 𓇹 𓇼</span>
+    <p><strong>Arqueoastronomia das Necrópoles</strong> — 24 horas · Desvendando os Códigos Egípcios.</p>
+    <p class="small">Dados de orientação de Spence (<i>Nature</i> 408, 2000), Belmonte &amp; Shaltout
+    (<i>JHA</i> / <i>Advances in Space Research</i>) e Tupikova (preprint MPIWG 511, 2022), com as fontes indicadas
+    em cada tabela. Transliteração conforme a Leiden Unified Transliteration (IAE, 2023).</p>
+    <p class="small muted">Conteúdo didático. Nenhuma medida apresentada aqui substitui a consulta à publicação original.</p>
+  </div>
+</footer>
+
+<!-- ce-progresso:início -->
+<!-- Registro de leitura. Guarda no navegador do aluno, em localStorage;
+     nada é enviado ao servidor. Gerado por injetar-progresso.py a partir
+     de area-aluno/js/progresso.js — não edite aqui. -->
+<script>
+/* ce-progresso — registro de leitura dos cursos.
+ *
+ * Guarda no navegador do aluno, em localStorage. Nada sai do dispositivo:
+ * nem para o site, nem para nós. Isso tem um custo honesto — trocar de
+ * computador recomeça a contagem — e uma vantagem: nenhum dado de leitura
+ * de ninguém fica armazenado em lugar nenhum.
+ *
+ * Formato:
+ *   { "curso-hieroglifos": { "3": { pct: 100, em: 1758... } }, ... }
+ *   pct = maior porcentagem de rolagem já alcançada naquele módulo
+ *
+ * Este arquivo é a versão de referência. Nas páginas dos módulos ele é
+ * injetado inline por scripts/injetar-progresso.py, para o curso não
+ * depender de um segundo pedido de rede nem da área do aluno estar no ar.
+ */
+(function (global) {
+  "use strict";
+
+  var CHAVE = "ce_progresso_v1";
+  var LIDO = 90; // % de rolagem a partir do qual o módulo conta como lido
+
+  function ler() {
+    try { return JSON.parse(global.localStorage.getItem(CHAVE)) || {}; }
+    catch (e) { return {}; }          // modo privado, cookies bloqueados, etc.
+  }
+
+  function gravar(dados) {
+    try { global.localStorage.setItem(CHAVE, JSON.stringify(dados)); return true; }
+    catch (e) { return false; }
+  }
+
+  function registrar(curso, modulo, pct) {
+    var d = ler();
+    var c = d[curso] || (d[curso] = {});
+    var antes = c[modulo] || { pct: 0 };
+    // só sobe: reler o começo de um módulo não desfaz o que já foi lido
+    if (pct <= antes.pct) { antes.em = Date.now(); c[modulo] = antes; }
+    else c[modulo] = { pct: pct, em: Date.now() };
+    gravar(d);
+  }
+
+  function limpar(curso) {
+    var d = ler();
+    if (curso) delete d[curso]; else d = {};
+    gravar(d);
+  }
+
+  /* ---- métricas de um curso, a partir da grade em window.CE_CURSOS ---- */
+  function resumo(curso, totalModulos) {
+    var c = ler()[curso] || {};
+    var lidos = 0, ultimo = null, ultimoEm = 0;
+    for (var k in c) {
+      if (!Object.prototype.hasOwnProperty.call(c, k)) continue;
+      if (c[k].pct >= LIDO) lidos++;
+      if (c[k].em > ultimoEm) { ultimoEm = c[k].em; ultimo = { modulo: +k, pct: c[k].pct }; }
+    }
+    return {
+      lidos: lidos,
+      total: totalModulos,
+      pct: totalModulos ? Math.round((lidos / totalModulos) * 100) : 0,
+      concluido: totalModulos > 0 && lidos >= totalModulos,
+      ultimo: ultimo,
+      modulos: c,
+    };
+  }
+
+  global.CEProgresso = {
+    ler: ler, registrar: registrar, limpar: limpar, resumo: resumo, LIDO: LIDO,
+  };
+
+  /* ---- se estamos numa página de módulo, medir a leitura ---- */
+  var m = global.location.pathname.match(/\/(curso-[a-z-]+)\/modulo-(\d+)\.html?$/i);
+  if (!m) return;
+  var curso = m[1], modulo = String(parseInt(m[2], 10));
+
+  function pctAtual() {
+    var doc = global.document.documentElement;
+    var alcance = doc.scrollHeight - doc.clientHeight;
+    // página que cabe inteira na tela já está lida por definição
+    if (alcance <= 40) return 100;
+    return Math.min(100, Math.round(((global.scrollY || 0) / alcance) * 100));
+  }
+
+  var pendente = false;
+  function medir() {
+    if (pendente) return;
+    pendente = true;
+    global.requestAnimationFrame(function () {
+      pendente = false;
+      registrar(curso, modulo, pctAtual());
+    });
+  }
+
+  global.addEventListener("scroll", medir, { passive: true });
+  global.addEventListener("pagehide", medir);
+  global.document.addEventListener("visibilitychange", function () {
+    if (global.document.visibilityState === "hidden") medir();
+  });
+  // marca a visita já na abertura, para o "continuar de onde parei" funcionar
+  // mesmo em quem abriu e saiu sem rolar
+  if (global.document.readyState === "complete") medir();
+  else global.addEventListener("load", medir);
+})(window);
+</script>
+<!-- ce-progresso:fim -->
+</body>
+</html>

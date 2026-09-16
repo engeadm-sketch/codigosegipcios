@@ -10,6 +10,7 @@ import SacredLexicon from "@/components/SacredLexicon";
 import EngineeringChronicles from "@/components/EngineeringChronicles";
 import StoreSection from "@/components/StoreSection";
 import AcademicFooter from "@/components/AcademicFooter";
+import { WHATSAPP } from "@/config";
 
 const TOTAL_FRAMES = 40;
 
@@ -943,7 +944,7 @@ function HomePageContent() {
         </span>
 
         <a
-          href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20projeto."
+          href={`https://wa.me/${WHATSAPP}?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20projeto.`}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Conversar no WhatsApp"

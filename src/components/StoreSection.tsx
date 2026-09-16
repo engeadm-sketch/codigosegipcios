@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
+import { WHATSAPP, DESTINOS_LOJA } from "@/config";
 
 export default function StoreSection() {
   const { t } = useLanguage();
@@ -45,11 +46,13 @@ export default function StoreSection() {
     );
   };
 
-  const handleBuyClick = (item: any) => {
+  // Os produtos físicos continuam indo para o WhatsApp; os cursos têm
+  // página de venda própria e vão direto para ela (ver src/config.ts).
+  const linkWhatsApp = (item: any) => {
     const text = encodeURIComponent(
       `Olá! Gostaria de comprar o item da Loja Oficial: ${item.title} (${item.price})`
     );
-    window.open(`https://wa.me/5511999999999?text=${text}`, "_blank");
+    return `https://wa.me/${WHATSAPP}?text=${text}`;
   };
 
   return (
@@ -152,13 +155,16 @@ export default function StoreSection() {
                   </span>
                 </div>
 
-                <button
-                  onClick={() => handleBuyClick(item)}
+                <a
+                  href={DESTINOS_LOJA[item.id] ?? linkWhatsApp(item)}
+                  {...(DESTINOS_LOJA[item.id]
+                    ? {}
+                    : { target: "_blank", rel: "noopener noreferrer" })}
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#e7bb81] via-[#dfa55c] to-[#c78839] text-[#140e04] font-bold text-xs uppercase tracking-wider hover:brightness-110 hover:shadow-[0_0_20px_rgba(223,165,92,0.5)] transition-all duration-300"
                 >
                   <span>{storeSection.buyBtn}</span>
                   <span className="text-sm">→</span>
-                </button>
+                </a>
               </div>
             </div>
           ))}

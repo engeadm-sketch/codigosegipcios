@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Módulo 01 — O que é arqueoastronomia — e o que ela exige | Arqueoastronomia das Necrópoles</title>
+<meta name="description" content="A disciplina, sua história acidentada e o método que a separa de encontrar figuras nas nuvens: azimute, altura do horizonte, declinação e controle estatístico.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Noto+Sans+Mono:wght@400;500&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/curso.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html"><span class="gl">𓇼</span> Códigos Egípcios</a>
+    <nav class="topnav">
+      <a href="index.html">Início do curso</a>
+      <a href="index.html#grade">Grade</a>
+      <a href="index.html#avaliacao">Avaliação</a>
+      <a href="index.html#bibliografia">Bibliografia</a>
+      <a href="../curso-hieroglifos/index.html">Curso de hieróglifos</a>
+      <a href="https://codigosegipcios.netlify.app/">Voltar ao site</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="glyphband">𓇯𓈌𓇼</div>
+    <span class="eyebrow">Módulo 01 · 3h</span>
+    <h1>O que é arqueoastronomia — e o que ela exige</h1>
+    <p class="lede">A disciplina, sua história acidentada e o método que a separa de encontrar figuras nas nuvens: azimute, altura do horizonte, declinação e controle estatístico.</p>
+  </div>
+</section>
+<section class="wrap narrow">
+
+  <div class="objetivos">
+    <h4>Objetivos do módulo</h4>
+    <ul>
+      <li>Explicar por que um alinhamento isolado nunca constitui evidência, em termos combinatórios</li>
+      <li>Situar Lockyer, Thom e Hawkins, e entender o que a crise metodológica dos anos 1970 corrigiu</li>
+      <li>Usar corretamente azimute, altura e declinação, e saber por que a declinação é a grandeza que importa</li>
+      <li>Converter azimute e altura em declinação e aplicar as correções relevantes</li>
+      <li>Listar as condições que tornam uma alegação de alinhamento defensável</li>
+    </ul>
+  </div>
+
+  <div class="toc">
+    <h4>Neste módulo</h4>
+    <ol>
+      <li><a href="#a11">A pergunta legítima e a armadilha geométrica</a></li>
+      <li><a href="#a12">Como o campo aprendeu a ser rigoroso</a></li>
+      <li><a href="#a13">Dois sistemas de coordenadas</a></li>
+      <li><a href="#a14">A conversão que sustenta tudo</a></li>
+      <li><a href="#a15">O que torna um alinhamento defensável</a></li>
+    </ol>
+  </div>
+
+  <!-- ============ 1.1 ============ -->
+  <article class="aula" id="a11">
+    <h2><span class="n">Aula 1.1</span> A pergunta legítima e a armadilha geométrica</h2>
+
+    <p>A pergunta é boa: povos antigos observavam o céu com atenção e usavam o que observavam. Isso não é
+    especulação — é fato documentado para o Egito, a Mesopotâmia, a Mesoamérica e a Grã-Bretanha neolítica.
+    Calendários agrícolas, festivais, navegação e ritual dependiam do céu. Seria estranho se a arquitetura
+    monumental não registrasse nada disso.</p>
+
+    <p>A armadilha também é real, e vale a pena vê-la em números antes de qualquer outra coisa.</p>
+
+    <h3>Conte os alvos</h3>
+    <p>Quantas direções astronômicas &ldquo;significativas&rdquo; existem no horizonte de um sítio egípcio?
+    Uma lista deliberadamente conservadora:</p>
+
+    <ul>
+      <li>nascer e ocaso do <strong>sol</strong> nos dois solstícios e nos equinócios — <strong>6 direções</strong></li>
+      <li>nascer e ocaso da <strong>lua</strong> nos limites maior e menor (as &ldquo;paradas lunares&rdquo;) — <strong>8 direções</strong></li>
+      <li>nascer e ocaso das <strong>estrelas de 1ª magnitude</strong> visíveis do Egito — cerca de 15 estrelas, <strong>30 direções</strong></li>
+      <li>os quatro <strong>pontos cardeais</strong> — <strong>4 direções</strong></li>
+      <li>nascer e ocaso dos <strong>cinco planetas visíveis</strong>, em faixas largas — dezenas de direções</li>
+    </ul>
+
+    <p>Só o que está listado acima passa de <strong>48 direções-alvo</strong>, espalhadas por 360°. Se cada alvo
+    é aceito com uma tolerância de ±1°, os alvos cobrem cerca de 96° — mais de um quarto de todo o horizonte.
+    E um monumento retangular oferece <strong>oito</strong> direções para testar: quatro eixos, cada um em dois
+    sentidos.</p>
+
+    <div class="box box-atencao">
+      <h4>A conta que você precisa fazer uma vez na vida</h4>
+      <p>Com 8 direções para testar e ~27% do horizonte coberto por alvos, a probabilidade de que
+      <em>pelo menos uma</em> das direções de um monumento caia sobre <em>algum</em> alvo, puramente por acaso, é de
+      aproximadamente <strong>1 − 0,73⁸ ≈ 92%</strong>.</p>
+      <p>Ou seja: se você pegar um galpão industrial construído em 1998 sem nenhuma intenção astronômica, medir seus
+      oito eixos e procurar em toda a lista de alvos, você tem cerca de nove chances em dez de encontrar um
+      &ldquo;alinhamento&rdquo;. Esta é a razão pela qual um alinhamento isolado, encontrado depois do fato,
+      <strong>não é evidência de nada</strong>.</p>
+    </div>
+
+    <p>Note o que a conta <em>não</em> diz. Ela não diz que alinhamentos intencionais não existem — existem, e este
+    curso estuda vários. Ela diz que a <strong>demonstração</strong> de intencionalidade exige mais do que exibir
+    uma coincidência. Exige um protocolo que torne a coincidência improvável de antemão.</p>
+  </article>
+
+  <!-- ============ 1.2 ============ -->
+  <article class="aula" id="a12">
+    <h2><span class="n">Aula 1.2</span> Como o campo aprendeu a ser rigoroso</h2>
+
+    <p>A arqueoastronomia passou por um ciclo completo de entusiasmo, excesso e correção. Conhecer esse ciclo é
+    parte do método, porque cada erro cometido gerou uma regra que hoje é padrão.</p>
+
+    <ul class="marcos">
+      <li>
+        <span class="quando">1894</span>
+        <span class="oque"><b>Norman Lockyer</b>, <i>The Dawn of Astronomy</i>. O astrônomo que descobriu o hélio
+        propõe que templos egípcios e gregos são orientados astronomicamente. Funda o campo — e erra em quase
+        todos os casos particulares, inclusive na leitura que propõe para Karnak.</span>
+      </li>
+      <li>
+        <span class="quando">1955–1971</span>
+        <span class="oque"><b>Alexander Thom</b> levanta centenas de círculos megalíticos britânicos com rigor
+        topográfico inédito e propõe alinhamentos lunares de altíssima precisão e uma unidade de medida universal,
+        a &ldquo;jarda megalítica&rdquo;. O levantamento é excelente; as conclusões, não.</span>
+      </li>
+      <li>
+        <span class="quando">1963–1965</span>
+        <span class="oque"><b>Gerald Hawkins</b>, <i>Stonehenge Decoded</i>. Usa um computador para testar
+        alinhamentos em Stonehenge e propõe que o monumento é um computador de eclipses. O livro é um enorme
+        sucesso popular.</span>
+      </li>
+      <li>
+        <span class="quando">1966</span>
+        <span class="oque"><b>Richard Atkinson</b>, arqueólogo de Stonehenge, publica a resenha demolidora
+        &ldquo;Moonshine on Stonehenge&rdquo;. A crítica não é astronômica: é <strong>arqueológica e
+        estatística</strong>. Hawkins testara alinhamentos entre pontos que nunca foram contemporâneos, e não
+        calculara a probabilidade de acerto ao acaso.</span>
+      </li>
+      <li>
+        <span class="quando">Anos 1970–80</span>
+        <span class="oque">A <b>crise</b>. Estatísticos reexaminam os dados de Thom e mostram que a precisão
+        alegada não sobrevive a um teste apropriado. A jarda megalítica não resiste à análise. O campo perde
+        credibilidade acadêmica quase inteira.</span>
+      </li>
+      <li>
+        <span class="quando">1984–1999</span>
+        <span class="oque"><b>Clive Ruggles</b> relevanta os sítios escoceses com protocolo pré-declarado e
+        amostragem completa. O resultado é modesto e sólido: há orientações preferenciais reais, em faixas largas,
+        não alinhamentos de precisão. É a <b>refundação metodológica</b> da disciplina.</span>
+      </li>
+      <li>
+        <span class="quando">Hoje</span>
+        <span class="oque">O campo opera com pré-registro de hipótese, amostragem populacional, testes estatísticos
+        e corroboração por evidência independente — texto, iconografia, contexto ritual. É lento, é chato, e
+        funciona.</span>
+      </li>
+    </ul>
+
+    <div class="box box-nota">
+      <h4>&ldquo;Marrom&rdquo; e &ldquo;verde&rdquo;</h4>
+      <p>Anthony Aveni cunhou uma distinção que se tornou corrente no campo, tirada da cor das capas de dois
+      volumes de anais de congresso:</p>
+      <ul style="margin-bottom:0">
+        <li><strong>Arqueoastronomia verde</strong> — quantitativa, estatística, medição de alinhamentos em
+        populações de monumentos. Tradição britânica, herdeira de Thom e Ruggles.</li>
+        <li><strong>Arqueoastronomia marrom</strong> — contextual, humanística, ancorada em textos, mitos,
+        iconografia e etnografia. Tradição americanista, herdeira dos estudos mesoamericanos.</li>
+      </ul>
+      <p style="margin-top:.8rem">A distinção já foi polêmica e hoje é vista como falsa oposição: um alinhamento
+      estatisticamente sólido que nenhuma fonte cultural corrobora é fraco, e uma leitura cultural rica que não
+      sobrevive à medição também. <strong>Este curso exige as duas coisas</strong> — é por isso que o Módulo 02
+      estuda os textos astronômicos egípcios antes de o Módulo 04 medir pirâmides.</p>
+    </div>
+  </article>
+
+  <!-- ============ 1.3 ============ -->
+  <article class="aula" id="a13">
+    <h2><span class="n">Aula 1.3</span> Dois sistemas de coordenadas</h2>
+
+    <p>Para dizer onde um astro está, usamos dois sistemas. Entender por que são dois — e qual deles descreve o
+    monumento e qual descreve o céu — é o coração técnico deste curso.</p>
+
+    <h3>Sistema horizontal: o que você mede no campo</h3>
+    <p>Ancorado no observador e no seu horizonte. Duas coordenadas:</p>
+    <ul>
+      <li><strong>Azimute (A)</strong> — o ângulo horizontal, medido a partir do <strong>norte verdadeiro</strong>,
+      girando no sentido horário: N = 0°, E = 90°, S = 180°, W = 270°.</li>
+      <li><strong>Altura (h)</strong> — o ângulo vertical acima do plano horizontal. Zenith = 90°.</li>
+    </ul>
+
+    <figure class="fig">
+      <svg viewBox="0 0 640 380" role="img" aria-labelledby="t-horiz d-horiz">
+        <title id="t-horiz">Sistema de coordenadas horizontais</title>
+        <desc id="d-horiz">Uma cúpula celeste sobre um horizonte elíptico. Um astro é localizado por seu azimute,
+        medido ao longo do horizonte a partir do norte, e por sua altura acima do horizonte.</desc>
+
+        <!-- cúpula -->
+        <path d="M 50 290 A 270 270 0 0 1 590 290" class="svg-grid"/>
+        <!-- horizonte -->
+        <ellipse cx="320" cy="290" rx="270" ry="58" class="svg-rule"/>
+        <!-- meridiano N-S -->
+        <path d="M 320 232 A 90 58 0 0 0 320 348" class="svg-grid" stroke-dasharray="3 4"/>
+
+        <!-- cardeais -->
+        <circle cx="320" cy="232" r="3.5" class="svg-star"/>
+        <text x="320" y="220" class="svg-label" text-anchor="middle">N</text>
+        <circle cx="320" cy="348" r="3.5" class="svg-star"/>
+        <text x="320" y="366" class="svg-label" text-anchor="middle">S</text>
+        <circle cx="590" cy="290" r="3.5" class="svg-star"/>
+        <text x="606" y="294" class="svg-label" text-anchor="middle">L</text>
+        <circle cx="50" cy="290" r="3.5" class="svg-star"/>
+        <text x="34" y="294" class="svg-label" text-anchor="middle">O</text>
+
+        <!-- zênite -->
+        <circle cx="320" cy="20" r="3" class="svg-star"/>
+        <text x="320" y="14" class="svg-label-sm" text-anchor="middle">zênite</text>
+
+        <!-- observador -->
+        <circle cx="320" cy="290" r="4" class="svg-dot"/>
+        <text x="300" y="306" class="svg-label-sm" text-anchor="end">observador</text>
+
+        <!-- arco de azimute sobre o horizonte, de N até o pé do astro -->
+        <path d="M 320 232 A 270 58 0 0 1 554 319" class="svg-mark"/>
+        <!-- pé do astro -->
+        <circle cx="554" cy="319" r="3" class="svg-dot"/>
+        <!-- linha vertical: altura -->
+        <line x1="554" y1="319" x2="489" y2="236" class="svg-mark" stroke-dasharray="4 4"/>
+        <!-- raio do observador ao astro -->
+        <line x1="320" y1="290" x2="489" y2="236" class="svg-dim"/>
+        <!-- o astro -->
+        <g transform="translate(489,236)">
+          <path d="M 0 -9 L 2.4 -2.8 L 8.8 -2.4 L 3.8 1.6 L 5.6 8 L 0 4.2 L -5.6 8 L -3.8 1.6 L -8.8 -2.4 L -2.4 -2.8 Z" class="svg-sun"/>
+        </g>
+        <text x="489" y="218" class="svg-label" text-anchor="middle">astro</text>
+
+        <!-- rótulos das duas coordenadas -->
+        <text x="452" y="290" class="svg-label" text-anchor="middle">A</text>
+        <text x="536" y="278" class="svg-label" text-anchor="middle">h</text>
+      </svg>
+      <figcaption>
+        <b>Azimute (A)</b> percorre o horizonte a partir do norte, no sentido horário; <b>altura (h)</b> sobe
+        verticalmente a partir do horizonte. Os dois juntos localizam qualquer ponto do céu — mas apenas
+        <em>para aquele observador, naquele instante</em>.
+      </figcaption>
+    </figure>
+
+    <h3>Sistema equatorial: o que descreve a estrela</h3>
+    <p>Ancorado na esfera celeste, não no observador:</p>
+    <ul>
+      <li><strong>Declinação (δ)</strong> — o equivalente celeste da latitude: a distância angular ao norte (+) ou
+      ao sul (−) do equador celeste. Varia de +90° (polo norte celeste) a −90°.</li>
+      <li><strong>Ascensão reta (α)</strong> — o equivalente celeste da longitude.</li>
+    </ul>
+
+    <div class="box box-pratica">
+      <h4>Por que a declinação é a grandeza que importa</h4>
+      <p>O azimute em que uma estrela nasce <strong>não é uma propriedade da estrela</strong>: depende da latitude
+      do observador e da altura do horizonte naquela direção. A mesma estrela nasce em azimutes diferentes no
+      Cairo e em Assuã.</p>
+      <p>A <strong>declinação</strong>, ao contrário, é uma propriedade da estrela, e muda apenas lentamente — por
+      precessão, ao longo de séculos. Por isso o procedimento canônico da arqueoastronomia é sempre o mesmo:</p>
+      <p style="text-align:center;font-family:var(--font-mono);color:var(--gold-light);margin:1.2rem 0 0">
+        azimute medido &nbsp;+&nbsp; altura do horizonte &nbsp;+&nbsp; latitude &nbsp;→&nbsp; <strong>declinação</strong>
+      </p>
+      <p style="margin-top:1rem;margin-bottom:0">A declinação é a moeda comum. É ela que se compara com efemérides,
+      é ela que se plota em histograma para uma população de monumentos, e é ela que aparece nos resultados de
+      Belmonte e Shaltout no Módulo 05.</p>
+    </div>
+  </article>
+
+  <!-- ============ 1.4 ============ -->
+  <article class="aula" id="a14">
+    <h2><span class="n">Aula 1.4</span> A conversão que sustenta tudo</h2>
+
+    <p>Uma única fórmula transforma a medida de campo no número comparável.</p>
+
+    <div class="formula">
+      <span class="eq">sen δ = sen φ · sen h + cos φ · cos h · cos A</span>
+      <dl>
+        <dt>δ</dt><dd>declinação do astro — o que queremos descobrir</dd>
+        <dt>φ</dt><dd>latitude geográfica do sítio</dd>
+        <dt>h</dt><dd>altura angular do horizonte <em>naquele azimute</em> — não zero, salvo em horizonte marítimo</dd>
+        <dt>A</dt><dd>azimute medido a partir do norte verdadeiro</dd>
+      </dl>
+    </div>
+
+    <h3>Exemplo trabalhado: o eixo de Karnak</h3>
+    <p>O eixo principal do templo de Amon-Rá em Karnak tem azimute de aproximadamente <strong>116,75°</strong>
+    na direção de entrada (sudeste). Karnak está a <strong>φ ≈ 25,72° N</strong>. A colina do outro lado do Nilo
+    dá uma altura de horizonte de cerca de <strong>h ≈ 0,5°</strong>.</p>
+
+    <div class="ex">
+      <p class="tl">sen δ = sen(25,72°)·sen(0,5°) + cos(25,72°)·cos(0,5°)·cos(116,75°)</p>
+      <p class="tl">sen δ = (0,4340)(0,0087) + (0,9009)(0,99996)(−0,4501)</p>
+      <p class="tl">sen δ = 0,0038 − 0,4055 = −0,4017</p>
+      <p class="tl">δ = −23,69°</p>
+      <p class="tr">Uma declinação de aproximadamente <strong>−23,7°</strong>. Guarde esse número: no Módulo 05 ele
+      vai coincidir com o pico mais forte do histograma de 330 templos egípcios, e vai ter um nome —
+      <strong>o sol do solstício de inverno</strong>.</p>
+      <p class="gloss">Valores aproximados, para demonstrar o procedimento. As medidas publicadas de Karnak variam
+      conforme o ponto de referência adotado no eixo.</p>
+    </div>
+
+    <h3>As correções que separam um resultado de um palpite</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Correção</th><th>Magnitude típica</th><th>Quando importa</th></tr></thead>
+        <tbody>
+          <tr><td><b>Declinação magnética</b></td><td>vários graus</td><td><b>Sempre</b>, se você mediu com bússola. O norte magnético não é o verdadeiro e se desloca continuamente; é necessário corrigir pelo valor da data e do local da medição.</td></tr>
+          <tr><td><b>Refração atmosférica</b></td><td>~0,57° no horizonte</td><td>Sempre que o astro está próximo do horizonte. A refração <em>eleva</em> a imagem: o sol é visível quando geometricamente já se pôs.</td></tr>
+          <tr><td><b>Semidiâmetro</b></td><td>~0,27° (sol e lua)</td><td>Sol e lua têm disco. É preciso declarar se o alvo é o centro, o limbo superior ou o primeiro contato com o horizonte — as três convenções diferem em mais de meio grau.</td></tr>
+          <tr><td><b>Extinção atmosférica</b></td><td>variável</td><td>Estrelas fracas não são visíveis exatamente no horizonte; desaparecem alguns graus antes. Crítico para levantes helíacos (Módulo 02).</td></tr>
+          <tr><td><b>Paralaxe</b></td><td>~0,95° (lua)</td><td>Só importa para a lua.</td></tr>
+          <tr><td><b>Altura real do horizonte</b></td><td>0° a vários graus</td><td>Sempre. Usar h = 0 quando há uma colina de 2° no caminho introduz erro sistemático de ordem comparável ao efeito que se quer medir.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-atencao">
+      <h4>Precisão espúria</h4>
+      <p>Um azimute medido com bússola de mão tem incerteza da ordem de ±0,5°, e frequentemente pior. Um azimute
+      medido sobre imagem de satélite, dependendo do comprimento do eixo, pode chegar a ±0,1°. Em nenhum dos dois
+      casos faz sentido reportar uma declinação com três casas decimais.</p>
+      <p>Quando você encontrar uma publicação que informa &ldquo;δ = −23,762°&rdquo; sem barra de erro, a precisão
+      é decorativa. <strong>Um valor sem incerteza declarada não é um resultado.</strong></p>
+    </div>
+  </article>
+
+  <!-- ============ 1.5 ============ -->
+  <article class="aula" id="a15">
+    <h2><span class="n">Aula 1.5</span> O que torna um alinhamento defensável</h2>
+
+    <p>Cinco condições. Nenhuma delas é suficiente sozinha; juntas, transformam uma coincidência numa alegação
+    que pode ser testada e, se for o caso, refutada.</p>
+
+    <div class="grid grid-2" style="margin-top:1.6rem">
+      <div class="card">
+        <h3>1. A hipótese vem antes da medida</h3>
+        <p>Declare o alvo <em>antes</em> de ir a campo. &ldquo;Vou testar se este eixo aponta para o nascer do sol
+        no solstício de inverno&rdquo; é ciência. &ldquo;Medi o eixo e depois procurei o que havia por perto&rdquo;
+        é a armadilha da Aula 1.1.</p>
+      </div>
+      <div class="card">
+        <h3>2. A população inteira é medida</h3>
+        <p>Meça <em>todos</em> os monumentos da classe, não só os que confirmam. Belmonte e Shaltout mediram mais
+        de 330 templos — inclusive os que não se alinham a nada. É o denominador que dá sentido ao numerador.</p>
+      </div>
+      <div class="card">
+        <h3>3. O resultado é estatisticamente significativo</h3>
+        <p>O padrão precisa ser mais forte do que o esperado ao acaso, e isso se demonstra com um teste, não com
+        uma impressão. Um pico num histograma de declinações é evidência; um caso isolado não.</p>
+      </div>
+      <div class="card">
+        <h3>4. Há corroboração independente</h3>
+        <p>Textos, inscrições de fundação, iconografia, nome do templo, festivais na data prevista. A astronomia
+        diz que o alinhamento é <em>possível</em>; a evidência cultural diz que era <em>pretendido</em>.</p>
+      </div>
+      <div class="card">
+        <h3>5. A incerteza é declarada</h3>
+        <p>Azimute com sua barra de erro, altura de horizonte com a sua, declinação resultante com a incerteza
+        propagada. Quem omite isso está pedindo que você confie, não que verifique.</p>
+      </div>
+      <div class="card">
+        <h3>E um teste de honestidade</h3>
+        <p>Uma boa publicação relata os casos que <strong>não</strong> se alinharam. Se um estudo só apresenta
+        acertos, ou os fracassos foram omitidos, ou a amostra foi escolhida depois — e nos dois casos o resultado
+        não vale.</p>
+      </div>
+    </div>
+
+    <div class="box box-debate">
+      <h4>O caso das casas redondas britânicas</h4>
+      <p>Um exemplo didático, citado no guia prático da BAJR. Levantamentos de casas redondas da Idade do Ferro
+      britânica mostravam que as portas tendiam a se abrir para leste, o que foi interpretado como orientação
+      solar ritual — uma leitura plausível e atraente.</p>
+      <p>O problema apareceu na revisão: a amostra havia sido <strong>filtrada</strong>. Estruturas cuja
+      orientação não era clara tinham sido removidas do conjunto, e a remoção não era aleatória. Com a população
+      completa, o padrão enfraquece bastante — e explicações não astronômicas, como a direção do vento dominante e
+      a entrada de luz da manhã por razões práticas, passam a competir em pé de igualdade.</p>
+      <p>A lição não é que a orientação a leste seja falsa. É que <strong>a decisão sobre o que entra na amostra
+      precisa ser tomada e declarada antes de olhar os resultados</strong>, ou o estudo mede a decisão do
+      pesquisador, não o comportamento dos construtores.</p>
+    </div>
+  </article>
+
+  <!-- ============ EXERCÍCIOS ============ -->
+  <div class="exercicios">
+    <h3>Exercícios do Módulo 01</h3>
+    <ol>
+      <li>Refaça a conta da Aula 1.1 com uma tolerância de ±2° por alvo, em vez de ±1°. Qual passa a ser a
+      probabilidade de encontrar ao menos um &ldquo;alinhamento&rdquo; por acaso num monumento retangular?</li>
+      <li>Por que a crítica de Atkinson a Hawkins foi mais devastadora do que qualquer objeção astronômica teria
+      sido?</li>
+      <li>Converta em declinação: azimute <b>A = 90°</b>, altura do horizonte <b>h = 0°</b>, latitude
+      <b>φ = 30°</b> (Gizé). Qual é o resultado e o que ele significa?</li>
+      <li>Converta em declinação: <b>A = 118°</b>, <b>h = 1,5°</b>, <b>φ = 29,98°</b>.</li>
+      <li>Um pesquisador mede o mesmo eixo com bússola de mão e obtém 117,2°. Ele reporta a declinação como
+      −23,847°. Quantas casas decimais são defensáveis, e por quê?</li>
+      <li>Um estudo afirma que 12 de 12 templos de certa região se alinham ao nascer de Sírius. Que três perguntas
+      você faz antes de aceitar o resultado?</li>
+      <li>Uma equipe mediu 40 monumentos e publicou os 9 que se alinhavam ao solstício, descartando os demais como
+      &ldquo;mal preservados&rdquo;. Qual condição da Aula 1.5 foi violada, e por que isso invalida a conclusão
+      mesmo que os 9 estejam corretamente medidos?</li>
+    </ol>
+
+    <details class="gab">
+      <summary>Ver gabarito comentado</summary>
+      <div class="body">
+        <ol>
+          <li>Com ±2°, cada alvo cobre 4°; 48 alvos cobrem ~192°, ou 53% do horizonte. A probabilidade de um eixo
+          <em>não</em> cair sobre alvo nenhum é 0,47; para 8 direções independentes, 0,47⁸ ≈ 0,0024.
+          Portanto a chance de encontrar ao menos um alinhamento é de aproximadamente <strong>99,8%</strong>.
+          A tolerância é o parâmetro mais poderoso de todos — e é por isso que ela tem de ser justificada
+          <em>antes</em>, a partir da precisão do instrumento e da natureza do alvo.</li>
+
+          <li>Porque era uma crítica <strong>arqueológica e estatística</strong>, e portanto não podia ser
+          respondida com mais astronomia. Atkinson mostrou que Hawkins traçara alinhamentos entre elementos que
+          nunca coexistiram no sítio — separados por séculos de fases construtivas — e que não havia cálculo da
+          probabilidade de acerto ao acaso. Uma objeção astronômica teria sido sobre efemérides; esta era sobre a
+          validade do próprio procedimento.</li>
+
+          <li>sen δ = sen(30°)·sen(0°) + cos(30°)·cos(0°)·cos(90°) = 0 + (0,866)(1)(0) = <strong>0</strong>,
+          logo <strong>δ = 0°</strong>. Faz sentido: o azimute 90° com horizonte plano é o leste exato, e é onde
+          nasce um astro de declinação zero — isto é, o sol nos equinócios. Este caso é o teste de sanidade da
+          fórmula: se sua planilha não devolve zero aqui, ela está errada.</li>
+
+          <li>sen δ = sen(29,98°)·sen(1,5°) + cos(29,98°)·cos(1,5°)·cos(118°)
+          <br>= (0,4997)(0,0262) + (0,8662)(0,99966)(−0,4695)
+          <br>= 0,0131 − 0,4065 = −0,3934 &nbsp;→&nbsp; <strong>δ ≈ −23,2°</strong>.
+          Próximo da declinação do sol no solstício de inverno, que na época das pirâmides era cerca de −24°.</li>
+
+          <li><strong>Nenhuma</strong>, ou no máximo uma. Uma bússola de mão tem incerteza típica de ±0,5° no
+          azimute, o que se propaga para algo da ordem de ±0,4° na declinação. Reportar milésimos de grau sugere
+          uma precisão três ordens de grandeza melhor do que o instrumento permite. A forma correta seria
+          <span class="t">δ = −23,8° ± 0,4°</span>.</li>
+
+          <li>(i) <strong>Quantos templos existem na região no total?</strong> Se são 12 de 12, mas a região tem
+          60, a amostra foi selecionada. (ii) <strong>A hipótese foi declarada antes da medição?</strong> Ou Sírius
+          foi escolhido depois, entre os alvos disponíveis? (iii) <strong>Qual a tolerância adotada e por quê?</strong>
+          Com tolerância larga o bastante, Sírius &ldquo;explica&rdquo; um quarto do horizonte.
+          Uma quarta pergunta útil: há evidência textual ou de culto ligando esses templos especificamente a
+          Sopdet?</li>
+
+          <li>A condição <strong>2</strong> — a população inteira deve ser medida e reportada. A violação invalida
+          a conclusão porque o descarte não foi aleatório: &ldquo;mal preservado&rdquo; pode correlacionar-se com
+          orientação, época ou tipo de monumento. Sem o denominador completo, 9 acertos em 40 é indistinguível do
+          que o acaso produziria — e a Aula 1.1 mostra que o acaso produz bastante. Os 9 podem estar medidos com
+          perfeição e ainda assim não sustentar nada.</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <div class="box box-nota">
+    <h4>Leitura recomendada para este módulo</h4>
+    <p><i>Archaeoastronomy for Archaeologists — A Basic Guide</i> (BAJR, 2024), seções 1–4 — gratuito e curto.
+    &nbsp;·&nbsp; RUGGLES, C. <i>Handbook of Archaeoastronomy and Ethnoastronomy</i> (Springer, 2015), cap. 1.
+    &nbsp;·&nbsp; AVENI, A. <i>Skywatchers</i> (2001), cap. 1. &nbsp;·&nbsp;
+    ATKINSON, R. J. C. &ldquo;Moonshine on Stonehenge&rdquo;. <i>Antiquity</i> 40 (1966), p. 212–216.</p>
+  </div>
+
+</section>
+<div class="wrap"><nav class="pager"><a href="index.html"><span class="k">Voltar</span><span class="v">Página inicial do curso</span></a><a class="next" href="modulo-02.html"><span class="k">Próximo módulo</span><span class="v">02 · O céu do Egito antigo</span></a></nav></div></main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span class="gl">𓇯 𓇳 𓇹 𓇼</span>
+    <p><strong>Arqueoastronomia das Necrópoles</strong> — 24 horas · Desvendando os Códigos Egípcios.</p>
+    <p class="small">Dados de orientação de Spence (<i>Nature</i> 408, 2000), Belmonte &amp; Shaltout
+    (<i>JHA</i> / <i>Advances in Space Research</i>) e Tupikova (preprint MPIWG 511, 2022), com as fontes indicadas
+    em cada tabela. Transliteração conforme a Leiden Unified Transliteration (IAE, 2023).</p>
+    <p class="small muted">Conteúdo didático. Nenhuma medida apresentada aqui substitui a consulta à publicação original.</p>
+  </div>
+</footer>
+
+<!-- ce-progresso:início -->
+<!-- Registro de leitura. Guarda no navegador do aluno, em localStorage;
+     nada é enviado ao servidor. Gerado por injetar-progresso.py a partir
+     de area-aluno/js/progresso.js — não edite aqui. -->
+<script>
+/* ce-progresso — registro de leitura dos cursos.
+ *
+ * Guarda no navegador do aluno, em localStorage. Nada sai do dispositivo:
+ * nem para o site, nem para nós. Isso tem um custo honesto — trocar de
+ * computador recomeça a contagem — e uma vantagem: nenhum dado de leitura
+ * de ninguém fica armazenado em lugar nenhum.
+ *
+ * Formato:
+ *   { "curso-hieroglifos": { "3": { pct: 100, em: 1758... } }, ... }
+ *   pct = maior porcentagem de rolagem já alcançada naquele módulo
+ *
+ * Este arquivo é a versão de referência. Nas páginas dos módulos ele é
+ * injetado inline por scripts/injetar-progresso.py, para o curso não
+ * depender de um segundo pedido de rede nem da área do aluno estar no ar.
+ */
+(function (global) {
+  "use strict";
+
+  var CHAVE = "ce_progresso_v1";
+  var LIDO = 90; // % de rolagem a partir do qual o módulo conta como lido
+
+  function ler() {
+    try { return JSON.parse(global.localStorage.getItem(CHAVE)) || {}; }
+    catch (e) { return {}; }          // modo privado, cookies bloqueados, etc.
+  }
+
+  function gravar(dados) {
+    try { global.localStorage.setItem(CHAVE, JSON.stringify(dados)); return true; }
+    catch (e) { return false; }
+  }
+
+  function registrar(curso, modulo, pct) {
+    var d = ler();
+    var c = d[curso] || (d[curso] = {});
+    var antes = c[modulo] || { pct: 0 };
+    // só sobe: reler o começo de um módulo não desfaz o que já foi lido
+    if (pct <= antes.pct) { antes.em = Date.now(); c[modulo] = antes; }
+    else c[modulo] = { pct: pct, em: Date.now() };
+    gravar(d);
+  }
+
+  function limpar(curso) {
+    var d = ler();
+    if (curso) delete d[curso]; else d = {};
+    gravar(d);
+  }
+
+  /* ---- métricas de um curso, a partir da grade em window.CE_CURSOS ---- */
+  function resumo(curso, totalModulos) {
+    var c = ler()[curso] || {};
+    var lidos = 0, ultimo = null, ultimoEm = 0;
+    for (var k in c) {
+      if (!Object.prototype.hasOwnProperty.call(c, k)) continue;
+      if (c[k].pct >= LIDO) lidos++;
+      if (c[k].em > ultimoEm) { ultimoEm = c[k].em; ultimo = { modulo: +k, pct: c[k].pct }; }
+    }
+    return {
+      lidos: lidos,
+      total: totalModulos,
+      pct: totalModulos ? Math.round((lidos / totalModulos) * 100) : 0,
+      concluido: totalModulos > 0 && lidos >= totalModulos,
+      ultimo: ultimo,
+      modulos: c,
+    };
+  }
+
+  global.CEProgresso = {
+    ler: ler, registrar: registrar, limpar: limpar, resumo: resumo, LIDO: LIDO,
+  };
+
+  /* ---- se estamos numa página de módulo, medir a leitura ---- */
+  var m = global.location.pathname.match(/\/(curso-[a-z-]+)\/modulo-(\d+)\.html?$/i);
+  if (!m) return;
+  var curso = m[1], modulo = String(parseInt(m[2], 10));
+
+  function pctAtual() {
+    var doc = global.document.documentElement;
+    var alcance = doc.scrollHeight - doc.clientHeight;
+    // página que cabe inteira na tela já está lida por definição
+    if (alcance <= 40) return 100;
+    return Math.min(100, Math.round(((global.scrollY || 0) / alcance) * 100));
+  }
+
+  var pendente = false;
+  function medir() {
+    if (pendente) return;
+    pendente = true;
+    global.requestAnimationFrame(function () {
+      pendente = false;
+      registrar(curso, modulo, pctAtual());
+    });
+  }
+
+  global.addEventListener("scroll", medir, { passive: true });
+  global.addEventListener("pagehide", medir);
+  global.document.addEventListener("visibilitychange", function () {
+    if (global.document.visibilityState === "hidden") medir();
+  });
+  // marca a visita já na abertura, para o "continuar de onde parei" funcionar
+  // mesmo em quem abriu e saiu sem rolar
+  if (global.document.readyState === "complete") medir();
+  else global.addEventListener("load", medir);
+})(window);
+</script>
+<!-- ce-progresso:fim -->
+</body>
+</html>

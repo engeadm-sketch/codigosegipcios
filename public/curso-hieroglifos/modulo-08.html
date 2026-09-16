@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Módulo 08 — Método epigráfico e leitura de textos reais | Masterclass de Hieróglifos</title>
+<meta name="description" content="Fac-símile, Chicago House Method, paleografia, convenções de edição, ferramentas digitais e quatro leituras guiadas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Noto+Sans+Mono:wght@400;500&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/curso.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html"><span class="gl">𓂀</span> Códigos Egípcios</a>
+    <nav class="topnav">
+      <a href="index.html">Início do curso</a>
+      <a href="index.html#grade">Grade</a>
+      <a href="index.html#avaliacao">Avaliação</a>
+      <a href="index.html#bibliografia">Bibliografia</a>
+      <a href="https://codigosegipcios.netlify.app/">Voltar ao site</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="glyphband">𓏞𓏛𓂋𓐍</div>
+    <span class="eyebrow">Módulo 08 · 4h</span>
+    <h1>Método epigráfico e leitura de textos reais</h1>
+    <p class="lede">Fac-símile, Chicago House Method, paleografia, convenções de edição, ferramentas digitais e quatro leituras guiadas.</p>
+  </div>
+</section>
+<section class="wrap narrow">
+
+  <div class="objetivos">
+    <h4>Objetivos do módulo</h4>
+    <ul>
+      <li>Explicar o que distingue um fac-símile epigráfico de uma fotografia e por que ambos são necessários</li>
+      <li>Descrever as etapas do Chicago House Method e a lógica de colação independente</li>
+      <li>Aplicar as convenções de edição crítica ao transcrever um texto danificado</li>
+      <li>Operar JSesh, o TLA e a Thot Sign List</li>
+      <li>Conduzir a leitura completa de um texto: fac-símile → transliteração → tradução → comentário</li>
+    </ul>
+  </div>
+
+  <div class="toc">
+    <h4>Neste módulo</h4>
+    <ol>
+      <li><a href="#a81">O que é epigrafia</a></li>
+      <li><a href="#a82">O Chicago House Method</a></li>
+      <li><a href="#a83">Paleografia e erros de escriba</a></li>
+      <li><a href="#a84">Convenções de edição crítica</a></li>
+      <li><a href="#a85">Ferramentas digitais</a></li>
+      <li><a href="#a86">Quatro leituras guiadas</a></li>
+      <li><a href="#a87">O projeto final</a></li>
+    </ol>
+  </div>
+
+  <!-- ============ 8.1 ============ -->
+  <article class="aula" id="a81">
+    <h2><span class="n">Aula 8.1</span> O que é epigrafia</h2>
+
+    <p><strong>Epigrafia</strong> é a disciplina que registra, edita e publica inscrições. Não se confunde com
+    tradução: traduzir supõe que já existe um texto estabelecido. A epigrafia é o trabalho anterior — determinar
+    <em>o que está ali</em>.</p>
+
+    <p>A pergunta que organiza o campo: por que não basta fotografar?</p>
+
+    <div class="grid grid-2" style="margin-top:1.5rem">
+      <div class="card">
+        <h3>O que a fotografia dá</h3>
+        <p>Registro objetivo, reprodutível, sem interpretação. Documenta a superfície, o estado de conservação, a cor,
+        a textura. É indispensável e deve sempre acompanhar a publicação.</p>
+      </div>
+      <div class="card">
+        <h3>O que a fotografia não dá</h3>
+        <p>Uma parede erodida sob luz rasante mostra sombras que podem ser sulco antigo, dano moderno, marca de
+        ferramenta ou acidente da pedra. A fotografia registra as sombras; ela não <em>decide</em> quais são traço
+        gravado. Essa decisão exige olho treinado diante do objeto, em várias condições de luz.</p>
+      </div>
+    </div>
+
+    <p>O <strong>fac-símile</strong> é o resultado dessa decisão: um desenho de linha que representa apenas o que o
+    epigrafista, depois de exame direto e repetido, afirma ser traço deliberado. É um documento
+    <strong>interpretativo</strong> — e é justamente por isso que o método de produzi-lo precisa ser rigoroso e
+    auditável.</p>
+
+    <div class="box box-nota">
+      <h4>Urgência</h4>
+      <p>Muitas paredes foram gravadas há três ou quatro mil anos e estão se degradando agora, aceleradamente, por
+      umidade, sal, poluição, turismo e alterações do lençol freático. Fac-símiles feitos no século XIX e início do
+      XX registram detalhes que hoje não existem mais. A epigrafia é, em boa medida, uma corrida contra o
+      apagamento.</p>
+    </div>
+  </article>
+
+  <!-- ============ 8.2 ============ -->
+  <article class="aula" id="a82">
+    <h2><span class="n">Aula 8.2</span> O Chicago House Method</h2>
+
+    <p>O <strong>Epigraphic Survey</strong>, fundado em 1924 por James Henry Breasted e sediado em Luxor na casa
+    conhecida como <em>Chicago House</em>, desenvolveu o protocolo que se tornou padrão internacional. Sua lógica
+    central é <strong>separar quem desenha de quem verifica</strong>, e verificar mais de uma vez, de forma
+    independente.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>#</th><th>Etapa</th><th>Quem executa</th><th>Objetivo</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Fotografia em grande formato da parede</td><td>fotógrafo</td><td>registro-base objetivo</td></tr>
+          <tr><td>2</td><td>Ampliação impressa em papel fotográfico</td><td>laboratório</td><td>suporte de desenho em escala</td></tr>
+          <tr><td>3</td><td>Desenho a tinta <em>sobre</em> a fotografia, na parede</td><td>artista</td><td>traçar o que é sulco, comparando com o original</td></tr>
+          <tr><td>4</td><td>Branqueamento químico da emulsão</td><td>laboratório</td><td>resta apenas o desenho de linha</td></tr>
+          <tr><td>5</td><td><b>Colação</b> por um primeiro epigrafista</td><td>epigrafista A</td><td>conferir o desenho contra a parede, sem ver correções anteriores</td></tr>
+          <tr><td>6</td><td><b>Colação</b> por um segundo epigrafista</td><td>epigrafista B</td><td>idem, de forma independente</td></tr>
+          <tr><td>7</td><td>Resolução de divergências no local</td><td>equipe + diretor</td><td>divergências vão de volta à parede, não à discussão de gabinete</td></tr>
+          <tr><td>8</td><td>Correção final e publicação</td><td>artista + editor</td><td>prancha publicada com aparato</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-pratica">
+      <h4>O princípio que você pode aplicar sozinho</h4>
+      <p>Você não tem uma equipe, mas pode adotar o essencial do método: <strong>nunca aceite sua primeira
+      leitura</strong>. Faça o fac-símile, deixe-o de lado por um dia, e reveja contra a fotografia original sem
+      olhar sua transliteração. Os sinais que você &ldquo;viu&rdquo; porque esperava encontrá-los aparecem nessa
+      segunda passagem.</p>
+    </div>
+  </article>
+
+  <!-- ============ 8.3 ============ -->
+  <article class="aula" id="a83">
+    <h2><span class="n">Aula 8.3</span> Paleografia e erros de escriba</h2>
+
+    <p><strong>Paleografia</strong> é o estudo das formas dos sinais e de sua evolução. Ela responde a duas
+    perguntas práticas: <em>que sinal é este?</em> e <em>de quando é este texto?</em></p>
+
+    <h3>O que varia</h3>
+    <ul>
+      <li><strong>Época</strong> — a forma de um mesmo sinal muda ao longo dos séculos de maneira razoavelmente
+      datável.</li>
+      <li><strong>Região</strong> — oficinas de Tebas, Mênfis e Abidos têm hábitos gráficos distintos.</li>
+      <li><strong>Suporte e técnica</strong> — relevo em calcário, incisão em granito, tinta sobre gesso e pincel
+      sobre papiro produzem formas diferentes do mesmo sinal.</li>
+      <li><strong>Mão individual</strong> — em corpora bem documentados, como Deir el-Medina, é possível identificar
+      escribas específicos pela letra.</li>
+    </ul>
+
+    <h3>Erros e intervenções</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Fenômeno</th><th>O que é</th><th>Como aparece</th></tr></thead>
+        <tbody>
+          <tr><td><b>Haplografia</b></td><td>escrever uma vez o que deveria aparecer duas</td><td>sinal ou grupo faltando</td></tr>
+          <tr><td><b>Ditografia</b></td><td>repetir indevidamente</td><td>sinal ou grupo duplicado</td></tr>
+          <tr><td><b>Transposição</b></td><td>troca de ordem</td><td>distinguir de transposição honorífica, que é regra</td></tr>
+          <tr><td><b>Palimpsesto</b></td><td>texto raspado e reescrito</td><td>traços fantasma sob a superfície</td></tr>
+          <tr><td><b>Damnatio memoriae</b></td><td>apagamento deliberado de nome</td><td>cartucho martelado; frequente com Hatshepsut e com Amon no período de Amarna</td></tr>
+          <tr><td><b>Usurpação</b></td><td>rei posterior substitui o cartucho</td><td>cartucho recortado mais fundo que o entorno</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-atencao">
+      <h4>A tentação a resistir</h4>
+      <p>Diante de um texto que não fecha, a explicação mais confortável é &ldquo;o escriba errou&rdquo;. Ela é
+      ocasionalmente verdadeira e quase sempre prematura. Antes de atribuir erro, verifique nesta ordem:
+      (1) sua leitura dos sinais; (2) a segmentação das palavras; (3) a possibilidade de uma grafia rara mas
+      atestada; (4) a existência de um paralelo em outro monumento. O erro do escriba é a última hipótese, não a
+      primeira.</p>
+    </div>
+  </article>
+
+  <!-- ============ 8.4 ============ -->
+  <article class="aula" id="a84">
+    <h2><span class="n">Aula 8.4</span> Convenções de edição crítica</h2>
+
+    <p>Uma transliteração publicada precisa distinguir, para qualquer leitor, o que está na pedra do que o editor
+    acrescentou. As convenções abaixo são padrão na egiptologia e derivam da tradição papirológica clássica.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Sinal</th><th>Significa</th><th>Exemplo</th></tr></thead>
+        <tbody>
+          <tr><td class="cd">[ ]</td><td>lacuna na pedra, <b>restaurada</b> pelo editor</td><td class="tl">sḏm[.n.f]</td></tr>
+          <tr><td class="cd">[...]</td><td>lacuna <b>não</b> restaurada; extensão estimada por pontos ou medida</td><td class="tl">nṯr [...] nb</td></tr>
+          <tr><td class="cd">⸢ ⸣</td><td>sinal danificado mas legível com segurança razoável</td><td class="tl">⸢ḥtp⸣</td></tr>
+          <tr><td class="cd">( )</td><td>acréscimo do editor para a tradução; desdobramento de abreviação</td><td class="tl">sḏm(.w)</td></tr>
+          <tr><td class="cd">{ }</td><td>texto presente na pedra que o editor julga <b>errôneo</b> e propõe suprimir</td><td class="tl">nṯr {nṯr} ꜥꜣ</td></tr>
+          <tr><td class="cd">&lt; &gt;</td><td>texto <b>omitido</b> pelo escriba e suprido pelo editor</td><td class="tl">nb &lt;tꜣwj&gt;</td></tr>
+          <tr><td class="cd">⟦ ⟧</td><td>texto deliberadamente <b>apagado</b> na Antiguidade</td><td class="tl">⟦Jmn⟧</td></tr>
+          <tr><td class="cd">?</td><td>leitura ou tradução incerta</td><td class="tl">sštꜣ(?)</td></tr>
+        </tbody>
+        <caption>Há variação entre escolas e coleções; a regra inegociável é declarar as convenções adotadas na
+        introdução de qualquer edição.</caption>
+      </table>
+    </div>
+
+    <div class="ex">
+      <p class="tl">ḥtp-dj-nswt Wsjr nb ⸢Ḏdw⸣ nṯr ꜥꜣ nb [Ꜣbḏw] dj.f prt-ḫrw [...] n kꜣ n sš N mꜣꜥ-ḫrw</p>
+      <p class="tr">Leitura deste aparato: &ldquo;Busíris&rdquo; está danificado mas legível; &ldquo;Abidos&rdquo;
+      está perdido e foi restaurado pelo editor com base no formulário padrão; entre
+      <span class="t">prt-ḫrw</span> e <span class="t">n kꜣ n</span> há uma lacuna não restaurada, que
+      provavelmente continha a lista de bens.</p>
+      <p class="gloss">Um leitor competente sabe, só pelo aparato, quanto do texto é pedra e quanto é hipótese.</p>
+    </div>
+
+    <div class="box box-nota">
+      <h4>Honestidade epigráfica</h4>
+      <p>A restauração de lacunas por paralelo formular é legítima e frequentemente segura — o formulário egípcio é
+      altamente padronizado. O que não é legítimo é <strong>apresentar a restauração sem marcá-la</strong>. Uma
+      edição que omite colchetes transforma hipótese em dado, e todo trabalho posterior que a cite herdará o erro
+      sem ter como detectá-lo.</p>
+    </div>
+  </article>
+
+  <!-- ============ 8.5 ============ -->
+  <article class="aula" id="a85">
+    <h2><span class="n">Aula 8.5</span> Ferramentas digitais</h2>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Ferramenta</th><th>O que faz</th><th>Custo</th></tr></thead>
+        <tbody>
+          <tr><td><b>JSesh</b><br><span class="small muted">Serge Rosmorduc</span></td><td>editor de hieróglifos em Manuel de Codage; compõe quadrados, exporta vetorial e bitmap. O padrão de facto para produzir texto hieroglífico publicável.</td><td>gratuito</td></tr>
+          <tr><td><b>Thesaurus Linguae Aegyptiae</b><br><span class="small muted">BBAW, Berlim</span></td><td>corpus anotado + dicionário lematizado, herdeiro do <i>Wörterbuch</i>. Busca por lema, por grafia e por ocorrência em contexto.</td><td>gratuito</td></tr>
+          <tr><td><b>Thot Sign List</b><br><span class="small muted">Université de Liège</span></td><td>lista de sinais colaborativa com paleografia, variantes e referências cruzadas a Gardiner e Unicode.</td><td>gratuito</td></tr>
+          <tr><td><b>Ramses Online</b><br><span class="small muted">Liège</span></td><td>corpus anotado de egípcio tardio, com análise morfossintática.</td><td>gratuito</td></tr>
+          <tr><td><b>Trlit_CG Times</b></td><td>fonte para os caracteres de transliteração, distribuída pela <i>Online Egyptological Bibliography</i>.</td><td>gratuito</td></tr>
+          <tr><td><b>Unicode Egyptian Hieroglyphs</b></td><td>bloco U+13000–U+1342F, com mais de 1.000 sinais; renderização depende de fonte instalada (<i>Noto Sans Egyptian Hieroglyphs</i>).</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Manuel de Codage: sintaxe de composição</h3>
+    <p>Além dos valores de transliteração vistos na Aula 2.2, o MdC codifica a <strong>disposição espacial</strong>
+    dos sinais dentro do quadrado. É o que permite ao JSesh reproduzir um agrupamento real.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Operador</th><th>Efeito</th><th>Exemplo</th><th>Resultado</th></tr></thead>
+        <tbody>
+          <tr><td class="cd">-</td><td>separa quadrados sucessivos</td><td class="cd">i-w</td><td class="g">𓇋𓅱</td></tr>
+          <tr><td class="cd">*</td><td>justapõe lado a lado dentro do quadrado</td><td class="cd">t*p</td><td class="g">𓏏𓊪</td></tr>
+          <tr><td class="cd">:</td><td>empilha verticalmente</td><td class="cd">R4:X1*Q3</td><td class="g">𓊵𓏏𓊪</td></tr>
+          <tr><td class="cd">&amp;</td><td>liga sinais num grupo indivisível</td><td class="cd">D&amp;d</td><td>—</td></tr>
+          <tr><td class="cd">&lt; &gt;</td><td>cartucho</td><td class="cd">&lt;-N5-mn:n-xpr-&gt;</td><td>cartucho de Mn-ḫpr-Rꜥ</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-pratica">
+      <h4>Exercício instalador</h4>
+      <p>Instale o JSesh agora e digite <code>Htp-di-nswt</code> seguido de <code>&lt;-N5-mn:n-xpr-&gt;</code>.
+      Compare o resultado com a fórmula da Aula 7.1 e com o cartucho de Tutmés III. Meia hora com o JSesh ensina
+      mais sobre agrupamento do que qualquer explicação escrita.</p>
+    </div>
+  </article>
+
+  <!-- ============ 8.6 ============ -->
+  <article class="aula" id="a86">
+    <h2><span class="n">Aula 8.6</span> Quatro leituras guiadas</h2>
+
+    <p>Cada leitura segue o mesmo protocolo: <strong>segmentar → transliterar → analisar → traduzir</strong>. Faça
+    cada uma antes de ler o comentário.</p>
+
+    <h3>Leitura 1 — legenda de cena</h3>
+    <div class="ex">
+      <div class="glyphline">𓁹 𓏏 𓊵 𓏏 𓊪 𓂝 𓈖 𓊹</div>
+      <p class="tl">jrt ḥtp(w) n nṯr</p>
+      <p class="tr">&ldquo;fazer oferendas ao deus&rdquo;</p>
+      <p class="gloss">Análise: <span class="t">jrt</span> é infinitivo feminino de <span class="t">jrj</span>
+      (Módulo 06); <span class="t">ḥtpw</span> é o objeto, plural; <span class="t">n nṯr</span> é preposição +
+      substantivo. A legenda nomeia a <em>ação</em> representada no relevo — daí o infinitivo, que é a forma
+      neutra, sem sujeito nem tempo. Este é o padrão de praticamente toda legenda de cena egípcia.</p>
+    </div>
+
+    <h3>Leitura 2 — sequência de títulos</h3>
+    <p>A abertura do <i>Conto de Sinuhe</i> (Papiro Berlim 3022, linha B1) não é uma frase: é uma cadeia de títulos
+    em aposição. Reconhecer isso é metade do trabalho.</p>
+
+    <div class="ex">
+      <p class="tl">jrj-pꜥt ḥꜣtj-ꜥ &nbsp;·&nbsp; ... &nbsp;·&nbsp; rḫ-nswt mꜣꜥ mrj.f &nbsp;·&nbsp; šmsw Zꜣ-nht</p>
+      <p class="tr">&ldquo;O nobre hereditário e conde, [...], verdadeiro conhecido do rei, a quem ele ama,
+      o seguidor Sinuhe.&rdquo;</p>
+      <p class="gloss">Análise: <span class="t">jrj-pꜥt</span> e <span class="t">ḥꜣtj-ꜥ</span> são títulos
+      honoríficos de alto escalão, formados sobre nisbas (Módulo 04);
+      <span class="t">rḫ-nswt</span> &ldquo;conhecido do rei&rdquo; é genitivo direto, com
+      <span class="t">mꜣꜥ</span> &ldquo;verdadeiro&rdquo; como adjetivo atributivo;
+      <span class="t">mrj.f</span> é <strong>particípio passivo</strong> com sufixo agente — &ldquo;a quem ele
+      ama&rdquo; (Módulo 06); <span class="t">šmsw Zꜣ-nht</span> fecha com função + nome próprio.</p>
+      <p class="src">Consulte o fac-símile e a edição de A. M. Blackman, <i>Middle-Egyptian Stories</i> (Bibliotheca
+      Aegyptiaca II, 1932), e a tradução comentada em R. B. Parkinson, <i>The Tale of Sinuhe and Other Ancient
+      Egyptian Poems</i> (OUP, 1997).</p>
+    </div>
+
+    <h3>Leitura 3 — inscrição de construção</h3>
+    <div class="ex">
+      <p class="tl">jr.n.f m mnw.f n jt.f &nbsp;[nome do deus]</p>
+      <p class="tr">&ldquo;Ele fez (isto) como seu monumento para seu pai [o deus N].&rdquo;</p>
+      <p class="gloss">Análise: <span class="t">jr.n.f</span> é <span class="t">sḏm.n.f</span>, perfeito
+      (Módulo 06); <span class="t">m mnw.f</span> usa o <strong><span class="t">m</span> de predicação</strong>
+      (Módulo 05) — &ldquo;na qualidade de seu monumento&rdquo;; <span class="t">n jt.f</span> é preposição +
+      substantivo com sufixo possessivo. O rei chamar o deus de &ldquo;seu pai&rdquo; é padrão ideológico, não
+      genealogia.</p>
+      <p class="gloss">Este é o núcleo formular que você encontrará em milhares de blocos de templo. Aprendê-lo
+      permite ler a maior parte das arquitraves de Karnak.</p>
+    </div>
+
+    <h3>Leitura 4 — narrativa</h3>
+    <div class="ex">
+      <p class="tl">ꜥḥꜥ.n ḏd.jn šmsw jqr: wḏꜣ jb.k, ḥꜣtj-ꜥ</p>
+      <p class="tr">&ldquo;Então o excelente seguidor disse: &lsquo;Que teu coração esteja bem, conde!&rsquo;&rdquo;</p>
+      <p class="gloss">Análise: <span class="t">ꜥḥꜥ.n</span> é o marcador de sequência narrativa (Módulo 06);
+      <span class="t">ḏd.jn</span> é a forma <span class="t">sḏm.jn.f</span>, típica de encadeamento narrativo;
+      <span class="t">šmsw jqr</span> é substantivo + adjetivo atributivo;
+      <span class="t">wḏꜣ jb.k</span> é <strong>subjuntivo</strong> com valor optativo — literalmente &ldquo;que
+      teu coração esteja íntegro&rdquo;, uma saudação; <span class="t">ḥꜣtj-ꜥ</span> é vocativo.</p>
+      <p class="src">Abertura do <i>Conto do Náufrago</i>, Papiro Hermitage (Ermitage) 1115, São Petersburgo.
+      Edição de referência: A. M. Blackman, <i>Middle-Egyptian Stories</i>; tradução comentada em Parkinson,
+      <i>The Tale of Sinuhe</i>. Confira as leituras contra a edição antes de citá-las.</p>
+    </div>
+  </article>
+
+  <!-- ============ 8.7 ============ -->
+  <article class="aula" id="a87">
+    <h2><span class="n">Aula 8.7</span> O projeto final</h2>
+
+    <p>Produza a edição epigráfica completa de <strong>uma estela do Império Médio</strong> à sua escolha, a partir
+    de fotografia de alta resolução disponível publicamente.</p>
+
+    <div class="box box-pratica">
+      <h4>Onde encontrar a peça</h4>
+      <p>Os acervos abaixo publicam imagens em alta resolução com metadados: <strong>British Museum</strong>
+      (coleção online), <strong>Metropolitan Museum of Art</strong> (Open Access), <strong>Musée du Louvre</strong>
+      (base Collections), <strong>Ägyptisches Museum Berlin</strong>, <strong>Rijksmuseum van Oudheden</strong>
+      (Leiden). Procure por <em>stela, Middle Kingdom, Abydos</em>. Prefira uma peça com 4 a 8 linhas de texto — o
+      suficiente para exercitar tudo, sem virar um projeto de meses.</p>
+    </div>
+
+    <h3>O que entregar</h3>
+    <ol>
+      <li><strong>Ficha técnica</strong> — número de inventário, material, dimensões, proveniência, datação
+      proposta pelo museu, bibliografia existente.</li>
+      <li><strong>Fac-símile</strong> — desenho de linha de todo o texto, feito por decalque digital sobre a
+      fotografia. Sinais incertos marcados em traço interrompido.</li>
+      <li><strong>Transliteração</strong> — em Leiden, com aparato completo de convenções de edição.</li>
+      <li><strong>Tradução</strong> — em português, seguindo a segmentação do original linha a linha.</li>
+      <li><strong>Comentário</strong> — 800 a 1.500 palavras cobrindo: estrutura do formulário empregado; análise
+      gramatical dos pontos difíceis; títulos e nomes identificados; paralelos em outras estelas; argumentação sobre
+      a datação; e uma lista explícita do que você <em>não</em> conseguiu ler.</li>
+    </ol>
+
+    <div class="box box-atencao">
+      <h4>O critério mais importante</h4>
+      <p>A qualidade do trabalho não se mede pelo número de linhas traduzidas, e sim pela
+      <strong>honestidade do aparato</strong>. Uma edição que declara com precisão o que é ilegível vale mais que uma
+      que preenche lacunas silenciosamente. A lista do que você não conseguiu ler é parte obrigatória da entrega,
+      e é a parte que um avaliador lê primeiro.</p>
+    </div>
+  </article>
+
+  <!-- ============ EXERCÍCIOS ============ -->
+  <div class="exercicios">
+    <h3>Exercícios do Módulo 08</h3>
+    <ol>
+      <li>Por que um fac-símile é necessário se já existe a fotografia? Dê duas razões independentes.</li>
+      <li>No Chicago House Method, por que a colação é feita por <em>dois</em> epigrafistas de forma independente?</li>
+      <li>Interprete o aparato: <span class="t">nṯr ⸢ꜥꜣ⸣ nb [Ꜣbḏw] {nb} dj.f [...]</span>. Diga, para cada marca,
+      o que está na pedra e o que é intervenção do editor.</li>
+      <li>Você lê um texto e uma palavra não faz sentido. Liste, em ordem, as quatro verificações a fazer antes de
+      concluir que o escriba errou.</li>
+      <li>Escreva em MdC: a fórmula <span class="t">ḥtp-dj-nswt</span> e o cartucho de Tutmés III.</li>
+      <li>Um cartucho aparece martelado numa parede de Karnak, e o entorno está intacto. Que hipóteses isso levanta,
+      e como distinguí-las?</li>
+      <li>Traduza e analise: <span class="t">jr.n.f m mnw.f n jt.f Jmn-Rꜥ nb nswt tꜣwj</span>.</li>
+    </ol>
+
+    <details class="gab">
+      <summary>Ver gabarito comentado</summary>
+      <div class="body">
+        <ol>
+          <li>(i) A fotografia registra <em>sombras</em>, não decisões: ela não distingue sulco antigo de dano
+          moderno, de marca de ferramenta ou de acidente da pedra. Essa distinção exige exame direto sob várias
+          condições de luz. (ii) O fac-símile é reproduzível em publicação impressa e comparável entre monumentos,
+          enquanto fotografias variam com iluminação, ângulo e estado de conservação no dia da tomada.</li>
+
+          <li>Para <strong>neutralizar o viés de expectativa</strong>. Um epigrafista que conhece o formulário tende
+          a &ldquo;ver&rdquo; os sinais que espera encontrar. Duas colações independentes, seguidas de resolução das
+          divergências <em>na própria parede</em>, transformam a leitura de opinião individual em resultado
+          auditável.</li>
+
+          <li><span class="t">ꜥꜣ</span> entre meios-colchetes: está na pedra, <strong>danificado mas legível</strong>.
+          <span class="t">Ꜣbḏw</span> entre colchetes: <strong>perdido</strong>, restaurado pelo editor — provavelmente
+          por paralelo formular. <span class="t">nb</span> entre chaves: está na pedra, mas o editor o julga
+          <strong>errôneo</strong> (provável ditografia) e propõe suprimi-lo. Os colchetes com reticências após
+          <span class="t">dj.f</span>: lacuna <strong>não restaurada</strong>.</li>
+
+          <li>(1) Reconferir a leitura dos sinais no fac-símile e na fotografia. (2) Rever a segmentação em palavras
+          — o egípcio não separa palavras, e a maioria dos impasses é de segmentação. (3) Procurar a grafia num
+          dicionário e no TLA, admitindo variantes raras e omissão de consoantes fracas. (4) Buscar um paralelo em
+          outro monumento com formulário semelhante. Só então considerar erro de escriba.</li>
+
+          <li>Fórmula: <code>Htp-di-nswt</code>. Cartucho: <code>&lt;-N5-mn:n-xpr-&gt;</code>. Note que no MdC o
+          disco solar é digitado <em>primeiro</em>, reproduzindo a transposição honorífica da pedra, e lido por
+          último.</li>
+
+          <li>Duas hipóteses principais: (i) <strong>damnatio memoriae</strong> — apagamento deliberado do nome de
+          um soberano ou divindade em desfavor, como ocorreu com Hatshepsut sob Tutmés III e com Amon durante o
+          período de Amarna; (ii) <strong>usurpação</strong> — substituição do cartucho por um rei posterior.
+          Distinguem-se pelo estado da superfície: na usurpação há um <em>novo</em> nome gravado, geralmente mais
+          fundo que o relevo circundante; na <em>damnatio</em>, a área fica vazia ou com traços fantasma do texto
+          raspado. Contexto histórico e paralelos no mesmo monumento ajudam a decidir.</li>
+
+          <li>&ldquo;Ele fez (isto) como seu monumento para seu pai Amon-Rá, senhor dos tronos das Duas Terras.&rdquo;
+          Análise: <span class="t">jr.n.f</span> perfeito <span class="t">sḏm.n.f</span>;
+          <span class="t">m mnw.f</span> <span class="t">m</span> de predicação + sufixo possessivo;
+          <span class="t">n jt.f</span> preposição + substantivo com sufixo;
+          <span class="t">Jmn-Rꜥ</span> nome divino composto;
+          <span class="t">nb nswt tꜣwj</span> cadeia de genitivos diretos — &ldquo;senhor dos tronos das Duas
+          Terras&rdquo;, epíteto canônico de Amon em Karnak.</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <div class="box box-nota">
+    <h4>Leitura recomendada para este módulo</h4>
+    <p>CAMINOS, R.; FISCHER, H. G. <i>Ancient Egyptian Epigraphy and Palaeography</i> (MMA, 1976). &nbsp;·&nbsp;
+    The Epigraphic Survey, <i>Method and Aims</i> — publicações do ISAC/Chicago House. &nbsp;·&nbsp;
+    PARKINSON, R. B. <i>The Tale of Sinuhe and Other Ancient Egyptian Poems, 1940–1640 BC</i> (OUP, 1997).
+    &nbsp;·&nbsp; BLACKMAN, A. M. <i>Middle-Egyptian Stories</i> (Bibliotheca Aegyptiaca II, 1932).</p>
+  </div>
+
+</section>
+<div class="wrap"><nav class="pager"><a href="modulo-07.html"><span class="k">Módulo anterior</span><span class="v">07 · Fórmulas e epigrafia monumental</span></a><a class="next" href="modulo-09.html"><span class="k">Próximo módulo</span><span class="v">09 · Debates, teorias e o crivo da evidência</span></a></nav></div></main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span class="gl">𓂀 ☥ 𓊽 𓆣</span>
+    <p><strong>Masterclass: Epigrafia &amp; Leitura de Hieróglifos</strong> — 40 horas · Desvendando os Códigos Egípcios.</p>
+    <p class="small">Transliteração conforme a Leiden Unified Transliteration (IAE, 2023), com equivalências de Gardiner indicadas.
+    Os hieróglifos desta página usam o bloco Unicode <em>Egyptian Hieroglyphs</em> (U+13000–U+1342F); se os sinais não aparecerem,
+    instale a fonte <em>Noto Sans Egyptian Hieroglyphs</em>.</p>
+    <p class="small muted">Conteúdo didático. As leituras e traduções seguem edições publicadas indicadas em cada módulo.</p>
+  </div>
+</footer>
+
+<!-- ce-progresso:início -->
+<!-- Registro de leitura. Guarda no navegador do aluno, em localStorage;
+     nada é enviado ao servidor. Gerado por injetar-progresso.py a partir
+     de area-aluno/js/progresso.js — não edite aqui. -->
+<script>
+/* ce-progresso — registro de leitura dos cursos.
+ *
+ * Guarda no navegador do aluno, em localStorage. Nada sai do dispositivo:
+ * nem para o site, nem para nós. Isso tem um custo honesto — trocar de
+ * computador recomeça a contagem — e uma vantagem: nenhum dado de leitura
+ * de ninguém fica armazenado em lugar nenhum.
+ *
+ * Formato:
+ *   { "curso-hieroglifos": { "3": { pct: 100, em: 1758... } }, ... }
+ *   pct = maior porcentagem de rolagem já alcançada naquele módulo
+ *
+ * Este arquivo é a versão de referência. Nas páginas dos módulos ele é
+ * injetado inline por scripts/injetar-progresso.py, para o curso não
+ * depender de um segundo pedido de rede nem da área do aluno estar no ar.
+ */
+(function (global) {
+  "use strict";
+
+  var CHAVE = "ce_progresso_v1";
+  var LIDO = 90; // % de rolagem a partir do qual o módulo conta como lido
+
+  function ler() {
+    try { return JSON.parse(global.localStorage.getItem(CHAVE)) || {}; }
+    catch (e) { return {}; }          // modo privado, cookies bloqueados, etc.
+  }
+
+  function gravar(dados) {
+    try { global.localStorage.setItem(CHAVE, JSON.stringify(dados)); return true; }
+    catch (e) { return false; }
+  }
+
+  function registrar(curso, modulo, pct) {
+    var d = ler();
+    var c = d[curso] || (d[curso] = {});
+    var antes = c[modulo] || { pct: 0 };
+    // só sobe: reler o começo de um módulo não desfaz o que já foi lido
+    if (pct <= antes.pct) { antes.em = Date.now(); c[modulo] = antes; }
+    else c[modulo] = { pct: pct, em: Date.now() };
+    gravar(d);
+  }
+
+  function limpar(curso) {
+    var d = ler();
+    if (curso) delete d[curso]; else d = {};
+    gravar(d);
+  }
+
+  /* ---- métricas de um curso, a partir da grade em window.CE_CURSOS ---- */
+  function resumo(curso, totalModulos) {
+    var c = ler()[curso] || {};
+    var lidos = 0, ultimo = null, ultimoEm = 0;
+    for (var k in c) {
+      if (!Object.prototype.hasOwnProperty.call(c, k)) continue;
+      if (c[k].pct >= LIDO) lidos++;
+      if (c[k].em > ultimoEm) { ultimoEm = c[k].em; ultimo = { modulo: +k, pct: c[k].pct }; }
+    }
+    return {
+      lidos: lidos,
+      total: totalModulos,
+      pct: totalModulos ? Math.round((lidos / totalModulos) * 100) : 0,
+      concluido: totalModulos > 0 && lidos >= totalModulos,
+      ultimo: ultimo,
+      modulos: c,
+    };
+  }
+
+  global.CEProgresso = {
+    ler: ler, registrar: registrar, limpar: limpar, resumo: resumo, LIDO: LIDO,
+  };
+
+  /* ---- se estamos numa página de módulo, medir a leitura ---- */
+  var m = global.location.pathname.match(/\/(curso-[a-z-]+)\/modulo-(\d+)\.html?$/i);
+  if (!m) return;
+  var curso = m[1], modulo = String(parseInt(m[2], 10));
+
+  function pctAtual() {
+    var doc = global.document.documentElement;
+    var alcance = doc.scrollHeight - doc.clientHeight;
+    // página que cabe inteira na tela já está lida por definição
+    if (alcance <= 40) return 100;
+    return Math.min(100, Math.round(((global.scrollY || 0) / alcance) * 100));
+  }
+
+  var pendente = false;
+  function medir() {
+    if (pendente) return;
+    pendente = true;
+    global.requestAnimationFrame(function () {
+      pendente = false;
+      registrar(curso, modulo, pctAtual());
+    });
+  }
+
+  global.addEventListener("scroll", medir, { passive: true });
+  global.addEventListener("pagehide", medir);
+  global.document.addEventListener("visibilitychange", function () {
+    if (global.document.visibilityState === "hidden") medir();
+  });
+  // marca a visita já na abertura, para o "continuar de onde parei" funcionar
+  // mesmo em quem abriu e saiu sem rolar
+  if (global.document.readyState === "complete") medir();
+  else global.addEventListener("load", medir);
+})(window);
+</script>
+<!-- ce-progresso:fim -->
+</body>
+</html>

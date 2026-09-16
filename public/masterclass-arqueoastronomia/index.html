@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arqueoastronomia das Necrópoles — Desvendando os Códigos Egípcios</title>
+<meta name="description" content="24 horas sobre o céu do Egito antigo, a orientação das pirâmides e o método que separa alinhamento de coincidência. Com números, fontes e o debate inteiro. R$ 247.">
+<meta property="og:title" content="Arqueoastronomia das Necrópoles">
+<meta property="og:description" content="A Grande Pirâmide erra 21 cm em 230 metros. Este curso ensina a medir fatos assim — e a reconhecer quando alguém está achando figuras nas nuvens.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Geist:wght@300;400;500;600;700&family=Noto+Sans+Mono:wght@400;500&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/vendas.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="https://codigosegipcios.netlify.app/"><span class="gl">𓇼</span> Códigos Egípcios</a>
+    <nav>
+      <a href="#experimente">Experimente</a>
+      <a href="#grade">Grade</a>
+      <a href="#metodo">Método</a>
+      <a href="#faq">Dúvidas</a>
+      <a class="btn btn-gold btn-sm" href="#lista">Entrar na lista</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="glyphband">𓇯 𓇳 𓇹 𓇼 𓇮 𓈌 𓉴 𓊨 𓂭</div>
+    <span class="eyebrow">Curso · 24 horas · 7 módulos</span>
+    <h1>Alinhamento ou <span class="grad">coincidência</span>?</h1>
+    <p class="lede">Um monumento tem eixos, cantos, portas e janelas. O céu tem o Sol, a Lua, cinco planetas
+    e milhares de estrelas. Com liberdade para escolher qual direção medir e qual astro procurar, sempre se
+    acha um alinhamento — inclusive em prédios modernos erguidos sem nenhuma intenção astronômica. Este curso
+    ensina o protocolo que separa a arqueoastronomia do seu contrário.</p>
+
+    <div class="hero-cta">
+      <a class="btn btn-gold btn-lg" href="#lista">Entrar na lista de espera</a>
+      <a class="btn btn-ghost btn-lg" href="#experimente">Testar agora, de graça</a>
+    </div>
+
+    <div class="trust">
+      <span>Garantia de 7 dias</span>
+      <span>Pagamento único</span>
+      <span>Acesso permanente</span>
+    </div>
+
+    <div class="metastrip">
+      <div><div class="k">Carga horária</div><div class="v">24 horas</div></div>
+      <div><div class="k">Módulos</div><div class="v">7</div></div>
+      <div><div class="k">Nível</div><div class="v">Intermediário</div></div>
+      <div><div class="k">Matemática</div><div class="v">Trigonometria básica</div></div>
+      <div><div class="k">Investimento</div><div class="v">R$ 247</div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════ DEMONSTRAÇÃO INTERATIVA ══════════════ -->
+<section id="experimente">
+  <div class="wrap narrow">
+    <span class="eyebrow">Antes de decidir qualquer coisa</span>
+    <h2>Três perguntas sobre as pirâmides, com os dados na mesa</h2>
+    <p class="lede">Páginas de venda costumam prometer. Esta prefere entregar antes. Os números abaixo são
+    medidos e publicados — e nos próximos 60 segundos você vai fazer com eles exatamente as três coisas que
+    este curso ensina.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="demo" id="demo">
+      <div class="demo-head">
+        <span class="demo-step" id="d-step">Questão 1 de 3</span>
+        <h3 id="d-title" style="margin:0">Carregando…</h3>
+      </div>
+
+      <div class="estimulo" id="d-est" aria-live="polite"></div>
+
+      <div class="opts" id="d-opts" role="group" aria-label="Opções de resposta"></div>
+
+      <div class="feedback" id="d-fb" hidden></div>
+
+      <div class="demo-nav">
+        <button class="btn btn-gold" id="d-next" hidden>Próxima</button>
+        <span class="demo-prog" id="d-prog">acertos: 0 / 0</span>
+      </div>
+    </div>
+
+    <p class="fonte narrow" style="margin-inline:auto">Erros de orientação conforme <b>SPENCE, K.</b>
+    “Ancient Egyptian chronology and the astronomical orientation of pyramids”. <i>Nature</i> 408 (2000),
+    Tabela 1, arredondados para um decimal. Valores negativos indicam desvio a oeste do norte verdadeiro.</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════ O PROBLEMA ══════════════ -->
+<section id="problema">
+  <div class="wrap narrow">
+    <span class="eyebrow">Por que este curso existe</span>
+    <h2>A arqueoastronomia é uma disciplina desconfortável</h2>
+    <p>Ela investiga uma pergunta perfeitamente legítima — o que os construtores antigos sabiam do céu, e o
+    que fizeram com esse conhecimento — usando um método que, mal aplicado, prova qualquer coisa.</p>
+
+    <p>O motivo é geométrico, não ideológico. Some as direções disponíveis num monumento com os astros
+    disponíveis no céu, deixe quem mede escolher os dois depois de olhar, e o resultado é garantido:
+    <strong>sempre haverá um alinhamento</strong>. Testes com edifícios modernos, erguidos sem nenhuma
+    intenção astronômica, produzem “alinhamentos” na mesma taxa.</p>
+
+    <div class="card" style="margin:2rem 0">
+      <h3 style="margin-top:0">O que separa a disciplina da numerologia</h3>
+      <p>Não é o tema. É o protocolo, e ele cabe em cinco linhas:</p>
+      <ul class="plain">
+        <li><strong>Declarar o alvo antes de medir.</strong> Hipótese primeiro, dados depois.</li>
+        <li><strong>Medir a população inteira</strong> de monumentos — não só os que deram certo.</li>
+        <li><strong>Converter azimute em declinação</strong> com a altura real do horizonte, não com a teórica.</li>
+        <li><strong>Estimar a incerteza.</strong> Uma declinação sem barra de erro é uma opinião com decimais.</li>
+        <li><strong>Aceitar o resultado</strong> quando ele não fecha.</li>
+      </ul>
+      <p style="margin-bottom:0">Quem aplica esses cinco passos consegue avaliar sozinho qualquer alegação de
+      alinhamento — a das pirâmides, a de Stonehenge, a do vídeo que apareceu no seu feed ontem. É uma
+      competência transferível, e é o que você leva deste curso.</p>
+    </div>
+
+    <p>Há uma ironia que vale antecipar: aplicado a sério, o método <em>desmonta</em> algumas alegações
+    famosas — e revela outras, reais, muito mais impressionantes e quase desconhecidas do público. Os dados do
+    Módulo 04 são mais surpreendentes que a teoria do Módulo 06. E são dados.</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════ RESULTADO ══════════════ -->
+<section id="resultado">
+  <div class="wrap">
+    <div class="narrow">
+      <span class="eyebrow">Competências</span>
+      <h2>O que você sai sabendo fazer</h2>
+      <p class="lede">Não “conhecer o assunto”. Executar — com calculadora, planilha e Stellarium, que são de
+      graça.</p>
+    </div>
+
+    <div class="grid g2" style="margin-top:2rem">
+      <div class="card">
+        <h3>Converter azimute em declinação</h3>
+        <p>A conta central da disciplina: <span class="t">sen δ = sen φ · sen h + cos φ · cos h · cos A</span>.
+        Uma linha de trigonometria que transforma uma direção medida no chão numa posição no céu — e que você
+        vai calcular à mão nos exercícios, não apenas ver pronta.</p>
+      </div>
+      <div class="card">
+        <h3>Ler o céu de qualquer data</h3>
+        <p>O céu de 2500 a.C. não é o de hoje. Você vai saber reconstituí-lo para qualquer data e latitude, e
+        explicar por que Thuban era a estrela polar dos egípcios e Polaris não.</p>
+      </div>
+      <div class="card">
+        <h3>Calcular o efeito da precessão</h3>
+        <p>Quanto o céu girou em 4.500 anos, o que isso faz com o levante helíaco de Sírius, e por que o
+        calendário egípcio de 365 dias atrasava um dia a cada quatro anos.</p>
+      </div>
+      <div class="card">
+        <h3>Estimar e propagar incerteza</h3>
+        <p>Toda medida de campo tem erro: no azimute, na altura do horizonte, na refração. Você vai aprender a
+        somá-los em quadratura e a publicar o resultado como <span class="t">δ = −23,7° ± 0,6°</span>, que é a
+        única forma honesta de apresentá-lo.</p>
+      </div>
+      <div class="card">
+        <h3>Avaliar uma alegação de alinhamento</h3>
+        <p>Com números. Quantas direções foram testadas, quantos alvos estavam disponíveis, qual a chance de
+        acerto por acaso, e se a hipótese foi declarada antes ou depois de olhar os dados.</p>
+      </div>
+      <div class="card">
+        <h3>Reconstituir um debate científico real</h3>
+        <p>Spence na <i>Nature</i> em 2000, a réplica de Rawlins e Pickering em 2001, a reavaliação de Tupikova
+        em 2022. Argumento, objeção e estado atual — a anatomia de uma controvérsia que segue aberta.</p>
+      </div>
+      <div class="card">
+        <h3>Interpretar as fontes egípcias</h3>
+        <p>Os relógios estelares dos caixões, os tetos astronômicos, os decanos, as circumpolares
+        <span class="t">jḫmw-sk</span> — “as que não conhecem a destruição”. O que os textos de fato dizem, e
+        o que lhes é atribuído.</p>
+      </div>
+      <div class="card">
+        <h3>Conduzir o seu próprio estudo</h3>
+        <p>O Módulo 07 é um protocolo completo: escolher o monumento, pré-registrar a hipótese, medir, corrigir
+        refração e extinção, calcular, estimar erro e publicar honestamente o que não fechou.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════ GRADE ══════════════ -->
+<section id="grade">
+  <div class="wrap">
+    <div class="narrow">
+      <span class="eyebrow">Currículo completo</span>
+      <h2>Sete módulos, 24 horas</h2>
+      <p class="lede">Três módulos constroem a base — o método, o céu, os instrumentos. Três aplicam essa base
+      a monumentos reais. O último põe você a fazer um estudo próprio.</p>
+    </div>
+
+    <div class="mods">
+      <div class="mod"><span class="n">MÓD 01</span><span class="t">O que é arqueoastronomia — e o que ela exige
+        <small>Lockyer, Thom, Hawkins e a crise metodológica dos anos 1970 · azimute, altura e declinação · por que declarar a hipótese antes de medir é a diferença entre a disciplina e o seu contrário</small></span><span class="h">3h</span></div>
+      <div class="mod"><span class="n">MÓD 02</span><span class="t">O céu do Egito antigo
+        <small>A esfera celeste a 30°N · as circumpolares <span class="t">jḫmw-sk</span> · precessão · o levante helíaco de Sírius e o calendário vagante · os decanos e as constelações realmente atestadas nos tetos</small></span><span class="h">4h</span></div>
+      <div class="mod"><span class="n">MÓD 03</span><span class="t">Instrumentos e o ritual de fundação
+        <small>O <span class="t">mrḫt</span> e o <span class="t">bꜣy</span> · o gnômon · o relógio de água · a cerimônia <span class="t">pḏ-šs</span> com Seshat — o que os textos dizem, e a distância entre o rito e a topografia</small></span><span class="h">3h</span></div>
+      <div class="mod"><span class="n">MÓD 04</span><span class="t">A orientação das pirâmides
+        <small>Os erros cardinais medidos de Meidum a Miquerinos · trânsito simultâneo, elongação máxima e bisseção solar · o debate Spence × Rawlins &amp; Pickering, e o que 2022 acrescentou</small></span><span class="h">4h</span></div>
+      <div class="mod"><span class="n">MÓD 05</span><span class="t">Templos, necrópoles e o horizonte
+        <small>O levantamento de 330 templos de Belmonte e Shaltout · o Nilo como eixo dominante · Karnak e o solstício de inverno · Abu Simbel · os canais da Grande Pirâmide</small></span><span class="h">4h</span></div>
+      <div class="mod"><span class="n">MÓD 06</span><span class="t">A Correlação de Órion e a arqueoastronomia alternativa
+        <small>A proposta de Bauval em detalhe · as objeções de Krupp e de Fairall · a erosão da Esfinge e a resposta geológica · e a parte inteiramente verdadeira sobre <span class="t">sꜣḥ</span> e Osíris</small></span><span class="h">3h</span></div>
+      <div class="mod"><span class="n">MÓD 07</span><span class="t">Método: faça o seu próprio estudo
+        <small>Do azimute de campo ao valor de declinação, com Stellarium e planilha · refração, extinção e horizonte real · pré-registrar a hipótese, estimar o erro e publicar honestamente o que não fechou</small></span><span class="h">3h</span></div>
+    </div>
+
+    <p class="small muted" style="margin-top:1.2rem">Avaliação em três etapas: conversão de coordenadas (após o
+    Módulo 02), análise crítica de uma alegação publicada (após o Módulo 05) e um estudo de orientação próprio,
+    de um monumento à sua escolha, como entrega final.</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════ MÉTODO ══════════════ -->
+<section id="metodo">
+  <div class="wrap">
+    <div class="narrow">
+      <span class="eyebrow">Como o curso é feito</span>
+      <h2>Cinco decisões que mudam tudo</h2>
+    </div>
+
+    <div class="grid g2" style="margin-top:2rem">
+      <div class="card">
+        <h3>Números com procedência</h3>
+        <p>Toda medida citada traz a publicação de onde veio. Quando duas fontes discordam — e discordam —, as
+        duas aparecem, com a divergência explicitada em vez de resolvida por conveniência.</p>
+      </div>
+      <div class="card">
+        <h3>Você refaz as contas</h3>
+        <p>A conversão de azimute em declinação é uma linha de trigonometria. Você vai calculá-la à mão nos
+        exercícios. Um resultado que você só leu não é um resultado que você sabe avaliar.</p>
+      </div>
+      <div class="card">
+        <h3>Ferramentas gratuitas</h3>
+        <p>Stellarium, Google Earth e uma planilha bastam para reproduzir a maior parte do que este curso
+        discute. Nada é caixa-preta, e nada exige compra.</p>
+      </div>
+      <div class="card">
+        <h3>A incerteza faz parte do resultado</h3>
+        <p>Todo exercício pede a estimativa de erro junto com o valor. É a diferença entre uma medida e uma
+        alegação — e é exatamente o que falta na maior parte do que circula sobre o assunto.</p>
+      </div>
+      <div class="card">
+        <h3>As fontes egípcias importam</h3>
+        <p>Um alinhamento que os egípcios não poderiam sequer descrever com seu próprio vocabulário astronômico
+        exige justificativa extra. Por isso o Módulo 02 estuda os textos, e não só o céu.</p>
+      </div>
+      <div class="card">
+        <h3>O desacordo fica visível</h3>
+        <p>Nos pontos em disputa — e são muitos — o curso apresenta os lados e diz <em>o que decidiria a
+        questão</em>, em vez de eleger um vencedor. Saber o que falta é parte de saber o assunto.</p>
+      </div>
+    </div>
+
+    <div class="narrow" style="margin-top:2.6rem">
+      <h3>A bibliografia está à vista</h3>
+      <p>O curso é construído sobre trabalhos que você pode conferir. Isso não é ornamento acadêmico: é o que
+      permite verificar qualquer afirmação sem ter que confiar em quem escreveu.</p>
+      <ul class="biblio plain">
+        <li><b>SPENCE, Kate.</b> “Ancient Egyptian chronology and the astronomical orientation of pyramids”. <i>Nature</i> 408 (2000), 320–324.</li>
+        <li><b>RAWLINS, D. &amp; PICKERING, K.</b> “Astronomical orientation of the pyramids”. <i>Nature</i> 412 (2001), 699. — a réplica publicada</li>
+        <li><b>TUPIKOVA, Irina.</b> “Astronomical Orientation of the Pyramids and Stellar Alignments”. MPIWG Preprint 511, 2022. — a reavaliação sistemática</li>
+        <li><b>BELMONTE, J. A. &amp; SHALTOUT, M.</b> <i>In Search of Cosmic Order: Selected Essays on Egyptian Archaeoastronomy</i>. SCA Press, 2009. — o levantamento de 330 templos</li>
+        <li><b>RUGGLES, Clive.</b> <i>Ancient Astronomy: An Encyclopedia of Cosmologies and Myth</i>. ABC-CLIO, 2005. — a referência metodológica da disciplina</li>
+        <li><b>KRUPP, E. C.</b> “Astronomical Integrity at Giza”. In: <i>In Search of Ancient Astronomies</i> e artigos subsequentes. — a objeção técnica à Correlação de Órion</li>
+      </ul>
+      <p class="small muted">A bibliografia completa está publicada dentro do curso, organizada por seção, além
+      de uma caixa de leitura recomendada ao final de cada um dos sete módulos.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════ PARA QUEM ══════════════ -->
+<section id="paraquem">
+  <div class="wrap">
+    <div class="narrow">
+      <span class="eyebrow">Honestidade</span>
+      <h2>Para quem é — e para quem não é</h2>
+      <p class="lede">Um curso que serve para todo mundo não serve direito para ninguém. Vale conferir antes de
+      gastar R$ 247.</p>
+    </div>
+
+    <div class="grid g2" style="margin-top:2rem">
+      <div class="card">
+        <h3 style="color:var(--ok)">É para você se…</h3>
+        <ul class="plain fit">
+          <li>você quer <strong>avaliar</strong> alegações, e não apenas coletá-las</li>
+          <li>consegue calcular <span class="t">arcsen(0,5)</span> numa calculadora sem se assustar</li>
+          <li>já assistiu a um documentário sobre pirâmides e ficou com a impressão de que faltava alguma coisa</li>
+          <li>gosta quando alguém mostra a conta em vez de mostrar a conclusão</li>
+          <li>estuda História, Arqueologia, Astronomia, Física ou afins</li>
+          <li>quer entender o debate de verdade — os dois lados, com as publicações</li>
+          <li>pretende fazer o seu próprio levantamento de um monumento</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="color:var(--no)">Não é para você se…</h3>
+        <ul class="plain nofit">
+          <li>você quer a confirmação de que as pirâmides codificam o Cinturão de Órion</li>
+          <li>procura evidência de tecnologia perdida ou de construtores pré-dinásticos</li>
+          <li>trigonometria de ensino médio te parece um obstáculo intransponível</li>
+          <li>espera respostas fechadas — boa parte deste assunto está em disputa, e o curso diz isso</li>
+          <li>não tem 3 a 4 horas por semana para dedicar</li>
+          <li>prefere vídeo a texto — este curso é escrito, para ser lido, consultado e recalculado</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card narrow" style="margin-top:2rem;margin-inline:auto">
+      <p><strong>Sobre o primeiro ponto da coluna da direita.</strong> O Módulo 06 trata a Correlação de Órion
+      com seriedade: a proposta de Bauval aparece ponto a ponto, no argumento de quem a defende, e as objeções
+      de Krupp e de Fairall aparecem com o mesmo cuidado. O módulo conclui que a correlação não respondeu às
+      objeções mensuráveis centrais que recebeu.</p>
+      <p style="margin-bottom:0">Mas há uma parte inteiramente verdadeira nessa história, e o curso a
+      desenvolve: <span class="t">sꜣḥ</span> 𓊃𓄿𓎛𓇼, a constelação que hoje chamamos de Órion, era de fato
+      identificada a Osíris pelos egípcios, e os Textos das Pirâmides dizem isso explicitamente. O problema
+      nunca foi a ligação entre Órion e o além egípcio. Foi a geometria que se pendurou nela.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════ PREÇO ══════════════ -->
+<section id="preco">
+  <div class="wrap narrow">
+    <div class="pricebox">
+      <span class="eyebrow" style="margin-bottom:.4rem">Curso completo</span>
+      <div class="price"><sup>R$</sup>247</div>
+      <p class="muted" style="margin-bottom:1.6rem">pagamento único · acesso permanente</p>
+
+      <div style="text-align:left;max-width:30rem;margin:0 auto 2rem">
+        <ul class="check">
+          <li>7 módulos · 24 horas de conteúdo escrito</li>
+          <li>Diagramas construídos a partir dos dados, não ilustrações</li>
+          <li>Tabelas de medidas com a publicação de origem indicada</li>
+          <li>Exercícios de todos os módulos com gabarito comentado</li>
+          <li>Protocolo completo para o seu próprio estudo de orientação</li>
+          <li>Acesso pelo navegador, no computador ou no celular</li>
+          <li>Certificado digital de conclusão</li>
+        </ul>
+      </div>
+
+      <a class="btn btn-gold btn-lg" href="#lista">Entrar na lista de espera</a>
+
+      <div class="selo">
+        <div class="mark"><div><b>7</b><i>dias</i></div></div>
+        <div>
+          <h4>Garantia incondicional</h4>
+          <p>Entrou, leu e não era o que você esperava? <strong>Devolvemos o valor integral</strong> — sem
+          perguntas, sem formulário, sem precisar justificar.</p>
+          <p class="leg">É o direito de arrependimento previsto no art. 49 do Código de Defesa do Consumidor.
+          Aqui ele é só explícito.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════ COMBO ══════════════ -->
+<section id="combo">
+  <div class="wrap narrow">
+    <span class="eyebrow">Os dois cursos</span>
+    <h2>Ler o céu e ler o que escreveram sobre ele</h2>
+    <p class="lede">Os dois cursos se completam de um jeito bem concreto: aqui você aprende a medir a
+    orientação de um monumento; lá você aprende a ler o que os egípcios gravaram na parede dele. O Módulo 09
+    da Masterclass de Hieróglifos abre os debates — este curso os desenvolve com números.</p>
+
+    <div class="combo" style="margin-top:2rem">
+      <div class="combo-top">
+        <div class="combo-item">
+          <span class="gl">𓂀</span>
+          <h4>Epigrafia &amp; Hieróglifos</h4>
+          <p>40 horas · 9 módulos · R$ 197</p>
+        </div>
+        <div class="combo-plus">+</div>
+        <div class="combo-item">
+          <span class="gl">𓇼</span>
+          <h4>Arqueoastronomia das Necrópoles</h4>
+          <p>24 horas · 7 módulos · R$ 247</p>
+        </div>
+      </div>
+
+      <div class="combo-price">
+        <div class="antes">R$ 444 separados</div>
+        <div class="price"><sup>R$</sup>347</div>
+        <p class="muted" style="margin:.2rem 0 0">64 horas · 16 módulos · pagamento único</p>
+        <div class="eco">Economia de R$ 97</div>
+        <p style="margin-top:1.6rem;margin-bottom:0">
+          <a class="btn btn-gold btn-lg" href="#lista">Quero os dois</a>
+        </p>
+      </div>
+    </div>
+
+    <p class="fonte">A mesma garantia de 7 dias vale para o combo, sobre o valor integral. Não há ordem
+    obrigatória entre os dois cursos: nenhum é pré-requisito do outro.</p>
+  </div>
+</section>
+
+<!-- ══════════════ FORMULÁRIO ══════════════ -->
+<section id="lista" class="tight">
+  <div class="wrap narrow">
+    <div class="formcard">
+      <span class="eyebrow">Lista de espera</span>
+      <h2 style="margin-bottom:.6rem">Avisamos quando as inscrições abrirem</h2>
+      <p class="muted">Sem spam, sem sequência de e-mails diária. Uma mensagem quando o curso abrir, e nada
+      além disso.</p>
+
+      <!-- Netlify Forms: exige "Enable form detection" ligado no painel do site.
+           O nome do formulário precisa ser único no site inteiro — por isso
+           "lista-arqueoastronomia", diferente do da página de hieróglifos. -->
+      <form name="lista-arqueoastronomia"
+            method="POST"
+            action="/masterclass-arqueoastronomia/obrigado.html"
+            data-netlify="true"
+            netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="lista-arqueoastronomia">
+        <p class="hp" aria-hidden="true">
+          <label>Não preencha este campo: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+        </p>
+
+        <div class="field">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required autocomplete="name" placeholder="Como quer ser chamado">
+        </div>
+
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="voce@exemplo.com">
+        </div>
+
+        <div class="field">
+          <label for="interesse">O que te traz aqui</label>
+          <select id="interesse" name="interesse">
+            <option value="metodo">Quero aprender a avaliar alegações de alinhamento</option>
+            <option value="ceu">Me interessa o céu do Egito antigo em si</option>
+            <option value="debates">Quero entender o debate sobre as pirâmides</option>
+            <option value="estudo">Pretendo fazer meu próprio levantamento</option>
+            <option value="academico">Venho da área (História, Arqueologia, Astronomia…)</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="pacote">Qual te interessa</label>
+          <select id="pacote" name="pacote">
+            <option value="arqueo">Só a Arqueoastronomia — R$ 247</option>
+            <option value="combo">Os dois cursos — R$ 347</option>
+            <option value="indeciso">Ainda não decidi</option>
+          </select>
+        </div>
+
+        <button class="btn btn-gold btn-lg" type="submit" style="width:100%;margin-top:.6rem">
+          Quero ser avisado
+        </button>
+
+        <p class="small muted" style="margin:1.1rem 0 0;text-align:center">
+          Seus dados servem só para este aviso. Você pode pedir a remoção a qualquer momento.
+        </p>
+      </form>
+
+      <hr class="rule" style="margin:2rem 0 1.6rem">
+
+      <p style="text-align:center;margin-bottom:.9rem">Prefere falar antes de decidir?</p>
+      <p style="text-align:center;margin:0">
+        <a class="btn btn-ghost" href="https://wa.me/5541988693911?text=Oi!%20Quero%20saber%20mais%20sobre%20o%20curso%20de%20Arqueoastronomia."
+           rel="noopener">Tirar dúvidas no WhatsApp</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════ FAQ ══════════════ -->
+<section id="faq">
+  <div class="wrap narrow">
+    <span class="eyebrow">Dúvidas</span>
+    <h2>Perguntas que valem responder antes</h2>
+
+    <div style="margin-top:2rem">
+      <details class="faq">
+        <summary>Preciso saber astronomia?</summary>
+        <div class="a"><p>Não. O Módulo 02 constrói o céu do zero: esfera celeste, coordenadas, movimento
+        diurno, circumpolares, precessão. O que é preciso é trigonometria de ensino médio — seno, cosseno,
+        arco-seno. Se você consegue avaliar <span class="t">arcsen(0,5)</span> numa calculadora, está
+        pronto.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary>Preciso ter feito o curso de hieróglifos?</summary>
+        <div class="a"><p>Não, os dois são independentes e não há ordem obrigatória. Eles se completam — os
+        termos egípcios aqui vêm sempre com transliteração e glifos, e o Módulo 09 de lá abre os debates que
+        este curso desenvolve com números — mas cada um se sustenta sozinho.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary>Quanta matemática, exatamente?</summary>
+        <div class="a"><p>A fórmula central é uma só: <span class="t">sen δ = sen φ · sen h + cos φ · cos h ·
+        cos A</span>. Além dela, tangente para converter ângulos pequenos em distância, soma de erros em
+        quadratura, e média e desvio padrão. Tudo se resolve numa calculadora comum ou numa planilha. Não há
+        cálculo, nem álgebra linear, nem programação.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary>O curso defende ou ataca a Correlação de Órion?</summary>
+        <div class="a"><p>Nem uma coisa nem outra: ele a <em>testa</em>. A proposta de Bauval é apresentada
+        ponto a ponto, pelo argumento de quem a defende, e as objeções técnicas de Krupp e de Fairall recebem o
+        mesmo cuidado. O módulo conclui que a correlação não respondeu às objeções mensuráveis centrais — e
+        desenvolve, em seguida, a parte da história que é inteiramente verdadeira: a identificação egípcia
+        entre <span class="t">sꜣḥ</span> e Osíris. Se você procura endosso, não é aqui. Se procura entender o
+        debate, provavelmente é o material mais completo em português.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary>É em vídeo?</summary>
+        <div class="a"><p>Não. O curso é <strong>escrito</strong>, em páginas de leitura no navegador. Foi uma
+        decisão deliberada: uma tabela de medidas com fonte, uma fórmula que você precisa consultar enquanto
+        calcula e um diagrama que você compara com o seu próprio resultado funcionam numa página e não
+        funcionam num vídeo. Você vai voltar a esse material — e num vídeo isso significa arrastar a barra de
+        progresso.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary>Os diagramas são ilustrações?</summary>
+        <div class="a"><p>Não. Os sete diagramas do curso são desenhados a partir dos valores, em SVG: a
+        esfera celeste com as cordas calculadas a partir da declinação real, o gráfico da deriva com os erros
+        publicados, o <span class="t">mrḫt</span> com a geometria de visada coerente. São figuras que você pode
+        conferir, não decoração.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary>Como recebo o acesso?</summary>
+        <div class="a"><p>Depois da confirmação da compra, você recebe o link direto para as páginas do curso
+        no próprio site. O acesso é permanente e funciona em qualquer navegador, no computador ou no celular —
+        as páginas foram testadas em tela de 390&nbsp;px.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary>Tem certificado?</summary>
+        <div class="a"><p>Sim, certificado digital de conclusão. Vale registrar o que ele é e o que não é: é um
+        comprovante de que você completou este programa, não uma certificação acadêmica ou profissional
+        reconhecida por universidade. Nenhum curso online de arqueoastronomia emite isso.</p></div>
+      </details>
+
+      <details class="faq">
+        <summary>E se eu não gostar?</summary>
+        <div class="a"><p>Você tem 7 dias para pedir o reembolso integral, sem precisar justificar. É o direito
+        de arrependimento previsto no art. 49 do Código de Defesa do Consumidor, e nós só o tornamos
+        explícito.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ══════════════ FECHAMENTO ══════════════ -->
+<section>
+  <div class="wrap narrow" style="text-align:center">
+    <div class="glyphband" style="font-family:var(--font-glyph);font-size:2rem;color:var(--gold);letter-spacing:.3em;margin-bottom:1.2rem">𓇼𓇼𓇼</div>
+    <h2>As estrelas que não conhecem a destruição</h2>
+    <p class="lede" style="margin-inline:auto">Era assim que os egípcios chamavam as circumpolares:
+    <span class="t">jḫmw-sk</span>. São as estrelas que nunca se põem — giram em torno do polo a noite
+    inteira, todas as noites, e por isso não morrem. O rei morto queria ir para junto delas.</p>
+    <p class="lede" style="margin-inline:auto">Para saber quais estrelas eram essas em 2500 a.C., não basta
+    olhar o céu de hoje. É preciso calcular. Em 24 horas, você calcula.</p>
+    <p style="margin-top:2.2rem">
+      <a class="btn btn-gold btn-lg" href="#lista">Entrar na lista de espera</a>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span class="gl">𓇯 𓇳 𓇼 𓈌</span>
+    <p><strong>Desvendando os Códigos Egípcios</strong> — Arqueoastronomia das Necrópoles.</p>
+    <p class="small">Transliteração conforme a Leiden Unified Transliteration (IAE, 2023). Os hieróglifos desta
+    página usam o bloco Unicode <em>Egyptian Hieroglyphs</em> (U+13000–U+1342F). Medidas de orientação conforme
+    Spence (<i>Nature</i>, 2000) e Tupikova (MPIWG Preprint 511, 2022).</p>
+    <p class="small"><a href="https://codigosegipcios.netlify.app/">Voltar ao site</a> ·
+    <a href="../masterclass-hieroglifos/">Masterclass de Hieróglifos</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var TABELA =
+    '<table class="errs">' +
+      '<caption>Desvio do lado em relação ao norte verdadeiro, em minutos de arco</caption>' +
+      '<thead><tr><th>Pirâmide</th><th>Soberano</th><th>Média dos lados</th></tr></thead>' +
+      '<tbody>' +
+        '<tr><td>Meidum</td><td>Seneferu</td><td class="n">−19,4′</td></tr>' +
+        '<tr><td>Curvada (Dahshur)</td><td>Seneferu</td><td class="n">−14,6′</td></tr>' +
+        '<tr><td>Vermelha (Dahshur)</td><td>Seneferu</td><td class="n">−8,8′</td></tr>' +
+        '<tr><td>Quéops (Gizé)</td><td>Khufu</td><td class="n">−3,2′</td></tr>' +
+        '<tr><td>Quéfren (Gizé)</td><td>Khafre</td><td class="n">−6,1′</td></tr>' +
+        '<tr><td>Miquerinos (Gizé)</td><td>Menkaure</td><td class="n pos">+13,3′</td></tr>' +
+      '</tbody>' +
+    '</table>';
+
+  var GRAFICO =
+    '<div>' +
+    '<svg class="drift" viewBox="0 0 680 252" role="img" ' +
+         'aria-label="Gráfico da deriva: os erros de orientação das seis pirâmides em ordem de construção, ' +
+         'partindo de menos 19,4 minutos de arco em Meidum, subindo até menos 3,2 em Quéops, recuando para ' +
+         'menos 6,1 em Quéfren e cruzando o zero até mais 13,3 em Miquerinos.">' +
+      '<line class="ax"   x1="76" x2="606" y1="188.3" y2="188.3"/>' +
+      '<line class="ax"   x1="76" x2="606" y1="144.0" y2="144.0"/>' +
+      '<line class="zero" x1="76" x2="606" y1="99.7"  y2="99.7"/>' +
+      '<line class="ax"   x1="76" x2="606" y1="55.4"  y2="55.4"/>' +
+      '<text class="gr" x="66" y="192.3">−20′</text>' +
+      '<text class="gr" x="66" y="148.0">−10′</text>' +
+      '<text class="gr" x="66" y="103.7">0′</text>' +
+      '<text class="gr" x="66" y="59.4">+10′</text>' +
+      '<path class="ln" d="M 76 185.6 L 182 164.4 L 288 138.7 L 394 113.9 L 500 126.7 L 606 40.8"/>' +
+      '<circle cx="76"  cy="185.6" r="4.5"/><text class="val" x="92"  y="206">−19,4′</text><text class="nm" x="76"  y="236">Meidum</text>' +
+      '<circle cx="182" cy="164.4" r="4.5"/><text class="val" x="182" y="184">−14,6′</text><text class="nm" x="182" y="236">Curvada</text>' +
+      '<circle cx="288" cy="138.7" r="4.5"/><text class="val" x="288" y="159">−8,8′</text><text class="nm" x="288" y="236">Vermelha</text>' +
+      '<circle cx="394" cy="113.9" r="4.5"/><text class="val" x="394" y="134">−3,2′</text><text class="nm" x="394" y="236">Quéops</text>' +
+      '<circle cx="500" cy="126.7" r="4.5"/><text class="val" x="500" y="147">−6,1′</text><text class="nm" x="500" y="236">Quéfren</text>' +
+      '<circle cx="606" cy="40.8"  r="4.5"/><text class="val" x="606" y="27">+13,3′</text><text class="nm" x="606" y="236">Miquerinos</text>' +
+    '</svg>' +
+    '<p class="driftcap">Erro de orientação em ordem de construção, de <b>Meidum</b> a ' +
+    '<b>Miquerinos</b>. A linha tracejada é o norte verdadeiro.' +
+    '<span class="so-mobile"> Os valores são os da tabela da questão anterior.</span></p>' +
+    '</div>';
+
+  var Q = [
+    {
+      est: '<div class="bignum"><div class="v">−3,2′</div>' +
+           '<div class="u">Quéops · erro de orientação<br><b>lado de 230,4 metros</b></div></div>',
+      title: "A Grande Pirâmide aponta ao norte verdadeiro com erro de 3,2 minutos de arco. Sobre um lado de 230 metros, de quanto é o desvio?",
+      opts: ["Cerca de 21 centímetros", "Cerca de 2 metros", "Cerca de 21 metros"],
+      right: 0,
+      fb: '<p class="tl">230,4 × tan(3,2′) = 230,4 × 0,000931 ≈ 0,21 m</p>' +
+          '<p><strong>A conta:</strong> um minuto de arco é 1/60 de grau. Converta os 3,2′ em graus, tire a ' +
+          'tangente, multiplique pelo comprimento do lado. É a operação que transforma um ângulo medido num ' +
+          'desvio que dá para enxergar.</p>' +
+          '<p style="margin-bottom:0">Vinte e um centímetros em duzentos e trinta metros — sem bússola, sem ' +
+          'teodolito, por volta de 2500 a.C. Guarde a técnica: você vai usá-la na próxima questão.</p>'
+    },
+    {
+      est: TABELA,
+      title: "Estas são as seis grandes pirâmides do Reino Antigo, em ordem de construção. Qual é o dado mais informativo da tabela?",
+      opts: [
+        "Que todos os erros são minúsculos — a precisão é o achado",
+        "Que cinco das seis erram para o mesmo lado, e a magnitude cai e depois inverte",
+        "Que Quéops é a mais precisa de todas"
+      ],
+      right: 1,
+      fb: '<p class="tl">O padrão vale mais que a precisão.</p>' +
+          '<p><strong>Por quê:</strong> errar <em>pouco</em> se explica por competência — bons instrumentos, ' +
+          'bases longas, média de muitas observações. Isso é admirável, mas não é informativo: não diz qual ' +
+          'método foi usado.</p>' +
+          '<p>Já errar <strong>sistematicamente para o mesmo lado</strong>, com a magnitude derivando de −19′ ' +
+          'até cruzar o zero, não pode vir de erro aleatório. Erro aleatório espalharia os sinais. Uma deriva ' +
+          'ordenada exige uma <strong>causa ordenada</strong> — e é justamente isso que abre a possibilidade ' +
+          'de identificar o método.</p>' +
+          '<p style="margin-bottom:0">Esse raciocínio — distinguir o que é impressionante do que é ' +
+          'informativo — é o hábito central da disciplina. Agora a parte difícil.</p>'
+    },
+    {
+      est: GRAFICO,
+      title: "Em 2000, Kate Spence publicou na Nature que essa deriva funciona como relógio, e datou Quéops em 2478 a.C. ± 65 anos. O que a deriva estabelece?",
+      opts: [
+        "Que os egípcios usaram o par Kochab–Mizar: o ajuste identifica o método",
+        "Que ela é compatível com métodos estelares afetados pela precessão — mas não diz qual deles",
+        "Nada: com seis pontos, qualquer padrão é coincidência"
+      ],
+      right: 1,
+      fb: '<p class="tl">Compatível não é o mesmo que demonstrado.</p>' +
+          '<p>A deriva é real e pede uma causa sistemática — até aí a resposta C está errada. Mas em 2001 ' +
+          '<strong>Rawlins e Pickering</strong> responderam na própria <i>Nature</i>: Kochab–Mizar não é o ' +
+          'único par que se ajusta aos dados. Se várias configurações explicam igualmente bem, o ajuste deixa ' +
+          'de identificar qual foi usada.</p>' +
+          '<p>Em 2022, <strong>Tupikova</strong> quantificou isso. Kochab–Mizar prevê desvio médio de ' +
+          '<span class="t">−4,7′ ± 3,0′</span>. Alioth–Mizar, uma configuração de natureza diferente, prevê ' +
+          '<span class="t">−4,7′ ± 3,0′</span> também. Quando duas explicações fisicamente distintas produzem ' +
+          'previsões indistinguíveis sobre a mesma amostra, o ajuste para de ser evidência a favor de ' +
+          'qualquer uma delas.</p>' +
+          '<p style="margin-bottom:0">Você acabou de fazer as três coisas que este curso ensina: ' +
+          '<strong>converter um ângulo em medida</strong>, <strong>separar padrão de acaso</strong> e ' +
+          '<strong>dizer o que um ajuste prova e o que não prova</strong>. Isso é o Módulo 04, aulas 4.1 a ' +
+          '4.5. Faltam 23 horas e 58 minutos.</p>'
+    }
+  ];
+
+  var i = 0, score = 0, answered = 0;
+  var elStep  = document.getElementById("d-step"),
+      elTitle = document.getElementById("d-title"),
+      elEst   = document.getElementById("d-est"),
+      elOpts  = document.getElementById("d-opts"),
+      elFb    = document.getElementById("d-fb"),
+      elNext  = document.getElementById("d-next"),
+      elProg  = document.getElementById("d-prog");
+
+  function render() {
+    var q = Q[i];
+    elStep.textContent = "Questão " + (i + 1) + " de " + Q.length;
+    elTitle.textContent = q.title;
+    elEst.innerHTML = q.est;
+    elFb.hidden = true;
+    elFb.innerHTML = "";
+    elNext.hidden = true;
+    elOpts.innerHTML = "";
+
+    q.opts.forEach(function (text, idx) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "opt";
+      b.innerHTML = '<span class="mk">' + String.fromCharCode(65 + idx) + "</span><span>" + text + "</span>";
+      b.addEventListener("click", function () { choose(idx, b); });
+      elOpts.appendChild(b);
+    });
+  }
+
+  function choose(idx, btn) {
+    var q = Q[i];
+    var all = elOpts.querySelectorAll(".opt");
+    Array.prototype.forEach.call(all, function (b, n) {
+      b.disabled = true;
+      if (n === q.right) { b.classList.add("right"); b.querySelector(".mk").textContent = "✓"; }
+    });
+    if (idx !== q.right) { btn.classList.add("wrong"); btn.querySelector(".mk").textContent = "✕"; }
+    else { score++; }
+
+    answered++;
+    elProg.textContent = "acertos: " + score + " / " + answered;
+    elFb.innerHTML = q.fb;
+    elFb.hidden = false;
+    elNext.textContent = (i < Q.length - 1) ? "Próxima" : "Ver o curso completo";
+    elNext.hidden = false;
+  }
+
+  elNext.addEventListener("click", function () {
+    if (i < Q.length - 1) { i++; render(); document.getElementById("demo").scrollIntoView({ block: "center" }); }
+    else { document.getElementById("grade").scrollIntoView(); }
+  });
+
+  render();
+})();
+</script>
+
+</body>
+</html>

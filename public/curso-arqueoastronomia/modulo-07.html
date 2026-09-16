@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Módulo 07 — Método: faça o seu próprio estudo | Arqueoastronomia das Necrópoles</title>
+<meta name="description" content="Do azimute de campo à declinação, com Stellarium e planilha: escolher o alvo antes de medir, estimar o erro e publicar o que não fecha.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Noto+Sans+Mono:wght@400;500&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/curso.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html"><span class="gl">𓇼</span> Códigos Egípcios</a>
+    <nav class="topnav">
+      <a href="index.html">Início do curso</a>
+      <a href="index.html#grade">Grade</a>
+      <a href="index.html#avaliacao">Avaliação</a>
+      <a href="index.html#bibliografia">Bibliografia</a>
+      <a href="../curso-hieroglifos/index.html">Curso de hieróglifos</a>
+      <a href="https://codigosegipcios.netlify.app/">Voltar ao site</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="glyphband">𓁹𓇼𓏛𓏤</div>
+    <span class="eyebrow">Módulo 07 · 3h</span>
+    <h1>Método: faça o seu próprio estudo</h1>
+    <p class="lede">Do azimute de campo à declinação, com Stellarium e planilha: escolher o alvo antes de medir, estimar o erro e publicar o que não fecha.</p>
+  </div>
+</section>
+<section class="wrap narrow">
+
+  <div class="objetivos">
+    <h4>Objetivos do módulo</h4>
+    <ul>
+      <li>Pré-registrar uma hipótese de alinhamento antes de qualquer medição</li>
+      <li>Medir o azimute de um eixo por imagem de satélite e, quando possível, em campo</li>
+      <li>Determinar a altura real do horizonte na direção do eixo</li>
+      <li>Converter em declinação e propagar a incerteza corretamente</li>
+      <li>Comparar com efemérides e redigir um relatório que declare o que não fechou</li>
+    </ul>
+  </div>
+
+  <div class="toc">
+    <h4>Neste módulo</h4>
+    <ol>
+      <li><a href="#a71">Antes de medir: o pré-registro</a></li>
+      <li><a href="#a72">Medir o azimute</a></li>
+      <li><a href="#a73">A altura do horizonte</a></li>
+      <li><a href="#a74">Converter e propagar a incerteza</a></li>
+      <li><a href="#a75">Comparar, concluir e publicar</a></li>
+      <li><a href="#projeto">O projeto final</a></li>
+    </ol>
+  </div>
+
+  <!-- ============ 7.1 ============ -->
+  <article class="aula" id="a71">
+    <h2><span class="n">Aula 7.1</span> Antes de medir: o pré-registro</h2>
+
+    <p>Escreva isto <strong>antes</strong> de abrir o Google Earth. É a diferença entre um estudo e um exercício de
+    confirmação.</p>
+
+    <div class="box box-pratica">
+      <h4>Ficha de pré-registro</h4>
+      <ol style="margin-bottom:0">
+        <li><strong>Monumento e eixo.</strong> Qual estrutura, qual eixo, e qual dos dois sentidos. Se há mais de
+        um eixo candidato, liste todos <em>agora</em> — não escolha depois o que der certo.</li>
+        <li><strong>Hipótese.</strong> Que alvo astronômico você vai testar, e por quê. A justificativa tem de ser
+        <em>independente</em> da medição: o nome do templo, a divindade titular, um festival documentado, um
+        paralelo publicado.</li>
+        <li><strong>Tolerância.</strong> Qual desvio você aceitará como confirmação, e por quê. Derive-a da
+        precisão do seu método, não do resultado desejado.</li>
+        <li><strong>Época.</strong> Qual data de construção você assume, com que fonte, e com que margem.</li>
+        <li><strong>Hipótese nula.</strong> Qual a direção do Nilo neste trecho? Sua hipótese prevê algo
+        <em>diferente</em> da perpendicular ao rio?</li>
+        <li><strong>Critério de falseamento.</strong> Que resultado faria você concluir que não há alinhamento?</li>
+      </ol>
+    </div>
+
+    <div class="box box-atencao">
+      <h4>O item 6 é o que mais se omite</h4>
+      <p>Se você não consegue escrever qual resultado o refutaria, você não tem uma hipótese — tem uma expectativa.
+      Escreva o critério de falseamento antes de medir e guarde-o. Depois, cumpra-o.</p>
+    </div>
+  </article>
+
+  <!-- ============ 7.2 ============ -->
+  <article class="aula" id="a72">
+    <h2><span class="n">Aula 7.2</span> Medir o azimute</h2>
+
+    <h3>Método A — por imagem de satélite</h3>
+    <p>É o método que você provavelmente usará, e é surpreendentemente bom para eixos longos.</p>
+
+    <ol>
+      <li>Localize o monumento no <strong>Google Earth</strong> ou no QGIS.</li>
+      <li>Identifique <strong>dois pontos bem definidos</strong> sobre o mesmo eixo, o mais <em>afastados</em>
+      possível um do outro — por exemplo, o centro do portal externo e o centro do santuário. O comprimento da base
+      é o que determina sua precisão.</li>
+      <li>Leia as coordenadas dos dois pontos e calcule o azimute, ou use a ferramenta de régua, que fornece o
+      rumo diretamente.</li>
+      <li>Registre também o <strong>comprimento</strong> da linha e a sua estimativa de incerteza na localização de
+      cada extremidade, em metros.</li>
+    </ol>
+
+    <div class="formula">
+      <span class="eq">σ<sub>A</sub> ≈ arctan( σ<sub>ponto</sub> · √2 / L )</span>
+      <dl>
+        <dt>σ<sub>A</sub></dt><dd>incerteza no azimute</dd>
+        <dt>σ<sub>ponto</sub></dt><dd>incerteza na posição de cada extremidade, em metros</dd>
+        <dt>L</dt><dd>comprimento da linha de base, em metros</dd>
+        <dt>√2</dt><dd>combinação das duas extremidades independentes</dd>
+      </dl>
+    </div>
+
+    <div class="ex">
+      <p class="tl">L = 200 m, σ<sub>ponto</sub> = 2 m</p>
+      <p class="tl">σ<sub>A</sub> ≈ arctan(2 × 1,414 / 200) = arctan(0,01414) ≈ 0,81°</p>
+      <p class="tr">Quase um grau de incerteza. Sobre uma base de <strong>600 m</strong>, com os mesmos 2 m de
+      incerteza por ponto, cai para ≈ <strong>0,27°</strong>.</p>
+      <p class="gloss">Conclusão prática: alongue a linha de base antes de tentar melhorar a precisão de cada ponto.</p>
+    </div>
+
+    <h3>Método B — em campo</h3>
+    <p>Se você for ao sítio, o problema muda de natureza: passa a ser encontrar o <strong>norte
+    verdadeiro</strong>.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Instrumento</th><th>Precisão típica</th><th>Cuidado essencial</th></tr></thead>
+        <tbody>
+          <tr><td>Bússola de mão</td><td>±0,5° a ±1°</td><td>corrigir a <b>declinação magnética</b> do local e da data; afastar-se de metal e de estruturas de concreto armado</td></tr>
+          <tr><td>Bússola de trânsito / teodolito</td><td>±0,1° ou melhor</td><td>idem, mais nivelamento cuidadoso</td></tr>
+          <tr><td>GNSS de duas antenas</td><td>±0,05°</td><td>fornece azimute verdadeiro diretamente, sem magnetismo</td></tr>
+          <tr><td>Observação solar</td><td>±0,05° ou melhor</td><td>o método clássico: medir o azimute do sol num instante conhecido e calcular o norte verdadeiro; exige hora precisa e coordenadas do sítio</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-atencao">
+      <h4>Declinação magnética não é detalhe</h4>
+      <p>O norte magnético difere do verdadeiro por vários graus, e a diferença <strong>muda com o lugar e com o
+      tempo</strong>. Um azimute de bússola não corrigido pode errar por mais do que todo o efeito que você
+      procura medir. Use um modelo geomagnético para a data exata da medição e registre o valor aplicado no
+      relatório.</p>
+    </div>
+  </article>
+
+  <!-- ============ 7.3 ============ -->
+  <article class="aula" id="a73">
+    <h2><span class="n">Aula 7.3</span> A altura do horizonte</h2>
+
+    <p>O erro mais comum em trabalhos amadores é assumir <strong>h = 0</strong>. No Egito, com falésias no deserto
+    e no vale, essa suposição introduz erro sistemático da ordem do efeito procurado.</p>
+
+    <h3>Como obter h sem ir ao local</h3>
+    <ol>
+      <li>No Google Earth, posicione a câmera <strong>no ponto de observação</strong>, à altura do olho, e aponte
+      na direção do azimute medido.</li>
+      <li>Use o perfil de elevação ao longo dessa direção para achar o ponto que forma o maior ângulo — nem sempre é
+      o mais alto, porque distância e altura competem.</li>
+      <li>Calcule: <code>h = arctan((elevação do obstáculo − elevação do observador) / distância horizontal)</code>.</li>
+      <li>Some a correção de curvatura terrestre e refração para distâncias grandes — a partir de alguns
+      quilômetros ela deixa de ser desprezível.</li>
+    </ol>
+
+    <div class="ex">
+      <p class="tl">obstáculo 180 m mais alto que o observador, a 4.500 m de distância</p>
+      <p class="tl">h = arctan(180 / 4500) = arctan(0,04) ≈ 2,29°</p>
+      <p class="tr">Mais de dois graus. Ignorar isso e usar h = 0 deslocaria a declinação calculada em ordem
+      comparável — o suficiente para trocar um alvo por outro.</p>
+    </div>
+
+    <div class="box box-nota">
+      <h4>Para onde o erro empurra</h4>
+      <p>Subestimar a altura do horizonte faz a declinação calculada ficar <strong>mais negativa</strong> do que a
+      real para alvos a leste ou oeste. Não é ruído: é viés com direção conhecida. Se o seu resultado caiu
+      &ldquo;quase&rdquo; sobre o alvo esperado, verifique se não foi o valor de h que o levou até lá.</p>
+    </div>
+  </article>
+
+  <!-- ============ 7.4 ============ -->
+  <article class="aula" id="a74">
+    <h2><span class="n">Aula 7.4</span> Converter e propagar a incerteza</h2>
+
+    <p>A fórmula é a da Aula 1.4. O que este módulo acrescenta é o que fazer com a barra de erro.</p>
+
+    <div class="formula">
+      <span class="eq">sen δ = sen φ · sen h + cos φ · cos h · cos A</span>
+    </div>
+
+    <h3>Propagação prática</h3>
+    <p>Você não precisa de derivadas parciais. O método mais robusto — e o mais fácil de conferir — é
+    <strong>numérico</strong>:</p>
+
+    <ol>
+      <li>Calcule δ com os valores centrais de A e h. Chame de δ₀.</li>
+      <li>Calcule δ com <strong>A + σ<sub>A</sub></strong>, mantendo h. E com <strong>A − σ<sub>A</sub></strong>.</li>
+      <li>Repita variando h por <strong>±σ<sub>h</sub></strong>, mantendo A.</li>
+      <li>As duas maiores diferenças em relação a δ₀ são as contribuições Δ<sub>A</sub> e Δ<sub>h</sub>.</li>
+      <li>Combine em quadratura: <code>σ<sub>δ</sub> = √(Δ<sub>A</sub>² + Δ<sub>h</sub>²)</code>.</li>
+    </ol>
+
+    <div class="ex">
+      <p class="tl">A = 117,0° ± 0,6° &nbsp;·&nbsp; h = 1,2° ± 0,3° &nbsp;·&nbsp; φ = 25,72°</p>
+      <p class="tl">δ₀ = −23,57°</p>
+      <p class="tl">A = 117,6° → δ = −24,09° &nbsp;·&nbsp; A = 116,4° → δ = −23,04° &nbsp;→ Δ<sub>A</sub> ≈ 0,53°</p>
+      <p class="tl">h = 1,5° → δ = −23,42° &nbsp;·&nbsp; h = 0,9° → δ = −23,71° &nbsp;→ Δ<sub>h</sub> ≈ 0,15°</p>
+      <p class="tl">σ<sub>δ</sub> = √(0,53² + 0,15²) ≈ 0,55°</p>
+      <p class="tr">Resultado a reportar: <strong>δ = −23,6° ± 0,6°</strong>. Note que a incerteza do azimute
+      contribui cerca de <strong>três vezes e meia</strong> mais que a da altura do horizonte — é onde vale a pena
+      investir esforço. Alongar a linha de base vale mais do que refinar o perfil de elevação.</p>
+    </div>
+
+    <div class="box box-pratica">
+      <h4>Monte a planilha uma vez</h4>
+      <p>Cinco células de entrada (φ, A, σ<sub>A</sub>, h, σ<sub>h</sub>) e uma de saída. Teste-a com o caso de
+      sanidade do Módulo 01: A = 90°, h = 0°, φ = 30° tem de devolver <strong>δ = 0,000°</strong>. Se não devolver,
+      você provavelmente esqueceu de converter graus em radianos.</p>
+    </div>
+  </article>
+
+  <!-- ============ 7.5 ============ -->
+  <article class="aula" id="a75">
+    <h2><span class="n">Aula 7.5</span> Comparar, concluir e publicar</h2>
+
+    <h3>Obter a declinação do alvo na época</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Tipo de alvo</th><th>Como obter</th></tr></thead>
+        <tbody>
+          <tr><td><b>Sol nos solstícios</b></td><td>δ = ± obliquidade da época. Em 2500 a.C., ≈ ±24,0°; hoje, ±23,44°.</td></tr>
+          <tr><td><b>Sol nos equinócios</b></td><td>δ = 0° em qualquer época, por definição.</td></tr>
+          <tr><td><b>Estrela</b></td><td>Stellarium, recuando a data. Verifique que a correção de precessão está ativa e anote a época usada.</td></tr>
+          <tr><td><b>Lua nos limites</b></td><td>δ = ± (obliquidade ± 5,15°), aproximadamente, conforme o ciclo de 18,6 anos.</td></tr>
+          <tr><td><b>Alta precisão</b></td><td>JPL HORIZONS, para efemérides rigorosas.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>O teste</h3>
+    <p>O alvo está dentro da sua barra de erro? A regra é simples e não negociável: compare
+    <strong>|δ<sub>medido</sub> − δ<sub>alvo</sub>|</strong> com <strong>σ<sub>δ</sub></strong>, usando a tolerância
+    que você <em>pré-registrou</em> na Aula 7.1.</p>
+
+    <div class="box box-atencao">
+      <h4>Três tentações a resistir no momento da conclusão</h4>
+      <ul style="margin-bottom:0">
+        <li><strong>Alargar a tolerância</strong> depois de ver o resultado. Se 0,5° não bastou, 2° não vale.</li>
+        <li><strong>Trocar de alvo.</strong> Se você pré-registrou Sírius e o resultado bate com Canopus, o achado
+        é uma <em>nova hipótese a testar em outro monumento</em>, não uma confirmação.</li>
+        <li><strong>Mudar a data de construção</strong> para fazer a declinação do alvo alcançar a medida. A data
+        vem da arqueologia, não da sua planilha.</li>
+      </ul>
+    </div>
+
+    <div class="box box-pratica">
+      <h4>O relatório honesto</h4>
+      <p>Um resultado negativo bem executado é <strong>mais valioso</strong> do que um resultado positivo obtido
+      afrouxando critérios. Escreva:</p>
+      <p style="margin-bottom:0"><em>&ldquo;A hipótese pré-registrada era X. A declinação medida é δ = … ± …,
+      e a declinação de X na época assumida é …. A diferença é de … , maior que a tolerância pré-registrada de ….
+      <strong>A hipótese não é sustentada por esta medição.</strong> Observo que o valor obtido é próximo de Y,
+      o que sugere uma hipótese a testar em outros monumentos da mesma classe.&rdquo;</em></p>
+    </div>
+  </article>
+
+  <!-- ============ PROJETO ============ -->
+  <article class="aula" id="projeto">
+    <h2><span class="n">Projeto final</span> Estudo de orientação</h2>
+
+    <p>Produza o estudo completo de orientação de <strong>um monumento egípcio</strong> à sua escolha, usando
+    imagens de satélite públicas e Stellarium.</p>
+
+    <div class="box box-pratica">
+      <h4>Sugestões de alvo</h4>
+      <p><strong>Boas escolhas para um primeiro estudo:</strong> um templo de Karnak que não seja o de Amon-Rá; um
+      templo núbio; uma pirâmide da V ou VI Dinastia em Abusir ou Sacará; um templo de oásis. Prefira estruturas
+      com <strong>eixo longo e extremidades bem definidas</strong> na imagem de satélite.</p>
+      <p style="margin-bottom:0"><strong>Evite:</strong> Quéops, Karnak-Amon e Abu Simbel. Não porque sejam
+      difíceis, mas porque a literatura sobre eles é tão extensa que você encontrará a resposta antes de medir — e
+      o pré-registro perde o sentido.</p>
+    </div>
+
+    <h3>O que entregar</h3>
+    <ol>
+      <li><strong>Ficha de pré-registro</strong> — os seis itens da Aula 7.1, com data de preenchimento anterior
+      à medição.</li>
+      <li><strong>Identificação do monumento</strong> — nome, coordenadas, datação proposta com fonte, contexto
+      arqueológico, bibliografia consultada.</li>
+      <li><strong>Medição do azimute</strong> — método, pontos usados com coordenadas, comprimento da linha de
+      base, captura de tela da medição, incerteza estimada e como foi estimada.</li>
+      <li><strong>Altura do horizonte</strong> — valor, obstáculo identificado, distância, perfil de elevação.</li>
+      <li><strong>Conversão</strong> — cálculo completo passo a passo, com propagação de incerteza. Mostre as
+      contas; não só o resultado.</li>
+      <li><strong>Comparação</strong> — declinação do alvo pré-registrado na época assumida, com a fonte da
+      efeméride e a época usada.</li>
+      <li><strong>Teste da hipótese nula</strong> — direção do Nilo no trecho e comparação com a orientação do
+      monumento.</li>
+      <li><strong>Conclusão</strong> — sustentada, não sustentada, ou inconclusiva. As três são resultados
+      legítimos.</li>
+      <li><strong>Limitações</strong> — o que você não pôde determinar e por quê.</li>
+    </ol>
+
+    <div class="box box-nota">
+      <h4>Critério de avaliação</h4>
+      <p>O projeto <strong>não</strong> é avaliado pela confirmação da hipótese. É avaliado por:
+      rigor do pré-registro; qualidade e honestidade da estimativa de incerteza; tratamento explícito da hipótese
+      nula do Nilo; e clareza sobre as limitações.</p>
+      <p style="margin-bottom:0">Um estudo que conclui &ldquo;não sustentado&rdquo; com método impecável recebe
+      nota máxima. Um estudo que conclui &ldquo;sustentado&rdquo; sem barra de erro e sem teste do Nilo, não.</p>
+    </div>
+  </article>
+
+  <!-- ============ EXERCÍCIOS ============ -->
+  <div class="exercicios">
+    <h3>Exercícios do Módulo 07</h3>
+    <ol>
+      <li>Calcule σ<sub>A</sub> para uma linha de base de 80 m com incerteza de 1,5 m por extremidade. Depois para
+      800 m com a mesma incerteza por ponto.</li>
+      <li>Um obstáculo 95 m mais alto que o observador está a 3.200 m. Qual a altura do horizonte?</li>
+      <li>Converta em declinação: A = 121,5°, h = 2,0°, φ = 24,09° (Assuã).</li>
+      <li>Para o caso do exercício 3, com σ<sub>A</sub> = 0,7° e σ<sub>h</sub> = 0,4°, estime σ<sub>δ</sub> pelo
+      método numérico.</li>
+      <li>Você pré-registrou o solstício de inverno com tolerância de 0,5°. Obteve δ = −25,1° ± 0,6°, e a
+      declinação solsticial na época é −24,0°. Qual é a conclusão, e por quê?</li>
+      <li>Seu resultado não bate com o alvo pré-registrado, mas cai exatamente sobre Canopus. O que você escreve
+      no relatório?</li>
+      <li>Por que o critério de avaliação do projeto não recompensa confirmar a hipótese?</li>
+    </ol>
+
+    <details class="gab">
+      <summary>Ver gabarito comentado</summary>
+      <div class="body">
+        <ol>
+          <li><b>80 m:</b> σ<sub>A</sub> = arctan(1,5 × 1,414 / 80) = arctan(0,02652) ≈ <strong>1,52°</strong>.
+          <b>800 m:</b> arctan(1,5 × 1,414 / 800) = arctan(0,002652) ≈ <strong>0,15°</strong>.
+          Dez vezes a base, um décimo da incerteza. É a alavanca mais barata que existe neste trabalho.</li>
+
+          <li>h = arctan(95 / 3200) = arctan(0,029688) ≈ <strong>1,70°</strong>. Bem longe de zero — e o suficiente
+          para deslocar a declinação calculada de forma significativa.</li>
+
+          <li>sen δ = sen(24,09°)·sen(2,0°) + cos(24,09°)·cos(2,0°)·cos(121,5°)
+          <br>= (0,4082)(0,0349) + (0,9129)(0,99939)(−0,5225)
+          <br>= 0,0142 − 0,4767 = −0,4625 &nbsp;→&nbsp; <strong>δ ≈ −27,55°</strong>.
+          Note que isso está bem além do solstício de inverno da época (≈ −24°): não é um templo solsticial.</li>
+
+          <li>Variando A: 122,2° → δ ≈ −28,16°; 120,8° → δ ≈ −26,93°. Logo Δ<sub>A</sub> ≈ 0,62°.
+          Variando h: 2,4° → δ ≈ −27,35°; 1,6° → δ ≈ −27,74°. Logo Δ<sub>h</sub> ≈ 0,19°.
+          σ<sub>δ</sub> = √(0,62² + 0,19²) ≈ <strong>0,65°</strong>.
+          Reportar: <strong>δ = −27,5° ± 0,7°</strong>. Mais uma vez, o azimute domina — e note que, mesmo com essa
+          barra de erro, o valor está a mais de cinco desvios do solstício de inverno da época (≈ −24°): a
+          conclusão negativa é robusta.</li>
+
+          <li>A diferença é |−25,1 − (−24,0)| = <strong>1,1°</strong>, contra uma tolerância pré-registrada de
+          0,5° — e maior também que a própria barra de erro de 0,6°. <strong>A hipótese não é sustentada.</strong>
+          Alargar a tolerância agora para 1,2° a fim de &ldquo;salvar&rdquo; o resultado seria exatamente a primeira
+          tentação da Aula 7.5. Registre o valor obtido e conclua honestamente.</li>
+
+          <li>Registra-se assim: a hipótese pré-registrada <strong>não</strong> foi sustentada; e observa-se que o
+          valor medido é próximo da declinação de Canopus na época, o que constitui uma <strong>nova hipótese a ser
+          testada em outros monumentos da mesma classe</strong>. O que <em>não</em> se faz é reescrever o estudo
+          como se Canopus tivesse sido o alvo desde o início: isso é escolher o alvo depois de ver os dados,
+          e destrói o valor probatório do resultado (Aula 1.1). A descoberta é real e vale ser perseguida — em um
+          estudo novo, com pré-registro novo.</li>
+
+          <li>Porque recompensar a confirmação cria exatamente o incentivo que corrompeu a arqueoastronomia nos anos
+          1960 e 1970 (Aula 1.2). Se confirmar dá nota, o avaliado aprende a afrouxar tolerâncias, trocar alvos e
+          ajustar datas. Avaliando o <strong>método</strong> — pré-registro, incerteza, hipótese nula, limitações —
+          o incentivo passa a ser fazer o trabalho direito, e o resultado fica livre para ser o que for.</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <div class="box box-nota">
+    <h4>Leitura recomendada para este módulo</h4>
+    <p><i>Archaeoastronomy for Archaeologists — A Basic Guide</i> (BAJR, 2024) — o manual prático completo,
+    gratuito. &nbsp;·&nbsp; RUGGLES, C. — ferramentas e recursos de método disponibilizados pelo autor.
+    &nbsp;·&nbsp; SHALTOUT, M.; BELMONTE, J. A., <i>JHA</i> (2005–2010) — use a seção de metodologia como modelo
+    de relatório.</p>
+  </div>
+
+  <div class="card" style="text-align:center;padding:2.6rem 2rem;margin-top:3rem">
+    <div class="glyphband" style="font-size:1.8rem;color:var(--gold);margin-bottom:1rem">𓇯 𓇼 𓈌</div>
+    <h2 style="margin-bottom:.6rem">Fim do programa</h2>
+    <p class="muted" style="max-width:58ch;margin:0 auto">Você começou sabendo que as pirâmides apontam para o
+    norte. Agora sabe <em>quanto</em> elas erram, em que direção, por que o erro deriva ao longo dos séculos, quais
+    hipóteses competem para explicá-lo — e por que a questão continua aberta. Essa última parte é a mais difícil de
+    aprender e a mais útil de possuir.</p>
+  </div>
+
+</section>
+<div class="wrap"><nav class="pager"><a href="modulo-06.html"><span class="k">Módulo anterior</span><span class="v">06 · A Correlação de Órion e a arqueoastronomia alternativa</span></a><a class="next" href="index.html#avaliacao"><span class="k">Encerramento</span><span class="v">Projeto final e certificação</span></a></nav></div></main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span class="gl">𓇯 𓇳 𓇹 𓇼</span>
+    <p><strong>Arqueoastronomia das Necrópoles</strong> — 24 horas · Desvendando os Códigos Egípcios.</p>
+    <p class="small">Dados de orientação de Spence (<i>Nature</i> 408, 2000), Belmonte &amp; Shaltout
+    (<i>JHA</i> / <i>Advances in Space Research</i>) e Tupikova (preprint MPIWG 511, 2022), com as fontes indicadas
+    em cada tabela. Transliteração conforme a Leiden Unified Transliteration (IAE, 2023).</p>
+    <p class="small muted">Conteúdo didático. Nenhuma medida apresentada aqui substitui a consulta à publicação original.</p>
+  </div>
+</footer>
+
+<!-- ce-progresso:início -->
+<!-- Registro de leitura. Guarda no navegador do aluno, em localStorage;
+     nada é enviado ao servidor. Gerado por injetar-progresso.py a partir
+     de area-aluno/js/progresso.js — não edite aqui. -->
+<script>
+/* ce-progresso — registro de leitura dos cursos.
+ *
+ * Guarda no navegador do aluno, em localStorage. Nada sai do dispositivo:
+ * nem para o site, nem para nós. Isso tem um custo honesto — trocar de
+ * computador recomeça a contagem — e uma vantagem: nenhum dado de leitura
+ * de ninguém fica armazenado em lugar nenhum.
+ *
+ * Formato:
+ *   { "curso-hieroglifos": { "3": { pct: 100, em: 1758... } }, ... }
+ *   pct = maior porcentagem de rolagem já alcançada naquele módulo
+ *
+ * Este arquivo é a versão de referência. Nas páginas dos módulos ele é
+ * injetado inline por scripts/injetar-progresso.py, para o curso não
+ * depender de um segundo pedido de rede nem da área do aluno estar no ar.
+ */
+(function (global) {
+  "use strict";
+
+  var CHAVE = "ce_progresso_v1";
+  var LIDO = 90; // % de rolagem a partir do qual o módulo conta como lido
+
+  function ler() {
+    try { return JSON.parse(global.localStorage.getItem(CHAVE)) || {}; }
+    catch (e) { return {}; }          // modo privado, cookies bloqueados, etc.
+  }
+
+  function gravar(dados) {
+    try { global.localStorage.setItem(CHAVE, JSON.stringify(dados)); return true; }
+    catch (e) { return false; }
+  }
+
+  function registrar(curso, modulo, pct) {
+    var d = ler();
+    var c = d[curso] || (d[curso] = {});
+    var antes = c[modulo] || { pct: 0 };
+    // só sobe: reler o começo de um módulo não desfaz o que já foi lido
+    if (pct <= antes.pct) { antes.em = Date.now(); c[modulo] = antes; }
+    else c[modulo] = { pct: pct, em: Date.now() };
+    gravar(d);
+  }
+
+  function limpar(curso) {
+    var d = ler();
+    if (curso) delete d[curso]; else d = {};
+    gravar(d);
+  }
+
+  /* ---- métricas de um curso, a partir da grade em window.CE_CURSOS ---- */
+  function resumo(curso, totalModulos) {
+    var c = ler()[curso] || {};
+    var lidos = 0, ultimo = null, ultimoEm = 0;
+    for (var k in c) {
+      if (!Object.prototype.hasOwnProperty.call(c, k)) continue;
+      if (c[k].pct >= LIDO) lidos++;
+      if (c[k].em > ultimoEm) { ultimoEm = c[k].em; ultimo = { modulo: +k, pct: c[k].pct }; }
+    }
+    return {
+      lidos: lidos,
+      total: totalModulos,
+      pct: totalModulos ? Math.round((lidos / totalModulos) * 100) : 0,
+      concluido: totalModulos > 0 && lidos >= totalModulos,
+      ultimo: ultimo,
+      modulos: c,
+    };
+  }
+
+  global.CEProgresso = {
+    ler: ler, registrar: registrar, limpar: limpar, resumo: resumo, LIDO: LIDO,
+  };
+
+  /* ---- se estamos numa página de módulo, medir a leitura ---- */
+  var m = global.location.pathname.match(/\/(curso-[a-z-]+)\/modulo-(\d+)\.html?$/i);
+  if (!m) return;
+  var curso = m[1], modulo = String(parseInt(m[2], 10));
+
+  function pctAtual() {
+    var doc = global.document.documentElement;
+    var alcance = doc.scrollHeight - doc.clientHeight;
+    // página que cabe inteira na tela já está lida por definição
+    if (alcance <= 40) return 100;
+    return Math.min(100, Math.round(((global.scrollY || 0) / alcance) * 100));
+  }
+
+  var pendente = false;
+  function medir() {
+    if (pendente) return;
+    pendente = true;
+    global.requestAnimationFrame(function () {
+      pendente = false;
+      registrar(curso, modulo, pctAtual());
+    });
+  }
+
+  global.addEventListener("scroll", medir, { passive: true });
+  global.addEventListener("pagehide", medir);
+  global.document.addEventListener("visibilitychange", function () {
+    if (global.document.visibilityState === "hidden") medir();
+  });
+  // marca a visita já na abertura, para o "continuar de onde parei" funcionar
+  // mesmo em quem abriu e saiu sem rolar
+  if (global.document.readyState === "complete") medir();
+  else global.addEventListener("load", medir);
+})(window);
+</script>
+<!-- ce-progresso:fim -->
+</body>
+</html>

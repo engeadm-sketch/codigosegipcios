@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Certificado — Códigos Egípcios</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Geist:wght@300;400;500;600;700&family=Noto+Sans+Mono:wght@400;500&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/aluno.css">
+<style>
+  /* ---------- o documento ---------- */
+  .folha {
+    background: #0a0703; border: 1px solid var(--line-strong); border-radius: 6px;
+    padding: clamp(2rem, 5vw, 3.4rem); text-align: center; margin-top: 1.4rem;
+    position: relative; overflow: hidden;
+  }
+  .folha::before {
+    content: ""; position: absolute; inset: 14px; border: 1px solid var(--line-dim);
+    border-radius: 3px; pointer-events: none;
+  }
+  .folha .faixa {
+    font-family: var(--font-glyph); font-size: 1.5rem; color: var(--gold);
+    letter-spacing: .38em; margin-bottom: 1.6rem;
+  }
+  .folha .marca {
+    font-family: var(--font-display); font-size: .74rem; letter-spacing: .24em;
+    text-transform: uppercase; color: var(--fg-muted);
+  }
+  .folha .tipo {
+    font-family: var(--font-display); font-size: clamp(1.3rem, 3.4vw, 1.8rem);
+    color: var(--gold-light); margin: 1.2rem 0 1.8rem;
+  }
+  .folha .quem {
+    font-family: var(--font-display); font-size: clamp(1.5rem, 4.6vw, 2.4rem);
+    color: var(--fg); border-bottom: 1px solid var(--line-dim);
+    display: inline-block; padding: 0 1.4rem .5rem; min-width: min(420px, 90%);
+    word-break: break-word;
+  }
+  .folha .o-que { color: var(--fg-soft); margin: 1.6rem auto 0; max-width: 34rem; line-height: 1.75; }
+  .folha .curso-nome { font-family: var(--font-display); color: var(--gold-light); font-size: 1.12rem; }
+  .folha .rodape {
+    margin-top: 2.4rem; padding-top: 1.4rem; border-top: 1px solid var(--line-dim);
+    display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    font-family: var(--font-mono); font-size: .74rem; color: var(--fg-muted);
+  }
+  .campo-nome { display: flex; gap: .7rem; flex-wrap: wrap; align-items: center; margin-top: 1rem; }
+  .campo-nome input {
+    flex: 1 1 260px; background: #060402; color: var(--fg);
+    border: 1px solid var(--line-dim); border-radius: 10px;
+    padding: .75rem 1rem; font-family: var(--font-body); font-size: 1rem;
+  }
+
+  /* ---------- impressão ---------- */
+  @media print {
+    @page { size: A4 landscape; margin: 12mm; }
+    body { background: #fff !important; color: #1a1408 !important; font-size: 12pt; }
+    body::before { display: none !important; }
+    .topbar, .footer, .nao-imprime { display: none !important; }
+    main, .wrap { width: auto !important; margin: 0 !important; padding: 0 !important; }
+    .folha {
+      background: #fff !important; border: 2px solid #b08a3e !important;
+      border-radius: 0; padding: 14mm 16mm !important; margin: 0 !important;
+      page-break-inside: avoid;
+    }
+    .folha::before { inset: 5mm; border-color: #d8c49a !important; }
+    .folha .faixa, .folha .tipo, .folha .curso-nome { color: #9a6c22 !important; }
+    .folha .quem { color: #1a1408 !important; border-bottom-color: #b08a3e !important; }
+    .folha .o-que { color: #33291a !important; }
+    .folha .marca, .folha .rodape { color: #6b5b3e !important; }
+    .folha .rodape { border-top-color: #d8c49a !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar nao-imprime">
+  <div class="topbar-in">
+    <a class="brand" href="https://codigosegipcios.netlify.app/"><span class="gl">𓂀</span> Códigos Egípcios</a>
+    <nav><a href="index.html">Voltar à área do aluno</a></nav>
+  </div>
+</header>
+
+<main>
+<section class="wrap" style="padding-top:2.4rem">
+
+  <div class="nao-imprime" id="painel">
+    <span class="eyebrow">Certificado de conclusão</span>
+    <h1 style="font-size:clamp(1.5rem,3.6vw,2.1rem)" id="titulo">Carregando…</h1>
+    <div id="bloqueado" hidden>
+      <div class="aviso">
+        <h3>Este curso ainda não está concluído</h3>
+        <p id="quanto-falta"></p>
+        <p style="margin-top:1rem"><a class="btn btn-ghost btn-sm" href="index.html">Voltar à área do aluno</a></p>
+      </div>
+    </div>
+    <div id="liberado" hidden>
+      <p class="muted">Escreva seu nome como ele deve aparecer no documento. Depois é só imprimir —
+      escolha <strong>“Salvar como PDF”</strong> na janela de impressão.</p>
+      <div class="campo-nome">
+        <label for="nome" class="eyebrow" style="margin:0">Seu nome completo</label>
+        <input type="text" id="nome" placeholder="Como deve constar no certificado" autocomplete="name">
+        <button class="btn btn-gold" type="button" id="imprimir">Imprimir / salvar em PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="folha" id="folha" hidden>
+    <div class="faixa">𓋹 𓊽 𓌀</div>
+    <div class="marca">Desvendando os Códigos Egípcios</div>
+    <div class="tipo">Certificado de Conclusão</div>
+    <div class="quem" id="f-nome">—</div>
+    <p class="o-que">
+      concluiu o programa<br>
+      <span class="curso-nome" id="f-curso">—</span><br>
+      <span id="f-carga">—</span>, percorrendo integralmente os módulos que o compõem.
+    </p>
+    <div class="rodape">
+      <span id="f-data">—</span>
+      <span id="f-ref">—</span>
+    </div>
+  </div>
+
+  <p class="small muted nao-imprime" id="ressalva" hidden style="margin-top:1.4rem">
+    Este documento atesta a conclusão deste programa. <strong>Não é uma certificação acadêmica
+    ou profissional reconhecida por universidade</strong> — nenhum curso on-line de egiptologia
+    ou arqueoastronomia emite isso, e vale dizê-lo com clareza. A emissão é feita no seu próprio
+    navegador, a partir do progresso registrado neste dispositivo.
+  </p>
+
+</section>
+</main>
+
+<footer class="footer nao-imprime">
+  <div class="wrap"><span class="gl">𓂀 ☥ 𓊽 𓆣</span><p class="small">Códigos Egípcios</p></div>
+</footer>
+
+<script src="js/dados.js"></script>
+<script src="js/progresso.js"></script>
+<script>
+(function () {
+  "use strict";
+  var CHAVE_NOME = "ce_nome_certificado";
+  var slug = new URLSearchParams(location.search).get("curso") || "";
+  var c = (window.CE_CURSOS || {})[slug];
+  var P = window.CEProgresso;
+
+  var elTitulo = document.getElementById("titulo");
+
+  if (!c) {
+    elTitulo.textContent = "Curso não encontrado";
+    document.getElementById("bloqueado").hidden = false;
+    document.getElementById("quanto-falta").textContent =
+      "O endereço não indica um curso válido. Volte à área do aluno e emita por ali.";
+    return;
+  }
+
+  var r = P.resumo(slug, c.m.length);
+  elTitulo.textContent = c.t;
+
+  if (!r.concluido) {
+    document.getElementById("bloqueado").hidden = false;
+    document.getElementById("quanto-falta").textContent =
+      "Você leu " + r.lidos + " de " + c.m.length + " módulos. O certificado fica disponível " +
+      "quando todos estiverem marcados como lidos — faltam " + (c.m.length - r.lidos) + ".";
+    return;
+  }
+
+  document.getElementById("liberado").hidden = false;
+  document.getElementById("folha").hidden = false;
+  document.getElementById("ressalva").hidden = false;
+
+  var campo = document.getElementById("nome");
+  var fNome = document.getElementById("f-nome");
+
+  try { campo.value = localStorage.getItem(CHAVE_NOME) || ""; } catch (e) {}
+
+  function pintar() {
+    var v = campo.value.trim();
+    fNome.textContent = v || "—";
+    try { localStorage.setItem(CHAVE_NOME, v); } catch (e) {}
+  }
+  campo.addEventListener("input", pintar);
+  pintar();
+
+  document.getElementById("f-curso").textContent = c.t;
+  document.getElementById("f-carga").textContent =
+    c.h + " horas, " + c.m.length + " módulos";
+  document.getElementById("f-data").textContent =
+    "Emitido em " + new Date().toLocaleDateString("pt-BR");
+
+  // referência estável: derivada do curso e do nome, só para dar ao documento
+  // um identificador. Não é verificação — o texto da ressalva diz isso.
+  function ref(s) {
+    var h = 5381;
+    for (var i = 0; i < s.length; i++) h = ((h * 33) ^ s.charCodeAt(i)) >>> 0;
+    return h.toString(36).toUpperCase().padStart(7, "0").slice(0, 7);
+  }
+  function atualizarRef() {
+    document.getElementById("f-ref").textContent =
+      "Ref. " + ref(slug + "|" + campo.value.trim().toLowerCase());
+  }
+  campo.addEventListener("input", atualizarRef);
+  atualizarRef();
+
+  document.getElementById("imprimir").addEventListener("click", function () {
+    if (!campo.value.trim()) { campo.focus(); return; }
+    window.print();
+  });
+})();
+</script>
+</body>
+</html>

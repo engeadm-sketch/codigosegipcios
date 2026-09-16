@@ -1,0 +1,237 @@
+/* ============================================================
+   Área do aluno — Códigos Egípcios
+   Mesmos tokens do site e das páginas de venda.
+   ============================================================ */
+
+:root {
+  --bg:          #000000;
+  --bg-panel:    #0b0803;
+  --bg-raised:   #170f09;
+  --fg:          #f4ede2;
+  --fg-soft:     #b8ab99;
+  --fg-muted:    #8f8272;
+
+  --gold:        #dfa55c;
+  --gold-light:  #e7bb81;
+  --gold-deep:   #c78839;
+  --gold-grad:   linear-gradient(90deg, #e7bb81 0%, #dfa55c 50%, #c78839 100%);
+
+  --line:        rgba(223,165,92,.22);
+  --line-strong: rgba(223,165,92,.40);
+  --line-dim:    rgba(120,92,48,.30);
+
+  --ok:          #8fc4ad;
+  --no:          #c98878;
+
+  --font-display: "Cinzel", "Times New Roman", serif;
+  --font-body:    "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono:    "Noto Sans Mono", "Geist Mono", ui-monospace, Menlo, monospace;
+  --font-glyph:   "Noto Sans Egyptian Hieroglyphs", "Segoe UI Historic", serif;
+
+  --wrap:   min(1000px, 100% - 3rem);
+  --radius: 14px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font-family: var(--font-body); font-size: 16.5px; line-height: 1.7;
+  -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
+body::before {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background:
+    radial-gradient(1000px 560px at 10% -10%, rgba(223,165,92,.08), transparent 62%),
+    radial-gradient(900px 520px at 92% 4%,   rgba(199,136,57,.05), transparent 60%);
+}
+main, header, footer { position: relative; z-index: 1; }
+
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height: 1.25; }
+h1 { font-size: clamp(1.8rem, 4.4vw, 2.6rem); margin: 0 0 .5rem; }
+h2 { font-size: clamp(1.25rem, 2.6vw, 1.6rem); margin: 0 0 1rem; }
+h3 { font-size: 1.05rem; margin: 0 0 .4rem; }
+a { color: var(--gold-light); }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible {
+  outline: 2px solid var(--gold-light); outline-offset: 2px;
+}
+.wrap { width: var(--wrap); margin-inline: auto; }
+.muted { color: var(--fg-muted); }
+.small { font-size: .86rem; }
+.t { font-family: var(--font-mono); color: var(--gold-light); }
+.gl { font-family: var(--font-glyph); }
+.grad {
+  background: var(--gold-grad); -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+}
+.eyebrow {
+  display: block; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: .7rem;
+}
+
+/* ---------- barra ---------- */
+.topbar {
+  position: sticky; top: 0; z-index: 20; background: rgba(0,0,0,.92);
+  border-bottom: 1px solid var(--line-dim); backdrop-filter: blur(9px);
+}
+.topbar-in {
+  width: var(--wrap); margin-inline: auto; display: flex; align-items: center;
+  justify-content: space-between; gap: 1rem; padding: .85rem 0;
+}
+.brand {
+  font-family: var(--font-display); font-size: .84rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--fg); text-decoration: none;
+  display: inline-flex; align-items: center; gap: .5rem; white-space: nowrap;
+}
+.brand .gl { font-size: 1.15rem; color: var(--gold); }
+.topbar nav { display: flex; align-items: center; gap: 1.3rem; }
+.topbar nav a { color: var(--fg-soft); text-decoration: none; font-size: .88rem; }
+.topbar nav a:hover { color: var(--gold-light); }
+
+/* ---------- botões ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  font-family: var(--font-body); font-size: .86rem; font-weight: 600;
+  letter-spacing: .04em; padding: .7rem 1.4rem; border-radius: 999px;
+  text-decoration: none; cursor: pointer; border: 1px solid transparent;
+  transition: transform .12s ease, background .18s ease, border-color .18s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-gold { background: var(--gold-grad); color: #0a0703; }
+.btn-ghost { border-color: var(--line-strong); color: var(--gold-light); background: transparent; }
+.btn-ghost:hover { background: rgba(223,165,92,.08); }
+.btn-sm { padding: .5rem 1rem; font-size: .78rem; }
+.btn:disabled { opacity: .45; cursor: not-allowed; transform: none; }
+
+/* ---------- cabeçalho ---------- */
+.topo { padding: 2.8rem 0 1.6rem; }
+.glyphband {
+  font-family: var(--font-glyph); font-size: clamp(1.5rem, 4vw, 2.1rem);
+  color: var(--gold); letter-spacing: .3em; margin-bottom: 1rem; opacity: .85;
+}
+
+/* ---------- cartão de curso ---------- */
+.cursos { display: grid; gap: 1.4rem; margin-top: 1.2rem; }
+.curso {
+  border: 1px solid var(--line-dim); border-radius: 18px;
+  background: linear-gradient(160deg, var(--bg-raised), var(--bg-panel));
+  padding: clamp(1.3rem, 3.2vw, 2rem);
+}
+.curso-topo {
+  display: flex; gap: 1.4rem; align-items: flex-start; flex-wrap: wrap;
+  justify-content: space-between;
+}
+.curso-topo h2 { margin: 0 0 .25rem; }
+.curso-meta { color: var(--fg-muted); font-size: .86rem; }
+
+/* anel de progresso */
+.anel { flex: 0 0 76px; width: 76px; height: 76px; position: relative; }
+.anel svg { transform: rotate(-90deg); display: block; }
+.anel .trilho { fill: none; stroke: var(--line-dim); stroke-width: 7; }
+.anel .arco {
+  fill: none; stroke: var(--gold); stroke-width: 7; stroke-linecap: round;
+  transition: stroke-dashoffset .5s ease;
+}
+.anel.completo .arco { stroke: var(--ok); }
+.anel b {
+  position: absolute; inset: 0; display: grid; place-items: center;
+  font-family: var(--font-mono); font-size: .82rem; color: var(--gold-light);
+}
+.anel.completo b { color: var(--ok); }
+
+.curso-acoes { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.3rem; }
+
+/* lista de módulos */
+.mods { margin-top: 1.4rem; border-top: 1px solid var(--line-dim); }
+.mods summary {
+  cursor: pointer; padding: .85rem 0 .3rem; color: var(--fg-soft);
+  font-size: .88rem; list-style: none;
+}
+.mods summary::-webkit-details-marker { display: none; }
+.mods summary::before { content: "▸ "; color: var(--gold-deep); }
+.mods[open] summary::before { content: "▾ "; }
+
+.mod {
+  display: grid; grid-template-columns: 26px 1fr auto; gap: .8rem;
+  align-items: baseline; padding: .6rem 0; border-bottom: 1px solid var(--line-dim);
+}
+.mod:last-child { border-bottom: 0; }
+.mod .marca {
+  font-size: .9rem; text-align: center; color: var(--fg-muted);
+  font-family: var(--font-mono);
+}
+.mod.lido .marca { color: var(--ok); }
+.mod a { color: var(--fg); text-decoration: none; }
+.mod a:hover { color: var(--gold-light); }
+.mod .aulas { display: block; color: var(--fg-muted); font-size: .82rem; margin-top: .1rem; }
+.mod .h { font-family: var(--font-mono); font-size: .78rem; color: var(--fg-muted); white-space: nowrap; }
+
+/* ---------- busca ---------- */
+.busca { margin-top: 1rem; }
+.busca input {
+  width: 100%; background: #060402; color: var(--fg);
+  border: 1px solid var(--line-dim); border-radius: 11px;
+  padding: .85rem 1.1rem; font-family: var(--font-body); font-size: 1rem;
+}
+.busca input::placeholder { color: var(--fg-muted); }
+.resultados { margin-top: 1rem; display: grid; gap: .1rem; }
+.res {
+  display: block; padding: .7rem .9rem; border-radius: 10px;
+  border: 1px solid transparent; text-decoration: none; color: var(--fg);
+}
+.res:hover { border-color: var(--line-dim); background: rgba(223,165,92,.05); }
+.res .via { display: block; font-size: .76rem; color: var(--fg-muted); margin-top: .12rem; }
+.res mark { background: rgba(223,165,92,.25); color: var(--gold-light); border-radius: 3px; }
+
+/* ---------- oferta do outro curso ---------- */
+.oferta {
+  border: 1px solid var(--line-strong); border-radius: 18px;
+  background: linear-gradient(160deg, #1a1208, #0a0703);
+  padding: clamp(1.3rem, 3.2vw, 2rem); margin-top: 1.4rem;
+}
+.oferta .preco {
+  font-family: var(--font-display); font-size: 2rem; color: var(--gold-light);
+  line-height: 1; margin: .5rem 0 .1rem;
+}
+.oferta .preco sup { font-size: .45em; vertical-align: .85em; margin-right: .1em; }
+.oferta .antes { color: var(--fg-muted); font-size: .9rem; text-decoration: line-through; }
+
+/* ---------- certificado ---------- */
+.cert {
+  margin-top: 1.4rem; padding: 1.1rem 1.3rem; border-radius: var(--radius);
+  border: 1px solid var(--line-dim); background: rgba(223,165,92,.04);
+  display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;
+}
+.cert.pronto { border-color: rgba(143,196,173,.45); background: rgba(143,196,173,.07); }
+.cert p { margin: 0; font-size: .9rem; color: var(--fg-soft); flex: 1 1 260px; }
+
+/* ---------- avisos ---------- */
+.aviso {
+  border: 1px solid var(--line-dim); border-radius: var(--radius);
+  padding: 1.2rem 1.4rem; background: var(--bg-panel); margin-top: 1.4rem;
+}
+.aviso h3 { margin-top: 0; }
+.aviso p:last-child { margin-bottom: 0; }
+
+.footer {
+  border-top: 1px solid var(--line-dim); margin-top: 3.5rem;
+  padding: 2.2rem 0 2.8rem; text-align: center; color: var(--fg-muted); font-size: .86rem;
+}
+.footer .gl { font-size: 1.2rem; color: var(--gold); letter-spacing: .3em; display: block; margin-bottom: .8rem; }
+
+/* ---------- telas pequenas ---------- */
+@media (max-width: 720px) {
+  :root { --wrap: min(1000px, 100% - 2rem); }
+  body { font-size: 16px; }
+  .topbar nav a:not(.btn) { display: none; }
+  .brand { font-size: .76rem; }
+  .curso-topo { gap: 1rem; }
+  .anel { flex: 0 0 60px; width: 60px; height: 60px; }
+  .curso-acoes .btn { flex: 1 1 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .01ms !important; transition-duration: .01ms !important;
+      scroll-behavior: auto !important; }
+}

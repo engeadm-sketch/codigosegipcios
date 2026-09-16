@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sua área — Códigos Egípcios</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Geist:wght@300;400;500;600;700&family=Noto+Sans+Mono:wght@400;500&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/aluno.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="https://codigosegipcios.netlify.app/"><span class="gl">𓂀</span> Códigos Egípcios</a>
+    <nav>
+      <a href="#cursos">Meus cursos</a>
+      <a href="#indice">Índice</a>
+      <a href="https://codigosegipcios.netlify.app/">Voltar ao site</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="topo">
+  <div class="wrap">
+    <div class="glyphband">𓇯 𓇳 𓇼 𓂀 𓊪 𓈌</div>
+    <span class="eyebrow">Área do aluno</span>
+    <h1>Onde você <span class="grad">parou</span></h1>
+    <p class="muted" id="linha-resumo">Carregando seus cursos…</p>
+  </div>
+</section>
+
+<!-- estado: não foi possível identificar os cursos -->
+<section class="wrap" id="sem-cursos" hidden>
+  <div class="aviso">
+    <h3>Não consegui identificar seus cursos</h3>
+    <p>Isso acontece quando o navegador não guardou o acesso — normalmente por ter limpado os
+    cookies, ou por estar numa janela anônima.</p>
+    <p><strong>A solução é abrir de novo o link que você recebeu por e-mail</strong> na compra.
+    Ele revalida o acesso em um clique.</p>
+    <p class="small muted">Não encontra o e-mail? Responda a mensagem da compra ou fale pelo
+    WhatsApp na página do curso — reenviamos o link.</p>
+  </div>
+</section>
+
+<section class="wrap" id="cursos">
+  <div class="cursos" id="lista-cursos"></div>
+</section>
+
+<section class="wrap" id="oferta-slot"></section>
+
+<section class="wrap" id="indice" style="margin-top:2.8rem">
+  <span class="eyebrow">Consulta rápida</span>
+  <h2>Todas as suas aulas</h2>
+  <p class="muted small" style="margin-top:-.4rem">Boa parte deste material é de consulta —
+  tabelas de sinais, fórmulas, valores medidos. Procure pelo que precisa em vez de caçar módulo
+  a módulo.</p>
+  <div class="busca">
+    <label for="q" class="eyebrow" style="margin-bottom:.4rem">Buscar aula</label>
+    <input type="search" id="q" placeholder="ex.: complementos fonéticos, precessão, cartucho, declinação"
+           autocomplete="off" spellcheck="false">
+  </div>
+  <div class="resultados" id="resultados"></div>
+</section>
+
+<section class="wrap" style="margin-top:2.8rem">
+  <div class="aviso">
+    <h3>Sobre o seu progresso</h3>
+    <p>A marcação de leitura fica <strong>no seu navegador</strong>, neste dispositivo. Não
+    enviamos nada para o servidor e não guardamos registro do que você leu — o que também
+    significa que trocar de computador recomeça a contagem, e limpar os dados do navegador
+    apaga as marcas.</p>
+    <p class="small muted">Seu acesso ao curso não depende disso: ele vem do link que você
+    recebeu, não do progresso. <button class="btn btn-ghost btn-sm" id="zerar" type="button">Zerar
+    meu progresso</button></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span class="gl">𓂀 ☥ 𓊽 𓆣</span>
+    <p><strong>Desvendando os Códigos Egípcios</strong></p>
+    <p class="small"><a href="https://codigosegipcios.netlify.app/">Voltar ao site</a></p>
+  </div>
+</footer>
+
+<script src="js/dados.js"></script>
+<script src="js/progresso.js"></script>
+<script src="js/aluno.js"></script>
+</body>
+</html>

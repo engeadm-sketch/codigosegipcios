@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Módulo 02 — O céu do Egito antigo | Arqueoastronomia das Necrópoles</title>
+<meta name="description" content="Esfera celeste na latitude de Gizé, as circumpolares que "não conhecem destruição", precessão, o levante helíaco de Sírius e as constelações egípcias atestadas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Noto+Sans+Mono:wght@400;500&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/curso.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html"><span class="gl">𓇼</span> Códigos Egípcios</a>
+    <nav class="topnav">
+      <a href="index.html">Início do curso</a>
+      <a href="index.html#grade">Grade</a>
+      <a href="index.html#avaliacao">Avaliação</a>
+      <a href="index.html#bibliografia">Bibliografia</a>
+      <a href="../curso-hieroglifos/index.html">Curso de hieróglifos</a>
+      <a href="https://codigosegipcios.netlify.app/">Voltar ao site</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="glyphband">𓇳𓇹𓇮𓇼</div>
+    <span class="eyebrow">Módulo 02 · 4h</span>
+    <h1>O céu do Egito antigo</h1>
+    <p class="lede">Esfera celeste na latitude de Gizé, as circumpolares que "não conhecem destruição", precessão, o levante helíaco de Sírius e as constelações egípcias atestadas.</p>
+  </div>
+</section>
+<section class="wrap narrow">
+
+  <div class="objetivos">
+    <h4>Objetivos do módulo</h4>
+    <ul>
+      <li>Descrever o movimento diurno e delimitar a calota circumpolar para a latitude de Gizé</li>
+      <li>Relacionar as <span class="t">jḫmw-sk</span> dos Textos das Pirâmides à astronomia observacional</li>
+      <li>Quantificar o efeito da precessão e distinguir o que ela muda do que ela não muda</li>
+      <li>Explicar o levante helíaco de Sírius, o ano vagante e os limites da datação sótica</li>
+      <li>Listar as constelações egípcias atestadas e o grau de certeza de cada identificação</li>
+      <li>Enumerar o que a astronomia egípcia comprovadamente <em>não</em> tinha</li>
+    </ul>
+  </div>
+
+  <div class="toc">
+    <h4>Neste módulo</h4>
+    <ol>
+      <li><a href="#a21">A esfera celeste a 30° de latitude</a></li>
+      <li><a href="#a22">As que não conhecem destruição</a></li>
+      <li><a href="#a23">Precessão: o que muda e o que não muda</a></li>
+      <li><a href="#a24">Sírius, Sopdet e o ano vagante</a></li>
+      <li><a href="#a25">As constelações egípcias</a></li>
+      <li><a href="#a26">O que os egípcios não tinham</a></li>
+    </ol>
+  </div>
+
+  <!-- ============ 2.1 ============ -->
+  <article class="aula" id="a21">
+    <h2><span class="n">Aula 2.1</span> A esfera celeste a 30° de latitude</h2>
+
+    <p>Gizé está a <strong>φ ≈ 29,98° N</strong> — praticamente 30°. Esse número determina sozinho a geometria de
+    todo o céu visível de lá, e vale a pena entender exatamente como.</p>
+
+    <div class="box box-pratica">
+      <h4>A regra fundamental</h4>
+      <p style="font-size:1.1rem;color:var(--gold-light);margin-bottom:.8rem">A altura do polo celeste acima do
+      horizonte norte é <strong>igual à latitude do observador</strong>.</p>
+      <p style="margin-bottom:0">Em Gizé, o polo norte celeste está a 30° acima do horizonte. Todo o céu gira em
+      torno desse ponto, uma volta a cada dia sideral (23h 56min).</p>
+    </div>
+
+    <figure class="fig">
+      <svg viewBox="0 0 640 400" role="img" aria-labelledby="t-esf d-esf">
+        <title id="t-esf">Corte meridiano da esfera celeste na latitude de Gizé</title>
+        <desc id="d-esf">A esfera celeste vista de perfil ao longo do meridiano. O polo celeste norte está a
+        30 graus acima do horizonte norte. Estrelas com declinação acima de 60 graus nunca se põem: são as
+        circumpolares. As demais descrevem trajetórias que cruzam o horizonte.</desc>
+
+        <!-- esfera -->
+        <circle cx="320" cy="190" r="150" class="svg-grid"/>
+
+        <!-- horizonte -->
+        <line x1="150" y1="190" x2="490" y2="190" class="svg-rule"/>
+        <text x="146" y="205" class="svg-label" text-anchor="end">N</text>
+        <text x="494" y="205" class="svg-label" text-anchor="start">S</text>
+        <text x="320" y="356" class="svg-label-sm" text-anchor="middle">horizonte</text>
+        <line x1="320" y1="340" x2="320" y2="196" class="svg-dim" stroke-dasharray="2 4"/>
+
+        <!-- zênite -->
+        <circle cx="320" cy="40" r="3" class="svg-star"/>
+        <text x="320" y="30" class="svg-label-sm" text-anchor="middle">zênite</text>
+
+        <!-- eixo polar -->
+        <line x1="190" y1="115" x2="450" y2="265" class="svg-dim" stroke-dasharray="5 4"/>
+
+        <!-- equador celeste, visto de perfil -->
+        <line x1="395" y1="60" x2="245" y2="320" class="svg-mark" stroke-dasharray="7 5"/>
+        <text x="410" y="56" class="svg-label" text-anchor="start">equador celeste</text>
+
+        <!-- limite circumpolar: corda de N até (245,60) -->
+        <line x1="170" y1="190" x2="245" y2="60" class="svg-mark"/>
+        <text x="228" y="48" class="svg-label" text-anchor="middle">limite circumpolar &nbsp;δ = +60°</text>
+
+        <!-- trajetória de uma circumpolar: corda perpendicular ao eixo polar, δ ≈ +75° -->
+        <line x1="175" y1="151" x2="214" y2="84" class="svg-dim"/>
+
+        <!-- polo -->
+        <circle cx="190" cy="115" r="4.5" class="svg-dot"/>
+        <text x="178" y="106" class="svg-label" text-anchor="end">polo N celeste</text>
+
+        <!-- ângulo da latitude -->
+        <path d="M 205 190 A 35 35 0 0 0 190.5 168" class="svg-mark"/>
+        <text x="223" y="176" class="svg-label" text-anchor="middle">φ = 30°</text>
+
+        <!-- observador -->
+        <circle cx="320" cy="190" r="4" class="svg-dot"/>
+
+        <!-- trajetória de estrela que nasce e se põe: corda a δ ≈ −10° -->
+        <line x1="269" y1="331" x2="417" y2="75" class="svg-dim"/>
+        <circle cx="350.5" cy="190" r="4" class="svg-sun"/>
+        <text x="432" y="72" class="svg-label-sm" text-anchor="start">estrela que</text>
+        <text x="432" y="86" class="svg-label-sm" text-anchor="start">nasce e se põe</text>
+      </svg>
+      <figcaption>
+        Corte da esfera celeste pelo meridiano local em Gizé. O eixo de rotação aponta para o polo celeste, a
+        <b>30° acima do horizonte norte</b>. O equador celeste cruza o horizonte exatamente a leste e a oeste,
+        culminando a 60° de altura ao sul. Estrelas com <b>declinação maior que +60°</b> descrevem circunferências
+        que nunca tocam o horizonte — <b>nunca se põem</b>.
+      </figcaption>
+    </figure>
+
+    <h3>As três regiões do céu, em Gizé</h3>
+    <div class="tablewrap">
+      <table class="dados">
+        <thead><tr><th>Região</th><th class="r">Declinação</th><th>Comportamento visto de Gizé</th></tr></thead>
+        <tbody>
+          <tr><td><b>Circumpolar norte</b></td><td class="num">δ &gt; +60°</td><td>nunca se põe; gira em torno do polo toda noite</td></tr>
+          <tr><td><b>Nasce e se põe</b></td><td class="num">−60° &lt; δ &lt; +60°</td><td>cruza o horizonte duas vezes por dia</td></tr>
+          <tr><td><b>Nunca visível</b></td><td class="num">δ &lt; −60°</td><td>permanece sempre abaixo do horizonte</td></tr>
+        </tbody>
+        <caption>O limite é δ = ±(90° − φ). Para φ = 30°, é ±60°.</caption>
+      </table>
+    </div>
+
+    <p>Esta é a razão pela qual <strong>Canopus</strong> (δ ≈ −52°) é visível do Egito, baixa no sul, enquanto o
+    <strong>Cruzeiro do Sul</strong> ficava no limite da visibilidade e foi se tornando invisível ao longo dos
+    milênios por precessão.</p>
+  </article>
+
+  <!-- ============ 2.2 ============ -->
+  <article class="aula" id="a22">
+    <h2><span class="n">Aula 2.2</span> As que não conhecem destruição</h2>
+
+    <p>Aqui a astronomia encontra o texto egípcio, e a correspondência é notavelmente direta.</p>
+
+    <div class="ex">
+      <div class="glyphline">𓐍 𓅓 𓅱 𓋴 𓎡 𓇼 𓏥</div>
+      <p class="tl">jḫmw-sk</p>
+      <p class="tr">&ldquo;as que não conhecem a destruição&rdquo; — literalmente &ldquo;as que ignoram o
+      perecer&rdquo;. É o termo egípcio para as estrelas <strong>circumpolares</strong>.</p>
+      <p class="gloss">Grafia normalizada; as ocorrências reais variam.</p>
+    </div>
+
+    <p>O nome é uma descrição observacional exata. Toda estrela que nasce também se põe — ela &ldquo;morre&rdquo; no
+    horizonte ocidental e passa pelo mundo inferior, a <span class="eg"><span class="gl">𓇽</span><span class="t">dwꜣt</span></span>,
+    antes de renascer. As circumpolares <strong>nunca fazem isso</strong>. Elas giram eternamente, sempre visíveis,
+    nunca tocadas pela morte.</p>
+
+    <p>Para uma cultura que organizou sua religião funerária inteira em torno da sobrevivência após a morte, uma
+    região do céu onde nada jamais desaparece não é um detalhe técnico. Os <strong>Textos das Pirâmides</strong>
+    exprimem repetidamente o desejo de que o rei morto se junte às <span class="t">jḫmw-sk</span> — isto é, de que
+    ele passe da categoria dos que se põem para a categoria dos que não se põem.</p>
+
+    <div class="box box-nota">
+      <h4>O segundo grupo: <span class="t">jḫmw-wrḏ</span></h4>
+      <p>&ldquo;As que não conhecem o cansaço&rdquo;, ou &ldquo;as infatigáveis&rdquo;. O termo designa o outro
+      conjunto de astros de comportamento notável — na leitura mais aceita, os corpos que se movem em relação às
+      estrelas fixas: planetas, e possivelmente os decanos. A identificação exata é discutida.</p>
+      <p>Os dois termos juntos mostram que a astronomia egípcia <strong>classificava os astros por comportamento
+      observado</strong>, não por posição. É uma taxonomia empírica.</p>
+    </div>
+
+    <div class="box box-pratica">
+      <h4>Uma consequência para o Módulo 04</h4>
+      <p>Repare no que isto significa para a orientação de monumentos. A região do céu que os egípcios
+      demonstravelmente valorizavam mais, e nomearam, é justamente a região <strong>ao redor do polo norte
+      celeste</strong> — que é a direção do norte verdadeiro.</p>
+      <p>Isso é <em>corroboração cultural independente</em>, na acepção da Aula 1.5: qualquer hipótese de que as
+      pirâmides foram orientadas por observação de estrelas circumpolares parte com apoio textual, e não apenas
+      geométrico. É uma vantagem enorme, e explica por que as hipóteses estelares do Módulo 04 são levadas a sério
+      pela egiptologia.</p>
+    </div>
+  </article>
+
+  <!-- ============ 2.3 ============ -->
+  <article class="aula" id="a23">
+    <h2><span class="n">Aula 2.3</span> Precessão: o que muda e o que não muda</h2>
+
+    <p>A Terra é um pião ligeiramente achatado, e a atração do Sol e da Lua sobre esse achatamento faz seu eixo de
+    rotação descrever um cone lentamente. Um giro completo leva cerca de <strong>25.772 anos</strong>.</p>
+
+    <div class="formula">
+      <span class="eq">taxa ≈ 50,3″ por ano &nbsp;=&nbsp; 1° a cada ≈ 71,6 anos &nbsp;=&nbsp; ≈ 14° por milênio</span>
+      <dl>
+        <dt>″</dt><dd>segundo de arco (1/3600 de grau)</dd>
+        <dt>ciclo</dt><dd>≈ 25.772 anos para uma volta completa</dd>
+      </dl>
+    </div>
+
+    <figure class="fig">
+      <svg viewBox="0 0 640 360" role="img" aria-labelledby="t-prec d-prec">
+        <title id="t-prec">Círculo de precessão do polo norte celeste</title>
+        <desc id="d-prec">O polo norte celeste descreve um círculo entre as estrelas em cerca de 25.772 anos.
+        Thuban ocupava a posição polar por volta de 2800 a.C., Polaris a ocupa hoje, e Vega a ocupará por volta
+        do ano 13700.</desc>
+
+        <circle cx="320" cy="175" r="120" class="svg-mark" stroke-dasharray="6 6"/>
+        <circle cx="320" cy="175" r="3.5" class="svg-dot"/>
+        <text x="320" y="197" class="svg-label-sm" text-anchor="middle">polo da eclíptica</text>
+        <text x="320" y="210" class="svg-label-sm" text-anchor="middle">(fixo)</text>
+
+        <!-- seta de sentido -->
+        <path d="M 400 92 A 120 120 0 0 1 428 148" class="svg-rule"/>
+        <path d="M 428 148 l -7 -6 l 9 -3 z" class="svg-star"/>
+        <text x="452" y="126" class="svg-label-sm" text-anchor="start">sentido</text>
+
+        <!-- Polaris (hoje), topo -->
+        <g transform="translate(320,55)">
+          <path d="M 0 -8 L 2.1 -2.5 L 7.8 -2.1 L 3.4 1.4 L 5 7.1 L 0 3.7 L -5 7.1 L -3.4 1.4 L -7.8 -2.1 L -2.1 -2.5 Z" class="svg-sun"/>
+        </g>
+        <text x="320" y="36" class="svg-label" text-anchor="middle">Polaris — hoje</text>
+
+        <!-- Thuban, ~2800 a.C. -->
+        <g transform="translate(210,123)">
+          <path d="M 0 -8 L 2.1 -2.5 L 7.8 -2.1 L 3.4 1.4 L 5 7.1 L 0 3.7 L -5 7.1 L -3.4 1.4 L -7.8 -2.1 L -2.1 -2.5 Z" class="svg-star"/>
+        </g>
+        <text x="196" y="114" class="svg-label" text-anchor="end">Thuban</text>
+        <text x="196" y="128" class="svg-label-sm" text-anchor="end">≈ 2800 a.C.</text>
+
+        <!-- Vega, ~13700 d.C. -->
+        <g transform="translate(355,290)">
+          <path d="M 0 -8 L 2.1 -2.5 L 7.8 -2.1 L 3.4 1.4 L 5 7.1 L 0 3.7 L -5 7.1 L -3.4 1.4 L -7.8 -2.1 L -2.1 -2.5 Z" class="svg-star"/>
+        </g>
+        <text x="372" y="292" class="svg-label" text-anchor="start">Vega</text>
+        <text x="372" y="306" class="svg-label-sm" text-anchor="start">≈ 13700 d.C.</text>
+
+        <!-- raio e rótulo da obliquidade -->
+        <line x1="320" y1="175" x2="320" y2="55" class="svg-dim"/>
+        <text x="332" y="118" class="svg-label-sm" text-anchor="start">≈ 23,5°</text>
+      </svg>
+      <figcaption>
+        O polo celeste não está fixo entre as estrelas: ele percorre um círculo de raio igual à obliquidade da
+        eclíptica em cerca de 25.772 anos. <b>Na época das pirâmides, a estrela polar não era Polaris</b> — era
+        Thuban (α Draconis), que por volta de 2800 a.C. esteve a menos de um décimo de grau do polo. É um fato
+        central para o Módulo 04.
+      </figcaption>
+    </figure>
+
+    <h3>O que a precessão muda</h3>
+    <ul>
+      <li><strong>Qual estrela é a &ldquo;polar&rdquo;.</strong> Thuban em 2800 a.C., Polaris hoje, Vega daqui a
+      cerca de 11.700 anos.</li>
+      <li><strong>A declinação de cada estrela</strong> — e portanto o azimute em que ela nasce e se põe, e se ela
+      é circumpolar ou não naquela latitude.</li>
+      <li><strong>A data do levante helíaco</strong> de cada estrela em relação ao ano trópico.</li>
+      <li><strong>Quais constelações são visíveis</strong> de uma dada latitude, ao longo dos milênios.</li>
+    </ul>
+
+    <h3>O que a precessão <em>não</em> muda</h3>
+    <div class="box box-atencao">
+      <h4>Três invariantes que derrubam muita alegação</h4>
+      <ul style="margin-bottom:0">
+        <li><strong>A declinação do sol nos solstícios.</strong> Ela é dada pela <em>obliquidade da eclíptica</em>,
+        não pela precessão. A obliquidade também varia, mas devagar e pouco: cerca de <strong>24,0°</strong> em
+        2500 a.C. contra <strong>23,44°</strong> hoje — pouco mais de meio grau em 4.500 anos.</li>
+        <li><strong>Os pontos cardeais.</strong> Norte verdadeiro é norte verdadeiro; o eixo de rotação continua
+        apontando para <em>algum</em> lugar, e o polo celeste sempre está a uma altura igual à latitude.</li>
+        <li><strong>A geometria do equinócio.</strong> O sol nasce a leste no equinócio em qualquer época, porque
+        equinócio é, por definição, declinação zero.</li>
+      </ul>
+    </div>
+
+    <p>Essa distinção tem uma consequência prática forte. Um alinhamento <strong>solar</strong> — solstício,
+    equinócio — é quase imune à precessão: ele funciona hoje quase como funcionava em 2500 a.C. Um alinhamento
+    <strong>estelar</strong>, ao contrário, é fortemente datável, porque a declinação da estrela mudou muito.</p>
+
+    <div class="box box-pratica">
+      <h4>Isto é uma ferramenta, não só uma complicação</h4>
+      <p>Um alinhamento estelar que funciona para uma data específica e falha para outras é um
+      <strong>relógio</strong>. É exatamente esse raciocínio que Kate Spence usará no Módulo 04 para tentar datar a
+      construção das pirâmides a partir dos seus erros de orientação — e é também o que torna a tentativa tão
+      contestada.</p>
+    </div>
+  </article>
+
+  <!-- ============ 2.4 ============ -->
+  <article class="aula" id="a24">
+    <h2><span class="n">Aula 2.4</span> Sírius, Sopdet e o ano vagante</h2>
+
+    <p>Sírius é a estrela mais brilhante do céu noturno. No Egito ela se chama
+    <span class="eg"><span class="gl">𓇮</span><span class="t">spdt</span></span> — Sopdet, para os gregos Sothis —
+    e foi o objeto astronômico mais importante da cultura egípcia.</p>
+
+    <h3>O levante helíaco</h3>
+    <p>Por cerca de <strong>70 dias</strong> por ano, Sírius está próxima demais do Sol no céu para ser vista.
+    Depois desse período, numa manhã específica, ela reaparece por alguns minutos na luz da aurora, logo acima do
+    horizonte leste, pouco antes de o Sol nascer e apagá-la. Essa primeira reaparição anual é o
+    <strong>levante helíaco</strong>, em egípcio <span class="t">prt spdt</span> — &ldquo;a saída de Sopdet&rdquo;.</p>
+
+    <p>No Egito faraônico, esse evento caía aproximadamente junto com o início da <strong>inundação anual do
+    Nilo</strong>. A coincidência é o que deu a Sopdet sua importância: ela anunciava o acontecimento do qual
+    dependia a agricultura inteira do país.</p>
+
+    <div class="box box-nota">
+      <h4>Por que o levante helíaco é difícil de calcular</h4>
+      <p>A data depende de um parâmetro chamado <strong>arco de visão</strong> — a distância angular mínima entre o
+      Sol e a estrela para que ela seja visível através da atmosfera baixa. Não é uma constante: depende da
+      transparência do ar, da poeira, da acuidade do observador e da altura do horizonte local. Para o Egito, as
+      estimativas de trabalho ficam entre <strong>9° e 11°</strong>.</p>
+      <p>E depende da <strong>latitude</strong>: o levante helíaco ocorre em datas diferentes em Elefantina, em
+      Mênfis e em Alexandria. Uma data sótica registrada num documento só é utilizável se soubermos onde a
+      observação foi feita — e frequentemente não sabemos.</p>
+    </div>
+
+    <h3>O calendário civil e o ano vagante</h3>
+    <p>O calendário civil egípcio tinha <strong>365 dias exatos</strong>: doze meses de trinta dias mais cinco dias
+    epagômenos. Nenhum dia bissexto, nunca.</p>
+
+    <p>O ano trópico real dura cerca de 365,2422 dias. A diferença de aproximadamente um quarto de dia por ano faz
+    o calendário civil <strong>escorregar</strong> em relação às estações, um dia a cada quatro anos. Ao longo de
+    séculos, o Ano-Novo civil passeia por todas as estações do ano — daí o nome <strong>ano vagante</strong>.</p>
+
+    <div class="formula">
+      <span class="eq">1 ciclo sótico = 1460 anos julianos ≈ 1461 anos civis egípcios</span>
+      <dl>
+        <dt>4 × 365</dt><dd>anos civis para atrasar 1 dia inteiro… e 365 dias a recuperar</dd>
+        <dt>1460</dt><dd>anos até que o levante helíaco volte a cair no Ano-Novo civil</dd>
+      </dl>
+    </div>
+
+    <p>O escritor romano <strong>Censorino</strong>, no século III d.C., registra que o levante helíaco de Sírius
+    coincidiu com o primeiro dia do calendário civil egípcio em torno de <strong>139 d.C.</strong> Essa é a única
+    âncora explícita que temos, e dela se pode recuar em múltiplos de 1.460 anos.</p>
+
+    <div class="box box-atencao">
+      <h4>Por que as datas sóticas não resolvem a cronologia egípcia</h4>
+      <p>A ideia é elegante e a execução é frustrante. Os problemas são cumulativos:</p>
+      <ul style="margin-bottom:0">
+        <li><strong>Local de observação desconhecido</strong> — a diferença entre Elefantina e Mênfis muda a data
+        em vários dias, e portanto a datação em décadas.</li>
+        <li><strong>Arco de visão incerto</strong> — variar o parâmetro entre 9° e 11° desloca o resultado.</li>
+        <li><strong>Poucos registros</strong> — o número de datas sóticas realmente utilizáveis é muito pequeno, e
+        a interpretação de cada uma é discutida.</li>
+        <li><strong>Ambiguidade de ciclo</strong> — sem informação externa, uma data sótica é compatível com
+        épocas separadas por 1.460 anos.</li>
+      </ul>
+      <p style="margin-top:.8rem;margin-bottom:0">Conclusão honesta: as datas sóticas são
+      <strong>restrições</strong>, úteis em combinação com listas de reis, sincronismos com a Mesopotâmia e
+      radiocarbono. Não são âncoras absolutas, e cronologias que as tratam como tal herdam uma precisão que os
+      dados não têm.</p>
+    </div>
+  </article>
+
+  <!-- ============ 2.5 ============ -->
+  <article class="aula" id="a25">
+    <h2><span class="n">Aula 2.5</span> As constelações egípcias</h2>
+
+    <p>Os egípcios agrupavam estrelas em figuras, e representaram essas figuras em tetos de túmulos e templos.
+    Mas — e esta é a informação que quase nunca aparece na divulgação — <strong>a identificação da maioria delas
+    com constelações modernas permanece incerta</strong>.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Nome egípcio</th><th>Grafia</th><th>Figura representada</th><th>Identificação</th><th>Certeza</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="tl">mskhtjw</td><td class="g">𓄘</td><td>perna dianteira de boi, ou enxó</td>
+            <td>Ursa Maior (o &ldquo;Carro&rdquo;)</td><td><b>alta</b></td>
+          </tr>
+          <tr>
+            <td class="tl">spdt</td><td class="g">𓇮</td><td>triângulo; deusa com estrela sobre a cabeça</td>
+            <td>Sírius (α Canis Majoris)</td><td><b>alta</b></td>
+          </tr>
+          <tr>
+            <td class="tl">sꜣḥ</td><td class="g">𓊃𓄿𓎛𓇼</td><td>figura humana caminhando, olhando para trás</td>
+            <td>Órion</td><td><b>alta</b></td>
+          </tr>
+          <tr>
+            <td class="tl">rrt / jpt</td><td class="g">𓃯</td><td>hipopótamo fêmea, muitas vezes com crocodilo</td>
+            <td>região de Draco / Boieiro (proposta)</td><td>média</td>
+          </tr>
+          <tr>
+            <td class="tl">nṯrw decanais</td><td class="g">𓇼𓏥</td><td>36 asterismos sucessivos</td>
+            <td>faixa ao sul da eclíptica; correspondências individuais em aberto</td><td><b>baixa</b></td>
+          </tr>
+        </tbody>
+        <caption>Grafias normalizadas. Para o estado atual da discussão sobre as identificações, ver Priskin
+        (<i>ENiM</i> 12, 2019) e os volumes de Neugebauer &amp; Parker.</caption>
+      </table>
+    </div>
+
+    <h3>Os decanos</h3>
+    <p>Um <strong>decano</strong> é um asterismo — grupo de estrelas — cujo comportamento marcava uma divisão do
+    tempo. Os egípcios identificaram <strong>36 decanos</strong>, cada um associado a um período de
+    <strong>10 dias</strong>. 36 × 10 = 360 dias, mais os cinco epagômenos, e fecha o ano civil.</p>
+
+    <p>A sucessão dos levantes helíacos dos decanos ao longo do ano servia para marcar as
+    <strong>horas da noite</strong>. É o sistema que dá origem à divisão da noite em doze partes — e, por extensão,
+    à nossa hora de 60 minutos, herdada via Mesopotâmia e Grécia.</p>
+
+    <h3>Os documentos</h3>
+    <ul class="marcos">
+      <li>
+        <span class="quando">c. 2100 a.C.</span>
+        <span class="oque"><b>Relógios estelares diagonais</b> em tampas de sarcófago, sobretudo de Assiut.
+        Tabelas com 36 colunas × 12 linhas: cada coluna é uma década do ano, cada linha uma hora da noite.
+        São os documentos astronômicos egípcios mais antigos que temos.</span>
+      </li>
+      <li>
+        <span class="quando">c. 1470 a.C.</span>
+        <span class="oque"><b>Teto de Senenmut</b> (TT353, Deir el-Bahari). Duas faixas: um painel
+        <b>norte</b> com as constelações circumpolares e os meses, e um painel <b>sul</b> com decanos e planetas.
+        É a mais antiga representação completa do &ldquo;diagrama astronômico&rdquo; egípcio.</span>
+      </li>
+      <li>
+        <span class="quando">Século XIII a.C.</span>
+        <span class="oque"><b>Tetos ramséssidas</b> — Seti I, Ramesseum, Ramsés VI e outros. Trazem os
+        <b>relógios estelares de trânsito</b>: um observador sentado e uma grade de posições relativas ao corpo de
+        um assistente, para registrar a passagem das estrelas pelo meridiano.</span>
+      </li>
+      <li>
+        <span class="quando">Império Novo</span>
+        <span class="oque"><b>O Livro de Nut</b> — texto cosmográfico que descreve a deusa-céu engolindo e
+        parindo os astros, com comentário técnico sobre decanos e sobre o período de invisibilidade de 70 dias.</span>
+      </li>
+      <li>
+        <span class="quando">c. 50 a.C.</span>
+        <span class="oque"><b>Zodíaco de Dendera</b>. Frequentemente apresentado como astronomia egípcia antiga,
+        é de época <b>ptolomaica tardia</b> e traz constelações <b>zodiacais de origem babilônica</b> chegadas via
+        Grécia — Áries, Touro, Leão. Não é testemunho do céu faraônico.</span>
+      </li>
+    </ul>
+
+    <div class="box box-atencao">
+      <h4>Os tetos não são mapas do céu</h4>
+      <p>Um erro comum é tratar o teto de Senenmut como uma carta celeste que se pode sobrepor a um planetário. Ele
+      não é isso. Os diagramas astronômicos egípcios são <strong>esquemáticos e canônicos</strong>: as figuras
+      ocupam posições convencionais, não posições medidas; as proporções não correspondem a distâncias angulares;
+      e os tetos posteriores <strong>copiam</strong> modelos anteriores, às vezes reproduzindo erros e mantendo
+      configurações já desatualizadas na época da cópia.</p>
+      <p>Eles são fontes preciosas para saber <em>o que</em> os egípcios nomeavam e <em>como</em> organizavam o
+      tempo noturno. São fontes pobres para medir posições.</p>
+    </div>
+  </article>
+
+  <!-- ============ 2.6 ============ -->
+  <article class="aula" id="a26">
+    <h2><span class="n">Aula 2.6</span> O que os egípcios não tinham</h2>
+
+    <p>Delimitar o que uma cultura <em>não</em> possuía é tão importante quanto catalogar o que possuía — porque
+    é isso que define quais alinhamentos ela poderia ter projetado deliberadamente.</p>
+
+    <div class="grid grid-2" style="margin-top:1.6rem">
+      <div class="card">
+        <h3>Zodíaco</h3>
+        <p>As doze constelações zodiacais são criação <strong>mesopotâmica</strong>, transmitida ao Egito na época
+        ptolomaica. Um egípcio da IV Dinastia não tinha &ldquo;Leão&rdquo; no céu, e nenhuma alegação que o suponha
+        pode funcionar para o Reino Antigo.</p>
+      </div>
+      <div class="card">
+        <h3>Teoria planetária preditiva</h3>
+        <p>Os egípcios <em>observavam</em> os planetas e os nomeavam. Não há evidência de modelos matemáticos que
+        previssem posições — isso é uma realização babilônica, mais tarde grega.</p>
+      </div>
+      <div class="card">
+        <h3>Conhecimento da precessão</h3>
+        <p>Nenhum texto egípcio a descreve. A descoberta é atribuída a Hiparco, no século II a.C. Alegações de que
+        monumentos codificam ciclos precessionais precisam explicar como o fenômeno foi detectado sem deixar
+        registro.</p>
+      </div>
+      <div class="card">
+        <h3>Medida angular em graus</h3>
+        <p>A divisão do círculo em 360° é babilônica. A matemática egípcia, como se vê no Papiro Rhind, trabalha com
+        <strong>razões</strong> — o <span class="t">seked</span> — e não com ângulos.</p>
+      </div>
+      <div class="card">
+        <h3>Trigonometria</h3>
+        <p>Não há função seno, cosseno ou tangente na matemática egípcia. A fórmula da Aula 1.4 é nossa ferramenta
+        de análise, não a deles.</p>
+      </div>
+      <div class="card">
+        <h3>E o que eles tinham</h3>
+        <p>Observação sistemática e de longo prazo, um calendário de 365 dias que atravessou três milênios,
+        divisão da noite em horas por decanos, instrumentos de visada e prumo, e uma precisão de alinhamento
+        cardinal que ainda não sabemos explicar com certeza.</p>
+      </div>
+    </div>
+
+    <div class="box box-debate">
+      <h4>O teste que isto fornece</h4>
+      <p>Diante de qualquer alegação sobre astronomia egípcia, pergunte: <strong>o fenômeno alegado é descritível
+      no vocabulário astronômico que sabemos que eles tinham?</strong></p>
+      <p>&ldquo;Este eixo aponta para o nascer helíaco de Sopdet&rdquo; passa no teste — os egípcios nomeavam a
+      estrela, registravam o evento e organizavam o calendário em torno dele. &ldquo;Este eixo codifica a posição
+      precessional de uma constelação zodiacal&rdquo; não passa: usa dois conceitos que eles comprovadamente não
+      possuíam.</p>
+      <p>Reprovar no teste não torna a alegação impossível — torna-a <em>muito</em> mais custosa, porque agora ela
+      precisa explicar também como o conhecimento existiu sem deixar vestígio em três mil anos de documentação.</p>
+    </div>
+  </article>
+
+  <!-- ============ EXERCÍCIOS ============ -->
+  <div class="exercicios">
+    <h3>Exercícios do Módulo 02</h3>
+    <ol>
+      <li>Qual é a declinação-limite da região circumpolar em Assuã (φ ≈ 24,1° N)? E em Alexandria (φ ≈ 31,2° N)?</li>
+      <li>Uma estrela tem δ = +58°. Ela é circumpolar em Gizé? E em Alexandria?</li>
+      <li>Quantos graus a precessão desloca o polo celeste em 4.500 anos? Compare com o raio do círculo de
+      precessão.</li>
+      <li>Explique por que um alinhamento ao solstício de inverno funciona quase igualmente bem em 2500 a.C. e
+      hoje, enquanto um alinhamento a uma estrela específica não.</li>
+      <li>O calendário civil egípcio tem 365 dias. Depois de quantos anos o Ano-Novo civil terá retrocedido três
+      meses inteiros em relação às estações?</li>
+      <li>Por que uma data sótica registrada num papiro sem indicação de procedência é menos útil do que parece?</li>
+      <li>Um documentário mostra o zodíaco de Dendera como &ldquo;o mapa celeste dos construtores das pirâmides&rdquo;.
+      Aponte os dois erros.</li>
+      <li>Aplique o teste da Aula 2.6: &ldquo;a Grande Pirâmide codifica o ciclo de precessão de 25.920 anos em
+      suas dimensões&rdquo;. O que essa alegação exige que os egípcios tivessem?</li>
+    </ol>
+
+    <details class="gab">
+      <summary>Ver gabarito comentado</summary>
+      <div class="body">
+        <ol>
+          <li>O limite é δ = 90° − φ. Em <b>Assuã</b>: 90 − 24,1 = <strong>+65,9°</strong>. Em <b>Alexandria</b>:
+          90 − 31,2 = <strong>+58,8°</strong>. Quanto mais ao norte, maior a calota circumpolar — e mais estrelas
+          &ldquo;não conhecem destruição&rdquo;.</li>
+
+          <li>Em <b>Gizé</b> (limite +60°): <strong>não</strong>, 58° &lt; 60°, a estrela nasce e se põe.
+          Em <b>Alexandria</b> (limite +58,8°): <strong>também não</strong>, por pouco — 58° &lt; 58,8°. Ela
+          roçaria o horizonte norte. Este é exatamente o tipo de caso em que a altura real do horizonte e a
+          refração decidem se o observador antigo via a estrela tocar o solo ou não.</li>
+
+          <li>Cuidado com a pergunta: há <em>dois</em> números aqui, e confundi-los é um erro comum.
+          <br>(a) <strong>Fase percorrida no ciclo</strong>: 4.500 ÷ 71,6 ≈ <strong>63°</strong>, ou seja
+          4.500/25.772 ≈ <strong>17,5% do ciclo</strong> — cerca de um sexto da volta completa.
+          <br>(b) <strong>Deslocamento real do polo no céu</strong>: como o polo percorre um círculo de raio
+          angular ≈ 23,5°, 17,5% dessa circunferência equivalem a um arco de ≈ <strong>26°</strong> sobre a esfera
+          celeste.
+          <br>É o número (b) que se observa: Thuban e Polaris estão de fato separadas por cerca de 25° no céu, o
+          que confere. Os 63° são ângulo de fase, não distância angular.</li>
+
+          <li>Porque a declinação do sol no solstício é fixada pela <strong>obliquidade da eclíptica</strong>, que
+          variou apenas de ≈ 24,0° para 23,44° em 4.500 anos — cerca de meio grau. Já a declinação de uma estrela
+          muda por <strong>precessão</strong>, que desloca o polo em dezenas de graus no mesmo intervalo.
+          Consequência metodológica: alinhamentos solares não datam nada; alinhamentos estelares, se reais, datam.</li>
+
+          <li>O calendário atrasa ≈ 0,2422 dia por ano. Três meses = 90 dias. 90 ÷ 0,2422 ≈
+          <strong>372 anos</strong>. Em pouco mais de três séculos e meio, o &ldquo;Ano-Novo da inundação&rdquo;
+          estaria caindo numa estação completamente diferente — o que os egípcios sabiam e registraram, sem nunca
+          terem corrigido o calendário civil.</li>
+
+          <li>Porque a data do levante helíaco <strong>depende da latitude</strong> do observador. A mesma
+          observação feita em Elefantina, em Mênfis ou em Alexandria corresponde a datas diferentes, e a conversão
+          para cronologia absoluta muda em décadas conforme o local suposto. Some a isso a incerteza no arco de
+          visão (9° a 11°) e a ambiguidade de ciclo de 1.460 anos.</li>
+
+          <li>(i) <strong>Cronologia</strong>: o zodíaco de Dendera é de c. 50 a.C., época ptolomaica tardia —
+          cerca de <strong>2.500 anos depois</strong> da construção das pirâmides.
+          (ii) <strong>Origem</strong>: as constelações zodiacais que ele traz são de origem
+          <strong>babilônica</strong>, transmitidas via Grécia. Não representam o céu que os egípcios da IV Dinastia
+          reconheciam.</li>
+
+          <li>Exige que os egípcios (a) <strong>conhecessem a precessão</strong>, fenômeno que nenhum texto egípcio
+          descreve e cuja descoberta é atribuída a Hiparco no século II a.C.; e (b) tivessem
+          <strong>medida angular</strong> e aritmética capazes de exprimir um ciclo dessa duração — quando a
+          matemática egípcia documentada trabalha por razões, não por ângulos. Note ainda que o valor citado,
+          25.920 anos, é um número redondo derivado de 72 × 360, e não o valor astronômico (≈ 25.772): a alegação
+          usa um ciclo que <strong>não existe</strong> na natureza, apenas na aritmética de quem a formula.</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <div class="box box-nota">
+    <h4>Leitura recomendada para este módulo</h4>
+    <p>CLAGETT, M. <i>Ancient Egyptian Science, vol. II: Calendars, Clocks, and Astronomy</i> (1995), caps. 1–2.
+    &nbsp;·&nbsp; NEUGEBAUER, O.; PARKER, R. A. <i>Egyptian Astronomical Texts</i>, vols. I e III. &nbsp;·&nbsp;
+    PRISKIN, G. &ldquo;The Constellations of the Egyptian Astronomical Diagrams&rdquo;, <i>ENiM</i> 12 (2019).
+    &nbsp;·&nbsp; GAUTSCHY, R. — recursos online sobre Sírius e cronologia sótica.</p>
+  </div>
+
+</section>
+<div class="wrap"><nav class="pager"><a href="modulo-01.html"><span class="k">Módulo anterior</span><span class="v">01 · O que é arqueoastronomia — e o que ela exige</span></a><a class="next" href="modulo-03.html"><span class="k">Próximo módulo</span><span class="v">03 · Instrumentos e o ritual de fundação</span></a></nav></div></main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span class="gl">𓇯 𓇳 𓇹 𓇼</span>
+    <p><strong>Arqueoastronomia das Necrópoles</strong> — 24 horas · Desvendando os Códigos Egípcios.</p>
+    <p class="small">Dados de orientação de Spence (<i>Nature</i> 408, 2000), Belmonte &amp; Shaltout
+    (<i>JHA</i> / <i>Advances in Space Research</i>) e Tupikova (preprint MPIWG 511, 2022), com as fontes indicadas
+    em cada tabela. Transliteração conforme a Leiden Unified Transliteration (IAE, 2023).</p>
+    <p class="small muted">Conteúdo didático. Nenhuma medida apresentada aqui substitui a consulta à publicação original.</p>
+  </div>
+</footer>
+
+<!-- ce-progresso:início -->
+<!-- Registro de leitura. Guarda no navegador do aluno, em localStorage;
+     nada é enviado ao servidor. Gerado por injetar-progresso.py a partir
+     de area-aluno/js/progresso.js — não edite aqui. -->
+<script>
+/* ce-progresso — registro de leitura dos cursos.
+ *
+ * Guarda no navegador do aluno, em localStorage. Nada sai do dispositivo:
+ * nem para o site, nem para nós. Isso tem um custo honesto — trocar de
+ * computador recomeça a contagem — e uma vantagem: nenhum dado de leitura
+ * de ninguém fica armazenado em lugar nenhum.
+ *
+ * Formato:
+ *   { "curso-hieroglifos": { "3": { pct: 100, em: 1758... } }, ... }
+ *   pct = maior porcentagem de rolagem já alcançada naquele módulo
+ *
+ * Este arquivo é a versão de referência. Nas páginas dos módulos ele é
+ * injetado inline por scripts/injetar-progresso.py, para o curso não
+ * depender de um segundo pedido de rede nem da área do aluno estar no ar.
+ */
+(function (global) {
+  "use strict";
+
+  var CHAVE = "ce_progresso_v1";
+  var LIDO = 90; // % de rolagem a partir do qual o módulo conta como lido
+
+  function ler() {
+    try { return JSON.parse(global.localStorage.getItem(CHAVE)) || {}; }
+    catch (e) { return {}; }          // modo privado, cookies bloqueados, etc.
+  }
+
+  function gravar(dados) {
+    try { global.localStorage.setItem(CHAVE, JSON.stringify(dados)); return true; }
+    catch (e) { return false; }
+  }
+
+  function registrar(curso, modulo, pct) {
+    var d = ler();
+    var c = d[curso] || (d[curso] = {});
+    var antes = c[modulo] || { pct: 0 };
+    // só sobe: reler o começo de um módulo não desfaz o que já foi lido
+    if (pct <= antes.pct) { antes.em = Date.now(); c[modulo] = antes; }
+    else c[modulo] = { pct: pct, em: Date.now() };
+    gravar(d);
+  }
+
+  function limpar(curso) {
+    var d = ler();
+    if (curso) delete d[curso]; else d = {};
+    gravar(d);
+  }
+
+  /* ---- métricas de um curso, a partir da grade em window.CE_CURSOS ---- */
+  function resumo(curso, totalModulos) {
+    var c = ler()[curso] || {};
+    var lidos = 0, ultimo = null, ultimoEm = 0;
+    for (var k in c) {
+      if (!Object.prototype.hasOwnProperty.call(c, k)) continue;
+      if (c[k].pct >= LIDO) lidos++;
+      if (c[k].em > ultimoEm) { ultimoEm = c[k].em; ultimo = { modulo: +k, pct: c[k].pct }; }
+    }
+    return {
+      lidos: lidos,
+      total: totalModulos,
+      pct: totalModulos ? Math.round((lidos / totalModulos) * 100) : 0,
+      concluido: totalModulos > 0 && lidos >= totalModulos,
+      ultimo: ultimo,
+      modulos: c,
+    };
+  }
+
+  global.CEProgresso = {
+    ler: ler, registrar: registrar, limpar: limpar, resumo: resumo, LIDO: LIDO,
+  };
+
+  /* ---- se estamos numa página de módulo, medir a leitura ---- */
+  var m = global.location.pathname.match(/\/(curso-[a-z-]+)\/modulo-(\d+)\.html?$/i);
+  if (!m) return;
+  var curso = m[1], modulo = String(parseInt(m[2], 10));
+
+  function pctAtual() {
+    var doc = global.document.documentElement;
+    var alcance = doc.scrollHeight - doc.clientHeight;
+    // página que cabe inteira na tela já está lida por definição
+    if (alcance <= 40) return 100;
+    return Math.min(100, Math.round(((global.scrollY || 0) / alcance) * 100));
+  }
+
+  var pendente = false;
+  function medir() {
+    if (pendente) return;
+    pendente = true;
+    global.requestAnimationFrame(function () {
+      pendente = false;
+      registrar(curso, modulo, pctAtual());
+    });
+  }
+
+  global.addEventListener("scroll", medir, { passive: true });
+  global.addEventListener("pagehide", medir);
+  global.document.addEventListener("visibilitychange", function () {
+    if (global.document.visibilityState === "hidden") medir();
+  });
+  // marca a visita já na abertura, para o "continuar de onde parei" funcionar
+  // mesmo em quem abriu e saiu sem rolar
+  if (global.document.readyState === "complete") medir();
+  else global.addEventListener("load", medir);
+})(window);
+</script>
+<!-- ce-progresso:fim -->
+</body>
+</html>
