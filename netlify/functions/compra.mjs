@@ -29,8 +29,21 @@
 
 import { createHmac, timingSafeEqual } from "node:crypto";
 
-const SITE = () => process.env.CURSO_SITE ?? "https://codigosegipcios.netlify.app";
-const DIAS = () => Number(process.env.ACESSO_DIAS ?? 3650);
+// Lê variável de ambiente tolerando duas coisas que acontecem com humanos
+// digitando em painel: espaço ou quebra de linha colados junto com o valor,
+// e o nome escrito sem os underscores. Aceitar as duas grafias custa uma
+// linha e evita a pior classe de bug de configuração — a que não dá erro,
+// só deixa de funcionar em silêncio.
+function env(...nomes) {
+  for (const n of nomes) {
+    const v = process.env[n];
+    if (typeof v === "string" && v.trim() !== "") return v.trim();
+  }
+  return undefined;
+}
+
+const SITE = () => env("CURSO_SITE") ?? "https://codigosegipcios.netlify.app";
+const DIAS = () => Number(env("ACESSO_DIAS") ?? 3650);
 
 const NOMES = {
   "curso-hieroglifos": "Masterclass: Epigrafia & Leitura de Hieróglifos",
@@ -126,8 +139,8 @@ function lerKiwify(body) {
    ══════════════════════════════════════════════════════════════════ */
 
 async function enviar({ para, assunto, html }) {
-  const chave = process.env.RESEND_API_KEY;
-  const de = process.env.EMAIL_REMETENTE;
+  const chave = env("RESEND_API_KEY", "RESENDAPIKEY", "RESEND_APIKEY");
+  const de = env("EMAIL_REMETENTE", "EMAILREMETENTE");
   if (!chave || !de || !para) return { ok: false, motivo: "e-mail não configurado" };
 
   const r = await fetch("https://api.resend.com/emails", {
@@ -227,13 +240,13 @@ export default async (req) => {
   const v = ehCakto ? lerCakto(body) : lerKiwify(body);
 
   if (ehCakto) {
-    const esperado = process.env.CAKTO_SECRET;
+    const esperado = env("CAKTO_SECRET", "CAKTOSECRET");
     if (!esperado || !igual(String(body.secret ?? ""), esperado)) {
       console.warn("[compra] secret da Cakto não confere");
       return new Response("Não autorizado", { status: 401 });
     }
   } else {
-    const token = process.env.KIWIFY_TOKEN;
+    const token = env("KIWIFY_TOKEN", "KIWIFYTOKEN");
     const assinatura = new URL(req.url).searchParams.get("signature");
     if (!token || !assinatura) {
       console.warn("[compra] webhook sem assinatura reconhecível");
@@ -266,7 +279,7 @@ export default async (req) => {
       } catch (e) { console.warn("[compra] registro falhou:", e.message); }
     }
     await enviar({
-      para: process.env.EMAIL_ADMIN,
+      para: env("EMAIL_ADMIN", "EMAILADMIN"),
       assunto: `Reembolso/estorno — ${v.email}`,
       html: emailAviso("Uma venda foi devolvida", [
         ["Evento", v.evento], ["Comprador", `${v.nome} <${v.email}>`],
@@ -278,14 +291,14 @@ export default async (req) => {
   }
 
   // ---- 4. compra aprovada ----
-  const segredo = process.env.CURSO_SEGREDO;
+  const segredo = env("CURSO_SEGREDO", "CURSOSEGREDO");
   if (!segredo) {
     console.error("[compra] CURSO_SEGREDO ausente — não dá para emitir acesso");
     return new Response("Configuração incompleta", { status: 500 });
   }
 
   let mapa = {};
-  try { mapa = JSON.parse(process.env.PRODUTOS ?? "{}"); }
+  try { mapa = JSON.parse(env("PRODUTOS") ?? "{}"); }
   catch { console.error("[compra] PRODUTOS não é um JSON válido"); }
 
   // aceita o id do produto ou o da oferta como chave do mapa
@@ -293,7 +306,7 @@ export default async (req) => {
   if (!destino) {
     console.error(`[compra] produto não mapeado: id=${v.produtoId} oferta=${v.ofertaId} nome=${v.produtoNome}`);
     await enviar({
-      para: process.env.EMAIL_ADMIN,
+      para: env("EMAIL_ADMIN", "EMAILADMIN"),
       assunto: "⚠️ Venda sem acesso: produto não mapeado",
       html: emailAviso("Uma compra foi aprovada mas não sei qual curso entregar", [
         ["Produto", v.produtoNome], ["id do produto", v.produtoId], ["id da oferta", v.ofertaId],
@@ -341,7 +354,7 @@ export default async (req) => {
   }
 
   await enviar({
-    para: process.env.EMAIL_ADMIN,
+    para: env("EMAIL_ADMIN", "EMAILADMIN"),
     assunto: `Venda: ${NOMES[destino] ?? "combo"} — ${v.email}`,
     html: emailAviso("Nova venda", [
       ["Comprador", `${v.nome} <${v.email}>`],
