@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compra concluída — Códigos Egípcios</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Geist:wght@300;400;500;600;700&family=Noto+Sans+Mono:wght@400;500&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/aluno/css/aluno.css">
+<style>
+  /* passos numerados — só esta página usa */
+  .passos { counter-reset: passo; display: grid; gap: 1rem; margin-top: 1.6rem; }
+  .passo {
+    display: grid; grid-template-columns: 44px 1fr; gap: 1.1rem; align-items: start;
+    border: 1px solid var(--line-dim); border-radius: var(--radius);
+    background: var(--bg-panel); padding: 1.15rem 1.35rem;
+  }
+  .passo::before {
+    counter-increment: passo; content: counter(passo);
+    font-family: var(--font-display); font-size: 1.05rem; color: var(--gold);
+    width: 44px; height: 44px; display: grid; place-items: center;
+    border: 1px solid var(--line-strong); border-radius: 50%;
+  }
+  .passo h3 { margin: .45rem 0 .35rem; }
+  .passo p  { margin: 0; color: var(--fg-soft); font-size: .93rem; }
+  .passo p + p { margin-top: .5rem; }
+  .selo {
+    display: inline-flex; align-items: center; gap: .55rem;
+    border: 1px solid rgba(143,196,173,.45); background: rgba(143,196,173,.08);
+    color: var(--ok); border-radius: 999px; padding: .38rem 1rem;
+    font-size: .8rem; font-family: var(--font-mono); letter-spacing: .06em;
+    margin-bottom: 1rem;
+  }
+  .acoes { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.6rem; }
+  @media (max-width: 720px) {
+    .passo { grid-template-columns: 38px 1fr; gap: .9rem; padding: 1rem 1.1rem; }
+    .passo::before { width: 38px; height: 38px; font-size: .95rem; }
+    .acoes .btn { flex: 1 1 100%; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="/"><span class="gl">𓂀</span> Códigos Egípcios</a>
+    <nav>
+      <a href="/">Voltar ao site</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="topo">
+  <div class="wrap">
+    <div class="glyphband">𓋹 𓏅 𓎼 𓂀 𓊪 𓇳</div>
+    <span class="selo">✓ Compra registrada</span>
+    <h1>O seu acesso está a caminho do <span class="grad">seu e-mail</span></h1>
+    <p class="muted">Não existe cadastro, senha nem área de login para inventar.
+    O link que chega por e-mail <strong>é</strong> a sua chave — e ele continua valendo
+    sempre que você precisar.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="passos">
+
+    <div class="passo">
+      <div>
+        <h3>Um e-mail chega para você</h3>
+        <p>Assunto <strong>“Seu acesso”</strong>, com o nome do curso. Vai para o mesmo
+        endereço que você digitou no pagamento.</p>
+        <p class="small muted">No cartão e no Pix costuma chegar em poucos minutos. No boleto,
+        só depois que o banco compensa — o que pode levar até dois dias úteis.</p>
+      </div>
+    </div>
+
+    <div class="passo">
+      <div>
+        <h3>Você clica no botão “Abrir o curso”</h3>
+        <p>Ele abre o curso direto, já liberado. Quem comprou os dois recebe um botão
+        para cada um.</p>
+      </div>
+    </div>
+
+    <div class="passo">
+      <div>
+        <h3>O acesso fica gravado neste navegador</h3>
+        <p>A partir daí você entra pelo próprio site, em <strong>Entrar</strong>, sem precisar
+        do link de novo. É lá também que ficam o seu progresso e o certificado.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="aviso">
+    <h3>Guarde esse e-mail</h3>
+    <p>Se você limpar os cookies do navegador, trocar de computador ou abrir numa janela
+    anônima, é ele que devolve o acesso — basta clicar no link outra vez. Ele não expira
+    com o uso.</p>
+  </div>
+
+  <div class="aviso">
+    <h3>Não chegou?</h3>
+    <p>Olhe em <strong>spam</strong> e, no Gmail, na aba <strong>Promoções</strong> — é onde
+    e-mails automáticos costumam parar. Vale também conferir se não houve um erro de digitação
+    no endereço durante a compra.</p>
+    <p class="small muted">Se mesmo assim não aparecer, me chame no WhatsApp com o e-mail que
+    você usou. Eu reenvio o link à mão.</p>
+    <div class="acoes">
+      <a class="btn btn-gold"
+         href="https://wa.me/5541988693911?text=Oi!%20Comprei%20o%20curso%20e%20n%C3%A3o%20recebi%20o%20e-mail%20de%20acesso."
+         target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+      <a class="btn btn-ghost" href="/">Voltar ao site</a>
+    </div>
+  </div>
+
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span class="gl">𓂀 ☥ 𓊽 𓆣</span>
+    <p><strong>Desvendando os Códigos Egípcios</strong></p>
+    <p class="small"><a href="/">Voltar ao site</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
