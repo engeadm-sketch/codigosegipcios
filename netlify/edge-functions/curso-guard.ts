@@ -174,14 +174,24 @@ async function areaDoAluno(request: Request, context: Context, url: URL, segredo
     const ck = context.cookies.get(cookieDe(c));
     if (ck && liberaPara(await validar(ck, segredo), c)) meus.push(c);
   }
-  if (!meus.length) return paraVendas();
-
-  // deixa a página passar e reescreve a lista, para ela nunca ficar velha
+  // A área do aluno abre para QUALQUER UM, de propósito. Ela não contém
+  // conteúdo de curso — só títulos de módulo e nomes de aula, que já estão
+  // públicos nas páginas de venda. O conteúdo continua trancado nas rotas
+  // /curso-*, que este mesmo guard protege.
+  //
+  // O motivo é de experiência, não de segurança: quem acabou de comprar e
+  // clica em "Entrar" antes de abrir o e-mail não tem cookie ainda. Barrando,
+  // ele era jogado na página de venda do curso que acabara de pagar. Passando,
+  // ele lê "abra de novo o link que você recebeu" e resolve sozinho.
   const origem = await context.next();
   const res = new Response(origem.body, origem);
   res.headers.append(
     "Set-Cookie",
-    paraCookie(COOKIE_LISTA, meus.join("~"), 60 * 60 * 24 * 400, false),
+    meus.length
+      // tem acesso: publica a lista, para a página nunca ficar velha
+      ? paraCookie(COOKIE_LISTA, meus.join("~"), 60 * 60 * 24 * 400, false)
+      // não tem: apaga a lista, para não exibir curso que não abriria
+      : `${COOKIE_LISTA}=; Path=/; Max-Age=0; Secure; SameSite=Lax`,
   );
   return res;
 }
