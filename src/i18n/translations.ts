@@ -209,7 +209,7 @@ export const translations: Record<Language, TranslationSchema> = {
     nav: {
       solutions: "Soluções",
       documentary: "Documentário",
-      resources: "Recursos",
+      resources: "Engenharia",
       about: "Sobre",
       store: "Loja",
       login: "Entrar",
@@ -598,7 +598,7 @@ export const translations: Record<Language, TranslationSchema> = {
     nav: {
       solutions: "Solutions",
       documentary: "Documentary",
-      resources: "Resources",
+      resources: "Engineering",
       about: "About",
       store: "Store",
       login: "Sign in",
@@ -987,7 +987,7 @@ export const translations: Record<Language, TranslationSchema> = {
     nav: {
       solutions: "Soluciones",
       documentary: "Documental",
-      resources: "Recursos",
+      resources: "Ingeniería",
       about: "Sobre",
       store: "Tienda",
       login: "Iniciar sesión",

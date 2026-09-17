@@ -127,7 +127,7 @@ export default function AcademicFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="#explorar" className="hover:text-white transition-colors">
+                <Link href="#engenharia" className="hover:text-white transition-colors">
                   {t.eng.title}
                 </Link>
               </li>

@@ -277,7 +277,7 @@ function HomePageContent() {
               <Link href="#documentario" className="hover:text-[#dfa55c] transition-colors">
                 {t.nav.documentary}
               </Link>
-              <Link href="#recursos" className="hover:text-[#dfa55c] transition-colors">
+              <Link href="#engenharia" className="hover:text-[#dfa55c] transition-colors">
                 {t.nav.resources}
               </Link>
               <Link href="#sobre" className="hover:text-[#dfa55c] transition-colors">
@@ -291,14 +291,14 @@ function HomePageContent() {
             {/* Desktop Auth & Language Selector */}
             <div className="hidden md:flex items-center gap-4 lg:gap-5">
               <LanguageSelector />
-              <Link 
-                href="#entrar" 
+              <a
+                href="/aluno/"
                 className="text-xs lg:text-sm font-semibold text-[#f4ede2] hover:text-[#dfa55c] transition-colors drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
               >
                 {t.nav.login}
-              </Link>
+              </a>
               <Link 
-                href="#comece" 
+                href="#loja" 
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#dfa55c] bg-gradient-to-r from-[#dfa55c]/25 via-[#c78839]/30 to-[#dfa55c]/25 backdrop-blur-md text-xs lg:text-sm font-bold text-white shadow-[0_0_20px_rgba(223,165,92,0.35),0_2px_10px_rgba(0,0,0,0.8)] hover:bg-gradient-to-r hover:from-[#e7bb81] hover:via-[#dfa55c] hover:to-[#c78839] hover:text-[#140e04] hover:shadow-[0_0_30px_rgba(223,165,92,0.6)] hover:scale-105 transition-all duration-300"
               >
                 <span>{t.nav.getStarted}</span>
@@ -343,7 +343,7 @@ function HomePageContent() {
                 {t.nav.documentary}
               </Link>
               <Link 
-                href="#recursos" 
+                href="#engenharia" 
                 onClick={() => setMobileMenuOpen(false)}
                 className="py-1 text-sm font-medium tracking-wider text-[#e8ded1] hover:text-white"
               >
@@ -364,15 +364,15 @@ function HomePageContent() {
                 {t.nav.store}
               </Link>
               <hr className="border-[#c9a063]/30 my-1" />
-              <Link 
-                href="#entrar" 
+              <a
+                href="/aluno/"
                 onClick={() => setMobileMenuOpen(false)}
                 className="py-1 text-sm font-semibold text-[#f4ede2] hover:text-[#dfa55c]"
               >
                 {t.nav.login}
-              </Link>
+              </a>
               <Link 
-                href="#comece" 
+                href="#loja" 
                 onClick={() => setMobileMenuOpen(false)}
                 className="inline-flex justify-center items-center gap-2 px-5 py-2.5 rounded-full border border-[#dfa55c] bg-gradient-to-r from-[#dfa55c] to-[#c78839] text-xs font-bold uppercase tracking-wider text-[#140e04] shadow-[0_0_20px_rgba(223,165,92,0.4)]"
               >
@@ -425,7 +425,7 @@ function HomePageContent() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5">
               {/* Primary Button */}
               <Link
-                href="#explorar"
+                href="#documentario"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-gradient-to-r from-[#e7bb81] via-[#dca057] to-[#c78839] text-[#140e04] font-bold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 hover:brightness-110 hover:shadow-[0_0_35px_rgba(223,165,92,0.6),0_4px_16px_rgba(0,0,0,0.9)] hover:scale-[1.02] active:scale-[0.98] shadow-[0_4px_20px_rgba(0,0,0,0.8),0_0_20px_rgba(223,165,92,0.3)]"
               >
                 <span>{t.hero.exploreBtn}</span>
@@ -434,7 +434,7 @@ function HomePageContent() {
 
               {/* Secondary Button */}
               <Link
-                href="#trailer"
+                href="#documentario"
                 className="inline-flex items-center justify-center gap-3 px-6 py-3.5 rounded-full border-2 border-[#dfa55c]/60 bg-black/80 backdrop-blur-md text-white font-semibold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 hover:border-[#dfa55c] hover:bg-[#dfa55c]/20 hover:shadow-[0_0_25px_rgba(223,165,92,0.35),0_4px_16px_rgba(0,0,0,0.9)] hover:scale-[1.02] active:scale-[0.98] shadow-[0_4px_16px_rgba(0,0,0,0.8)]"
               >
                 <span className="w-5 h-5 rounded-full border border-current flex items-center justify-center text-[9px] pl-[1.5px] text-[#dfa55c]">

@@ -12,7 +12,7 @@ export default function EngineeringChronicles() {
   const current = t.eng.studies[currentKey];
 
   return (
-    <section className="relative py-24 sm:py-32 bg-black overflow-hidden border-t border-[#dfa55c]/20">
+    <section id="engenharia" className="relative py-24 sm:py-32 bg-black overflow-hidden border-t border-[#dfa55c]/20">
       <div className="relative max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         
         {/* Section Header */}
