@@ -378,3 +378,47 @@ blockquote {
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
+
+/* ---------- a oferta combinada ---------- */
+.combo {
+  border: 1px solid var(--line-strong); border-radius: 18px;
+  background: linear-gradient(160deg, #150e07, #070502);
+  padding: clamp(1.6rem, 4vw, 2.4rem);
+}
+.combo-top {
+  display: flex; gap: 1.4rem; align-items: center; flex-wrap: wrap;
+  justify-content: center; text-align: center;
+}
+.combo-item { flex: 1 1 210px; }
+.combo-item .gl { font-size: 1.7rem; color: var(--gold); display: block; margin-bottom: .45rem; }
+.combo-item h4 {
+  margin: 0 0 .25rem; font-family: var(--font-display); font-size: 1.02rem;
+  color: var(--fg); letter-spacing: 0; text-transform: none;
+}
+.combo-item p { margin: 0; font-size: .85rem; color: var(--fg-muted); }
+.combo-plus {
+  flex: 0 0 auto; font-family: var(--font-display); font-size: 1.8rem; color: var(--gold-deep);
+}
+.combo-price { text-align: center; margin-top: 1.8rem; }
+.combo-price .antes {
+  color: var(--fg-muted); font-size: .95rem; text-decoration: line-through;
+  text-decoration-color: var(--no); margin-bottom: .2rem;
+}
+.combo-price .eco {
+  display: inline-block; margin-top: .7rem; font-family: var(--font-mono);
+  font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ok);
+  border: 1px solid rgba(143,196,173,.45); border-radius: 999px; padding: .22rem .8rem;
+}
+@media (max-width: 620px) {
+  .combo-plus { flex: 1 1 100%; font-size: 1.3rem; }
+}
+
+/* ---------- nota de fonte sob um bloco de dados ---------- */
+.fonte {
+  font-size: .78rem; color: var(--fg-muted); line-height: 1.55;
+  margin: .9rem 0 0; font-family: var(--font-body);
+}
+
+/* O botão dourado da barra do topo: `.topbar nav a` vencia `.btn-gold`
+   por especificidade e pintava o texto de claro sobre fundo claro. */
+.topbar nav a.btn-gold { color: #0a0703; }

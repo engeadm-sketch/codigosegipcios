@@ -508,3 +508,7 @@ blockquote {
   margin: .9rem 0 0; font-family: var(--font-body);
 }
 .fonte b { color: var(--fg-soft); font-weight: 500; }
+
+/* O botão dourado da barra do topo: `.topbar nav a` vencia `.btn-gold`
+   por especificidade e pintava o texto de claro sobre fundo claro. */
+.topbar nav a.btn-gold { color: #0a0703; }
