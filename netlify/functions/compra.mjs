@@ -13,11 +13,12 @@
 // VARIÁVEIS DE AMBIENTE (painel do Netlify, escopo Functions)
 //
 //   CURSO_SEGREDO     obrigatória — a MESMA do curso-guard.ts
-//   PRODUTOS          obrigatória — JSON que liga id de produto a curso, ex.:
+//   PRODUTOS          opcional — JSON que liga id de produto a curso, ex.:
 //                     {"cd287b31-...":"curso-hieroglifos",
 //                      "9f2a1c04-...":"curso-arqueoastronomia",
 //                      "5b77e0aa-...":"*"}
 //                     "*" é o combo: abre os dois cursos.
+//                     Sem ela, vale o MAPA_PADRAO que está no código.
 //   CAKTO_SECRET      o "secret" que a Cakto envia no corpo do webhook
 //   KIWIFY_TOKEN      o token do webhook da Kiwify (só se usar Kiwify)
 //   RESEND_API_KEY    chave da Resend, para enviar o e-mail de acesso
@@ -297,9 +298,31 @@ export default async (req) => {
     return new Response("Configuração incompleta", { status: 500 });
   }
 
-  let mapa = {};
-  try { mapa = JSON.parse(env("PRODUTOS") ?? "{}"); }
-  catch { console.error("[compra] PRODUTOS não é um JSON válido"); }
+  // Os ids abaixo saem da própria API pública do checkout da Cakto
+  // (api.cakto.com.br/api/product/checkout/<slug>/), então não são segredo
+  // nenhum e podem morar no repositório. Ficam aqui como padrão para o site
+  // funcionar sem depender de ninguém lembrar de criar uma variável.
+  //
+  // A variável de ambiente PRODUTOS, se existir, substitui este padrão
+  // inteiro — é por lá que se corrige sem precisar de deploy.
+  const MAPA_PADRAO = {
+    // Masterclass: Epigrafia & Leitura de Hieróglifos — R$ 197
+    AyaZ2qq: "curso-hieroglifos",   // id do produto
+    i8tzac5: "curso-hieroglifos",   // id da oferta
+    // Arqueoastronomia das Necrópoles — R$ 247
+    "5GP4SGF": "curso-arqueoastronomia",
+    "92q6amb": "curso-arqueoastronomia",
+    // Combo: os dois — R$ 347. "*" abre os dois cursos.
+    "6CTrKwE": "*",
+    mryzbp7: "*",
+  };
+
+  let mapa = MAPA_PADRAO;
+  const mapaDoAmbiente = env("PRODUTOS");
+  if (mapaDoAmbiente) {
+    try { mapa = JSON.parse(mapaDoAmbiente); }
+    catch { console.error("[compra] PRODUTOS não é um JSON válido — usando o mapa padrão"); }
+  }
 
   // aceita o id do produto ou o da oferta como chave do mapa
   const destino = mapa[v.produtoId] ?? mapa[v.ofertaId];
