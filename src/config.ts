@@ -12,3 +12,10 @@ export const DESTINOS_LOJA: Record<string, string> = {
   // descreve a oferta inteira, então ele vai direto ao checkout.
   "course-combo": "https://pay.cakto.com.br/mryzbp7_1113067",
 };
+
+// O documentário. Cole aqui só o ID do vídeo no YouTube — o pedaço depois
+// de "v=" no endereço. Enquanto estiver vazio, a seção do filme não aparece
+// no site e nada muda.
+//
+//   https://www.youtube.com/watch?v=dQw4w9WgXcQ   ->   "dQw4w9WgXcQ"
+export const VIDEO_DOCUMENTARIO = "";

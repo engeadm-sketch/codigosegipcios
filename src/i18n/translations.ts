@@ -145,6 +145,12 @@ export interface TranslationSchema {
   };
   necropolis: {
     tag: string;
+    film: {
+      tag: string;
+      title: string;
+      subtitle: string;
+      play: string;
+    };
     title: string;
     subtitle: string;
     anomaliesTitle: string;
@@ -378,6 +384,12 @@ export const translations: Record<Language, TranslationSchema> = {
       }
     },
     necropolis: {
+      film: {
+        tag: "Documentário",
+        title: "Topografia das Grandes Necrópoles",
+        subtitle: "Três minutos por Gizé, Sacará, o Vale dos Reis e Ábidos — o que os dados mostram, e o que ainda está em aberto.",
+        play: "Assistir · 3 min",
+      },
       tag: "Atlas Arqueológico",
       title: "Topografia das Grandes Necrópoles",
       subtitle: "Navegue pelos maiores sítios sagrados do Nilo através de dados geofísicos, muografia de partículas cósmicas e escavações arqueológicas do último século.",
@@ -776,6 +788,12 @@ export const translations: Record<Language, TranslationSchema> = {
       }
     },
     necropolis: {
+      film: {
+        tag: "Documentary",
+        title: "Topography of the Great Necropolises",
+        subtitle: "Three minutes across Giza, Saqqara, the Valley of the Kings and Abydos — what the data shows, and what is still open.",
+        play: "Watch · 3 min · in Portuguese",
+      },
       tag: "Archaeological Atlas",
       title: "Topography of Great Necropolises",
       subtitle: "Explore Nile's sacred sites through geophysical data, cosmic particle muography, and past century archaeological excavations.",
@@ -1174,6 +1192,12 @@ export const translations: Record<Language, TranslationSchema> = {
       }
     },
     necropolis: {
+      film: {
+        tag: "Documental",
+        title: "Topografía de las Grandes Necrópolis",
+        subtitle: "Tres minutos por Guiza, Saqqara, el Valle de los Reyes y Abidos — lo que muestran los datos y lo que sigue abierto.",
+        play: "Ver · 3 min · en portugués",
+      },
       tag: "Atlas Arqueológico",
       title: "Topografía de las Grandes Necrópolis",
       subtitle: "Navegue por los mayores sitios sagrados del Nilo mediante datos geofísicos, muografía de partículas cósmicas y excavaciones arqueológicas.",

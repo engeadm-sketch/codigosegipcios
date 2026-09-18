@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
+import DocumentaryFilm from "./DocumentaryFilm";
 
 export default function NecropolisAtlas() {
   const { t } = useLanguage();
@@ -17,6 +18,9 @@ export default function NecropolisAtlas() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[#c49a58]/5 blur-[160px] rounded-full pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+
+        {/* O filme abre a seção; o atlas continua abaixo dele. */}
+        <DocumentaryFilm />
         
         {/* Section Header */}
         <div className="max-w-3xl mb-16 sm:mb-20">
