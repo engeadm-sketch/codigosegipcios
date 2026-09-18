@@ -10,6 +10,7 @@ import SacredLexicon from "@/components/SacredLexicon";
 import EngineeringChronicles from "@/components/EngineeringChronicles";
 import StoreSection from "@/components/StoreSection";
 import AcademicFooter from "@/components/AcademicFooter";
+import TrailerButton from "@/components/TrailerButton";
 import { WHATSAPP } from "@/config";
 
 const TOTAL_FRAMES = 40;
@@ -433,15 +434,14 @@ function HomePageContent() {
               </Link>
 
               {/* Secondary Button */}
-              <Link
-                href="#documentario"
-                className="inline-flex items-center justify-center gap-3 px-6 py-3.5 rounded-full border-2 border-[#dfa55c]/60 bg-black/80 backdrop-blur-md text-white font-semibold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 hover:border-[#dfa55c] hover:bg-[#dfa55c]/20 hover:shadow-[0_0_25px_rgba(223,165,92,0.35),0_4px_16px_rgba(0,0,0,0.9)] hover:scale-[1.02] active:scale-[0.98] shadow-[0_4px_16px_rgba(0,0,0,0.8)]"
+              <TrailerButton
+                className="inline-flex items-center justify-center gap-3 px-6 py-3.5 rounded-full border-2 border-[#dfa55c]/60 bg-black/80 backdrop-blur-md text-white font-semibold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 hover:border-[#dfa55c] hover:bg-[#dfa55c]/20 hover:shadow-[0_0_25px_rgba(223,165,92,0.35),0_4px_16px_rgba(0,0,0,0.9)] hover:scale-[1.02] active:scale-[0.98] shadow-[0_4px_16px_rgba(0,0,0,0.8)] cursor-pointer"
               >
                 <span className="w-5 h-5 rounded-full border border-current flex items-center justify-center text-[9px] pl-[1.5px] text-[#dfa55c]">
                   ▶
                 </span>
                 <span>{t.hero.trailerBtn}</span>
-              </Link>
+              </TrailerButton>
             </div>
 
           </div>
