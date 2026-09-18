@@ -271,7 +271,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "R$ 197",
           desc: "Curso completo do básico ao avançado com certificado digital de conclusão e material didático.",
           tag: "Curso Online • 40h",
-          rating: "4.9 ★★★★★",
+          rating: "9 módulos",
         },
         {
           id: "hoodie-eye",
@@ -280,7 +280,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "R$ 189",
           desc: "Algodão 100% penteado super macio com bordado de alta densidade do símbolo sagrado.",
           tag: "Edição Especial",
-          rating: "5.0 ★★★★★",
+          rating: "",
         },
         {
           id: "tshirt-pyramid",
@@ -289,7 +289,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "R$ 89",
           desc: "Algodão premium sustentável com estampa em relevo da geometria sagrada e coordenadas astronômicas.",
           tag: "Algodão Premium",
-          rating: "4.8 ★★★★★",
+          rating: "",
         },
         {
           id: "mug-gold",
@@ -298,7 +298,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "R$ 49",
           desc: "Cerâmica fosca de alta qualidade com acabamento em brilho dourado e símbolo Ankh.",
           tag: "Caneca 350ml",
-          rating: "4.9 ★★★★★",
+          rating: "",
         },
         {
           id: "cap-djed",
@@ -307,7 +307,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "R$ 79",
           desc: "Ajuste perfeito com fecho regulável e bordado frontal discreto do pilar de Osíris.",
           tag: "Acessório Oficial",
-          rating: "4.9 ★★★★★",
+          rating: "",
         },
         {
           id: "course-astronomy",
@@ -316,7 +316,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "R$ 247",
           desc: "Aprenda como os egípcios mapeavam o cinturão de Órion, a precessão e o alinhamento com os pontos cardeais.",
           tag: "Formação Avançada",
-          rating: "5.0 ★★★★★",
+          rating: "7 módulos",
         },
         {
           id: "course-combo",
@@ -669,7 +669,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "R$ 197",
           desc: "Comprehensive online course from basic to advanced with digital certificate of completion and study materials.",
           tag: "Online Course • 40h • in Portuguese",
-          rating: "4.9 ★★★★★",
+          rating: "9 modules",
         },
         {
           id: "hoodie-eye",
@@ -678,7 +678,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "$ 59",
           desc: "100% super soft combed cotton with high-density gold embroidery.",
           tag: "Special Edition",
-          rating: "5.0 ★★★★★",
+          rating: "",
         },
         {
           id: "tshirt-pyramid",
@@ -687,7 +687,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "$ 25",
           desc: "Sustainable premium cotton with 3D print of sacred geometry and coordinates.",
           tag: "Premium Cotton",
-          rating: "4.8 ★★★★★",
+          rating: "",
         },
         {
           id: "mug-gold",
@@ -696,7 +696,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "$ 18",
           desc: "High quality matte ceramic with gold print finish and engraved Ankh emblem.",
           tag: "Ceramic 350ml",
-          rating: "4.9 ★★★★★",
+          rating: "",
         },
         {
           id: "cap-djed",
@@ -705,7 +705,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "$ 22",
           desc: "Perfect fit with adjustable strap and embroidered Osiris Djed pillar.",
           tag: "Official Apparel",
-          rating: "4.9 ★★★★★",
+          rating: "",
         },
         {
           id: "course-astronomy",
@@ -714,7 +714,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "R$ 247",
           desc: "Learn how ancient Egyptians mapped Orion's belt, precession, and cardinal alignment.",
           tag: "Advanced Program • in Portuguese",
-          rating: "5.0 ★★★★★",
+          rating: "7 modules",
         },
         {
           id: "course-combo",
@@ -1067,7 +1067,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "R$ 197",
           desc: "Curso completo online de básico a avanzado con certificado digital de finalización y material didáctico.",
           tag: "Curso Online • 40h • en portugués",
-          rating: "4.9 ★★★★★",
+          rating: "9 módulos",
         },
         {
           id: "hoodie-eye",
@@ -1076,7 +1076,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "$ 59",
           desc: "100% algodón peinado supersuave con bordado de alta densidad del símbolo sagrado.",
           tag: "Edición Especial",
-          rating: "5.0 ★★★★★",
+          rating: "",
         },
         {
           id: "tshirt-pyramid",
@@ -1085,7 +1085,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "$ 25",
           desc: "Algodón premium sostenible con estampado en relieve de geometría sagrada y coordenadas.",
           tag: "Algodón Premium",
-          rating: "4.8 ★★★★★",
+          rating: "",
         },
         {
           id: "mug-gold",
@@ -1094,7 +1094,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "$ 18",
           desc: "Cerámica mate de alta calidad con acabado en brillo dorado y emblema Ankh grabado.",
           tag: "Cerámica 350ml",
-          rating: "4.9 ★★★★★",
+          rating: "",
         },
         {
           id: "cap-djed",
@@ -1103,7 +1103,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "$ 22",
           desc: "Ajuste perfecto con cierre regulable y bordado frontal del pilar Djed.",
           tag: "Accesorio Oficial",
-          rating: "4.9 ★★★★★",
+          rating: "",
         },
         {
           id: "course-astronomy",
@@ -1112,7 +1112,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "R$ 247",
           desc: "Aprende cómo los egipcios mapeaban el cinturón de Orión, la precesión y la alineación astronómica.",
           tag: "Programa Avanzado • en portugués",
-          rating: "5.0 ★★★★★",
+          rating: "7 módulos",
         },
         {
           id: "course-combo",
