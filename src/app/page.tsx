@@ -384,7 +384,7 @@ function HomePageContent() {
         </header>
 
         {/* ===================== HERO MAIN CONTENT ===================== */}
-        <main className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-12 sm:py-16 lg:py-24 flex-1 flex flex-col justify-center">
+        <main className="hero-main relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-12 sm:py-16 lg:py-24 flex-1 flex flex-col justify-center">
           <div className="max-w-2xl text-left relative">
             
             {/* Ambient Dark Aura behind Hero typography */}
@@ -448,8 +448,8 @@ function HomePageContent() {
         </main>
 
         {/* ===================== BOTTOM FEATURE HIGHLIGHTS ===================== */}
-        <section className="relative z-20 w-full border-t border-[#3a2c17]/40 bg-black/70 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-6 sm:py-8">
+        <section className="hero-faixa relative z-20 w-full border-t border-[#3a2c17]/40 bg-black/70 backdrop-blur-sm">
+          <div className="hero-faixa-in max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-6 sm:py-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0">
               
               {/* Item 1 */}
