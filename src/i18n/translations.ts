@@ -280,7 +280,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "R$ 189",
           desc: "Algodão 100% penteado super macio com bordado de alta densidade do símbolo sagrado.",
           tag: "Edição Especial",
-          rating: "",
+          rating: "Pedido no WhatsApp",
         },
         {
           id: "tshirt-pyramid",
@@ -289,7 +289,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "R$ 89",
           desc: "Algodão premium sustentável com estampa em relevo da geometria sagrada e coordenadas astronômicas.",
           tag: "Algodão Premium",
-          rating: "",
+          rating: "Pedido no WhatsApp",
         },
         {
           id: "mug-gold",
@@ -298,7 +298,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "R$ 49",
           desc: "Cerâmica fosca de alta qualidade com acabamento em brilho dourado e símbolo Ankh.",
           tag: "Caneca 350ml",
-          rating: "",
+          rating: "Pedido no WhatsApp",
         },
         {
           id: "cap-djed",
@@ -307,7 +307,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "R$ 79",
           desc: "Ajuste perfeito com fecho regulável e bordado frontal discreto do pilar de Osíris.",
           tag: "Acessório Oficial",
-          rating: "",
+          rating: "Pedido no WhatsApp",
         },
         {
           id: "course-astronomy",
@@ -678,7 +678,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "$ 59",
           desc: "100% super soft combed cotton with high-density gold embroidery.",
           tag: "Special Edition",
-          rating: "",
+          rating: "Order via WhatsApp",
         },
         {
           id: "tshirt-pyramid",
@@ -687,7 +687,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "$ 25",
           desc: "Sustainable premium cotton with 3D print of sacred geometry and coordinates.",
           tag: "Premium Cotton",
-          rating: "",
+          rating: "Order via WhatsApp",
         },
         {
           id: "mug-gold",
@@ -696,7 +696,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "$ 18",
           desc: "High quality matte ceramic with gold print finish and engraved Ankh emblem.",
           tag: "Ceramic 350ml",
-          rating: "",
+          rating: "Order via WhatsApp",
         },
         {
           id: "cap-djed",
@@ -705,7 +705,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "$ 22",
           desc: "Perfect fit with adjustable strap and embroidered Osiris Djed pillar.",
           tag: "Official Apparel",
-          rating: "",
+          rating: "Order via WhatsApp",
         },
         {
           id: "course-astronomy",
@@ -1076,7 +1076,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "$ 59",
           desc: "100% algodón peinado supersuave con bordado de alta densidad del símbolo sagrado.",
           tag: "Edición Especial",
-          rating: "",
+          rating: "Pedido por WhatsApp",
         },
         {
           id: "tshirt-pyramid",
@@ -1085,7 +1085,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "$ 25",
           desc: "Algodón premium sostenible con estampado en relieve de geometría sagrada y coordenadas.",
           tag: "Algodón Premium",
-          rating: "",
+          rating: "Pedido por WhatsApp",
         },
         {
           id: "mug-gold",
@@ -1094,7 +1094,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "$ 18",
           desc: "Cerámica mate de alta calidad con acabado en brillo dorado y emblema Ankh grabado.",
           tag: "Cerámica 350ml",
-          rating: "",
+          rating: "Pedido por WhatsApp",
         },
         {
           id: "cap-djed",
@@ -1103,7 +1103,7 @@ export const translations: Record<Language, TranslationSchema> = {
           price: "$ 22",
           desc: "Ajuste perfecto con cierre regulable y bordado frontal del pilar Djed.",
           tag: "Accesorio Oficial",
-          rating: "",
+          rating: "Pedido por WhatsApp",
         },
         {
           id: "course-astronomy",
