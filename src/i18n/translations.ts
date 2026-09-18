@@ -64,6 +64,7 @@ export interface TranslationSchema {
   carousel: {
     tag: string;
     title: string;
+    note: string;
   };
   bento: {
     card1Title: string;
@@ -234,8 +235,9 @@ export const translations: Record<Language, TranslationSchema> = {
       feature4: "Um Legado Para o Mundo",
     },
     carousel: {
-      tag: "Reconhecimento & Pesquisa de Estudiosos",
-      title: "Inspirado Pelas Maiores Instituições do Mundo",
+      tag: "Acervos & Fontes",
+      title: "De Onde Vêm as Peças Deste Curso",
+      note: "Citamos objetos, publicações e sítios destes acervos. Nenhuma destas instituições tem vínculo com o curso nem o endossa.",
     },
     bento: {
       card1Title: "Decodificação Instantânea de Hieróglifos",
@@ -638,8 +640,9 @@ export const translations: Record<Language, TranslationSchema> = {
       feature4: "A World Legacy",
     },
     carousel: {
-      tag: "Recognition & Scholarly Research",
-      title: "Inspired By The World's Greatest Institutions",
+      tag: "Collections & Sources",
+      title: "Where The Pieces In This Course Come From",
+      note: "We cite objects, publications and sites held by these institutions. None of them is affiliated with this course or endorses it.",
     },
     bento: {
       card1Title: "Instant Hieroglyphic Decipherment",
@@ -1042,8 +1045,9 @@ export const translations: Record<Language, TranslationSchema> = {
       feature4: "Un Legado Mundial",
     },
     carousel: {
-      tag: "Reconocimiento e Investigación de Eruditos",
-      title: "Inspirado Por Las Mayores Instituciones Del Mundo",
+      tag: "Acervos y Fuentes",
+      title: "De Dónde Vienen Las Piezas De Este Curso",
+      note: "Citamos objetos, publicaciones y sitios de estos acervos. Ninguna de estas instituciones tiene vínculo con el curso ni lo respalda.",
     },
     bento: {
       card1Title: "Descifrado Instantáneo de Jeroglíficos",

@@ -537,6 +537,9 @@ function HomePageContent() {
         <p className="font-cinzel text-2xl sm:text-3xl md:text-4xl text-white font-normal tracking-wide drop-shadow-[0_2px_15px_rgba(223,165,92,0.2)]">
           {t.carousel.title}
         </p>
+        <p className="mt-4 max-w-2xl mx-auto text-[11px] sm:text-xs text-[#8f8272] leading-relaxed">
+          {t.carousel.note}
+        </p>
         <div className="flex items-center justify-center gap-3 mt-4">
           <span className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#c9a063]/60" />
           <div className="w-2 h-2 rotate-45 border border-[#cda260] bg-[#cda260] shadow-[0_0_10px_rgba(205,162,96,0.6)]" />
@@ -553,12 +556,7 @@ function HomePageContent() {
         <div className="flex w-full mb-5 sm:mb-7 overflow-hidden">
           <div className="animate-marquee-left flex items-center gap-5 sm:gap-7">
             <div className="flex items-center gap-5 sm:gap-7">
-              <div className="group flex items-center gap-3 px-6 sm:px-8 py-3.5 rounded-full border border-[#c49a58]/25 bg-[#120d06]/75 backdrop-blur-xl text-[#d4c3b0] hover:border-[#dfa55c]/60 hover:text-white transition-all duration-300">
-                <span className="w-3.5 h-5 border-2 border-[#e5a93b] rounded-[1px] shrink-0 shadow-[0_0_8px_rgba(229,169,59,0.5)]" />
-                <span className="font-cinzel text-xs sm:text-sm font-semibold tracking-wider uppercase">
-                  National Geographic
-                </span>
-              </div>
+              
               <div className="group flex items-center gap-3 px-6 sm:px-8 py-3.5 rounded-full border border-[#c49a58]/25 bg-[#120d06]/75 backdrop-blur-xl text-[#d4c3b0] hover:border-[#dfa55c]/60 hover:text-white transition-all duration-300">
                 <svg className="w-5 h-5 text-[#d9aa61] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
                   <path d="M3 9l9-5 9 5v2H3V9zM4 11v7M8 11v7M12 11v7M16 11v7M20 11v7M2 19h20v2H2v-2z" />
@@ -576,14 +574,14 @@ function HomePageContent() {
                 </span>
               </div>
               <div className="group flex items-center gap-3 px-6 sm:px-8 py-3.5 rounded-full border border-[#c49a58]/25 bg-[#120d06]/75 backdrop-blur-xl text-[#d4c3b0] hover:border-[#dfa55c]/60 hover:text-white transition-all duration-300">
-                <svg className="w-5 h-5 text-[#e5a93b] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-                  <circle cx="12" cy="12" r="4" fill="currentColor" />
-                  <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.2 2.2M16.9 16.9l2.2 2.2M4.9 19.1l2.2-2.2M16.9 7.1l2.2-2.2" />
+                <svg className="w-5 h-5 text-[#d9aa61] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+                  <path d="M3 9l9-5 9 5v2H3V9zM4 11v7M8 11v7M12 11v7M16 11v7M20 11v7M2 19h20v2H2v-2z" />
                 </svg>
                 <span className="font-cinzel text-xs sm:text-sm font-semibold tracking-wider uppercase">
-                  Smithsonian Channel
+                  Egyptian Museum, Cairo
                 </span>
               </div>
+              
             </div>
           </div>
         </div>
@@ -601,22 +599,24 @@ function HomePageContent() {
                 </span>
               </div>
               <div className="group flex items-center gap-3 px-6 sm:px-8 py-3.5 rounded-full border border-[#c49a58]/25 bg-[#120d06]/75 backdrop-blur-xl text-[#d4c3b0] hover:border-[#dfa55c]/60 hover:text-white transition-all duration-300">
-                <span className="font-black text-xs tracking-tighter text-[#dfa55c] px-1.5 py-0.5 border border-[#dfa55c] rounded-sm">
-                  IMAX
-                </span>
+                <svg className="w-5 h-5 text-[#d9aa61] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+                  <path d="M4 4h11l5 5v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z" />
+                  <path d="M15 4v5h5M7 13h9M7 17h6" />
+                </svg>
                 <span className="font-cinzel text-xs sm:text-sm font-semibold tracking-wider uppercase">
-                  Experience Cinema
+                  Nature
                 </span>
               </div>
               <div className="group flex items-center gap-3 px-6 sm:px-8 py-3.5 rounded-full border border-[#c49a58]/25 bg-[#120d06]/75 backdrop-blur-xl text-[#d4c3b0] hover:border-[#dfa55c]/60 hover:text-white transition-all duration-300">
-                <svg className="w-5 h-5 text-[#d9aa61] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M4 6h3a6 6 0 0 1 6 6 6 6 0 0 1-6 6H4V6z" />
-                  <path d="M20 6h-3a6 6 0 0 0-6 6 6 6 0 0 0 6 6h3V6z" />
+                <svg className="w-5 h-5 text-[#d9aa61] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+                  <path d="M4 4h11l5 5v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z" />
+                  <path d="M15 4v5h5M7 13h9M7 17h6" />
                 </svg>
                 <span className="font-cinzel text-xs sm:text-sm font-semibold tracking-wider uppercase">
-                  Dolby Atmos Soundscape
+                  Griffith Institute · Oxford
                 </span>
               </div>
+              
             </div>
           </div>
         </div>
